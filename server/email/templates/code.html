@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>猫猫放置🐱🐟 - {title}</title>
+  <style>
+    body { background-color:#f4f6f8; margin:0; padding:20px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+    .container{max-width:680px;margin:0 auto;background:#ffffff;border-radius:10px;overflow:hidden;box-shadow:0 6px 18px rgba(16,24,40,0.08)}
+    .header{padding:28px 36px;background:linear-gradient(90deg,#0ea5e9,#6366f1);color:#fff}
+    .header h1{margin:0;font-size:20px;letter-spacing:0.2px}
+    .body{padding:28px 36px;color:#0f172a}
+    .lead{font-size:16px;margin-bottom:12px}
+    .muted{color:#64748b;font-size:13px}
+    .card{background:#f8fafc;border-radius:8px;padding:18px;margin:18px 0;text-align:center}
+    .code{display:inline-block;padding:18px 26px;background:#ffffff;border-radius:8px;border:1px dashed #c7d2fe;font-size:28px;letter-spacing:6px;font-weight:700;color:#111827}
+    .btn{display:inline-block;padding:12px 20px;background:#0ea5e9;color:white;border-radius:8px;text-decoration:none;font-weight:600;margin-top:14px}
+    .meta{font-size:13px;color:#94a3b8;margin-top:12px;text-align:center}
+    .footer{padding:20px 36px;background:#fcfdff;border-top:1px solid #eef2ff;color:#64748b;font-size:13px}
+    @media screen and (max-width:480px){.container{margin:0 12px}.header,.body,.footer{padding:20px}.code{font-size:22px;padding:14px 20px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>猫猫放置🐱🐟  — {title}</h1>
+    </div>
+    <div class="body">
+      <p class="lead">尊敬的 {name}，您好！</p>
+
+      <div class="card">
+        <p style="margin:0;color:#0f172a;font-weight:600">请在 {expiry_minutes} 分钟内使用下面的验证码完成操作：</p>
+        <div style="margin-top:14px">
+          <span class="code">{code}</span>
+        </div>
+        <div style="margin-top:12px;color:#475569">（验证码仅用于 {title}，请勿泄露）</div>
+      </div>
+
+      <p class="muted">如果您没有发起本次操作，请忽略此邮件</p>
+    </div>
+    <div class="footer">2025 猫猫放置🐱🐟 • 本邮件由系统自动发送，请勿回复。</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,290 @@
+{
+  "crops": [
+    {
+      "seedId": "grapeSeed",
+      "yields": [
+        {
+          "id": "grape",
+          "range": {
+            "min": 250,
+            "max": 280
+          },
+          "percent": 1
+        },
+        {
+          "id": "grapeSeed",
+          "range": {
+            "min": 1,
+            "max": 2
+          },
+          "percent": 0.3
+        }
+      ],
+      "mutationYields": [],
+      "name": "葡萄种子",
+      "fertilizable": true,
+      "fertilizerIds": [
+        "animalManure",
+        "fertBasic",
+        "fertYieldIncrease"
+      ],
+      "baseGrowthSeconds": 28800,
+      "baseMutationChance": 0.03,
+      "farmingPlantLevelRequired": 20,
+      "farmingPlantExpGainWhenHarvest": 4000,
+      "plantCost": [
+        {
+          "id": "grapeSeed",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "seedId": "ryeSeed",
+      "yields": [
+        {
+          "id": "rye",
+          "range": {
+            "min": 250,
+            "max": 280
+          },
+          "percent": 1
+        },
+        {
+          "id": "ryeSeed",
+          "range": {
+            "min": 1,
+            "max": 2
+          },
+          "percent": 0.3
+        }
+      ],
+      "mutationYields": [],
+      "name": "黑麦种子",
+      "fertilizable": true,
+      "fertilizerIds": [
+        "animalManure",
+        "fertBasic",
+        "fertYieldIncrease"
+      ],
+      "baseGrowthSeconds": 28800,
+      "baseMutationChance": 0.02,
+      "farmingPlantLevelRequired": 20,
+      "farmingPlantExpGainWhenHarvest": 4000,
+      "plantCost": [
+        {
+          "id": "ryeSeed",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "seedId": "berrySeed",
+      "yields": [
+        {
+          "id": "berry",
+          "range": {
+            "min": 1000,
+            "max": 1500
+          },
+          "percent": 1
+        }
+      ],
+      "mutationYields": [
+        {
+          "id": "mysteriousBerry_1",
+          "count": 1,
+          "percent": 0.1
+        }
+      ],
+      "name": "浆果种子",
+      "fertilizable": true,
+      "fertilizerIds": [
+        "animalManure",
+        "fertBasic",
+        "fertMutationBoost",
+        "fertYieldIncrease"
+      ],
+      "baseGrowthSeconds": 28800,
+      "baseMutationChance": 0.03,
+      "farmingPlantLevelRequired": 0,
+      "farmingPlantExpGainWhenHarvest": 2000,
+      "plantCost": [
+        {
+          "id": "berrySeed",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "seedId": "mushroomSeed",
+      "yields": [
+        {
+          "id": "mushroom",
+          "range": {
+            "min": 1000,
+            "max": 1500
+          },
+          "percent": 1
+        }
+      ],
+      "mutationYields": [
+        {
+          "id": "hugeMushroom",
+          "count": 1,
+          "percent": 0.1
+        }
+      ],
+      "name": "蘑菇孢子",
+      "fertilizable": true,
+      "fertilizerIds": [
+        "animalManure",
+        "fertBasic",
+        "fertMutationBoost",
+        "fertYieldIncrease"
+      ],
+      "baseGrowthSeconds": 28800,
+      "baseMutationChance": 0.03,
+      "farmingPlantLevelRequired": 0,
+      "farmingPlantExpGainWhenHarvest": 2000,
+      "plantCost": [
+        {
+          "id": "mushroomSeed",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "seedId": "dawnBlossomSeed",
+      "yields": [
+        {
+          "id": "dawnBlossom",
+          "range": {
+            "min": 125,
+            "max": 150
+          },
+          "percent": 1
+        },
+        {
+          "id": "dawnBlossomSeed",
+          "range": {
+            "min": 1,
+            "max": 2
+          },
+          "percent": 0.2
+        }
+      ],
+      "mutationYields": [],
+      "name": "晨露花种子",
+      "fertilizable": true,
+      "fertilizerIds": [
+        "animalManure",
+        "fertBasic",
+        "fertYieldIncrease"
+      ],
+      "baseGrowthSeconds": 28800,
+      "baseMutationChance": 0,
+      "farmingPlantLevelRequired": 30,
+      "farmingPlantExpGainWhenHarvest": 6000,
+      "plantCost": [
+        {
+          "id": "dawnBlossomSeed",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "seedId": "windBellHerbSeed",
+      "yields": [
+        {
+          "id": "windBellHerb",
+          "range": {
+            "min": 125,
+            "max": 150
+          },
+          "percent": 1
+        },
+        {
+          "id": "windBellHerbSeed",
+          "range": {
+            "min": 1,
+            "max": 2
+          },
+          "percent": 0.2
+        }
+      ],
+      "mutationYields": [],
+      "name": "风铃草种子",
+      "fertilizable": true,
+      "fertilizerIds": [
+        "animalManure",
+        "fertBasic",
+        "fertYieldIncrease"
+      ],
+      "baseGrowthSeconds": 28800,
+      "baseMutationChance": 0,
+      "farmingPlantLevelRequired": 30,
+      "farmingPlantExpGainWhenHarvest": 6000,
+      "plantCost": [
+        {
+          "id": "windBellHerbSeed",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "fertilizers": [
+    {
+      "id": "animalManure",
+      "effects": [
+        {
+          "type": "shortenDuration",
+          "percent": 0.01
+        },
+        {
+          "type": "increaseYield",
+          "percent": 0.01
+        }
+      ],
+      "name": "动物粪肥",
+      "maxStacks": 1
+    },
+    {
+      "id": "fertBasic",
+      "effects": [
+        {
+          "type": "shortenDuration",
+          "percent": 0.1
+        },
+        {
+          "type": "increaseYield",
+          "percent": 0.05
+        }
+      ],
+      "name": "基础肥料",
+      "maxStacks": 1
+    },
+    {
+      "id": "fertMutationBoost",
+      "effects": [
+        {
+          "type": "adjustMutationChance",
+          "percentPoint": 0.15
+        }
+      ],
+      "name": "异变肥料",
+      "maxStacks": 2
+    },
+    {
+      "id": "fertYieldIncrease",
+      "effects": [
+        {
+          "type": "increaseYield",
+          "percent": 0.2
+        }
+      ],
+      "name": "增产肥",
+      "maxStacks": 1
+    }
+  ]
+}

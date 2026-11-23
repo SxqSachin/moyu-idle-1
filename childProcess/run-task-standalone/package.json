@@ -1,0 +1,10 @@
+{
+  "name": "backend-server",
+  "private": true,
+  "type": "module",
+
+  "scripts": {
+    "kitty0": "bun ./src/process/runKittyTaskProcess.ts --group=0 --groupCount=2",
+    "kitty1": "bun ./src/process/runKittyTaskProcess.ts --group=1 --groupCount=2"
+  }
+}

@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE `User` ADD COLUMN `is_gm` BOOLEAN NOT NULL DEFAULT false;

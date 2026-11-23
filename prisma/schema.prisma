@@ -1,0 +1,2291 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider               = "prisma-client"
+  output                 = "../generated/prisma"
+  // runtime                = "nodejs"
+  moduleFormat           = "esm"
+  generatedFileExtension = "ts"
+  importFileExtension    = "ts"
+  binaryTargets          = ["native", "rhel-openssl-1.0.x", "debian-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "mysql"
+  url      = "mysql://idle_game:1234qwer@10.3.8.5:3306/idle_game_db"
+  // url      = "mysql://idle_game:1234qwer@localhost:3306/idle_game_db"
+}
+
+model User {
+  id    Int     @id @default(autoincrement())
+  uuid  String  @unique
+  name  String  @unique
+  pwd   String  @default("")
+  email String? @unique
+  tel   String? @unique
+
+  // Email verification
+  email_verified    Boolean  @default(false)
+  email_verified_at DateTime?
+
+  mainAccountUuid String?
+  accountType     String? @default("MAIN") // "MAIN" | "SUB"
+  accountPlayType String? @default("NORMAL") // "NORMAL" | "IRON"
+
+  referredBy String?
+
+  create_date     DateTime @default(now())
+  last_login_date DateTime @default(now())
+
+  first_reset_password Boolean? @default(false)
+
+  is_visitor Boolean? @default(false)
+
+  avatar String @default("avatar_1")
+
+  last_online_date DateTime @default(now())
+  last_offline_date DateTime?
+
+  last_online_ip   String   @default("")
+  last_online_fp   String?
+
+  sponsor_points     Int @default(0) // 赞助点数
+  max_sponsor_points Int @default(0) // 赞助点数最大值
+
+  is_gm Boolean @default(false)
+
+  current_title   String @default("")
+  available_title String? @db.LongText
+
+  // 徽章
+  all_badge     String @default("")
+  enabled_badge String @default("")
+
+  is_banned  Boolean @default(false) // 是否被封禁
+  ban_reason String? @default("") // 封禁原因
+
+  // 聊天禁言
+  is_muted    Boolean  @default(false) // 是否被禁言（临时/永久）
+  mute_until  DateTime? // 禁言截止时间（null 表示不限时，需手动解除）
+
+  guild      String? @default("")
+  guildTitle String? @default("")
+
+  option String? @default("{}")
+
+  profileCardEffect String?
+
+  userGameState String? @db.LongText // 用户状态信息，存储为JSON字符串 { id: string, duration: number}
+
+  // 上次已阅读的应用版本（用于进入游戏时自动跳转更新日志）
+  last_seen_app_version String? @default("")
+
+  // Onboarding flags
+  // 是否已看过新手引导（老用户在迁移中会被回填为 true；新用户默认 false）
+  has_seen_onboarding Boolean @default(false)
+  // 是否新用户（用于只在首次进入时显示引导；老用户在迁移中会被回填为 false；新用户默认 true）
+  is_new_user         Boolean @default(false)
+
+  // Relations
+  curioItems CurioItem[]
+
+  @@index([uuid])
+  @@index([is_muted])
+  @@index([mute_until])
+  @@index([last_seen_app_version])
+  @@index([accountType, pwd], map: "idx_user_accountType_pwd")
+  @@index([referredBy, accountType, is_banned, id], map: "idx_user_ref_ban_id")
+}
+
+/// 用户服务使用记录：用于记录赞助服务（如定制物品）的已使用次数
+model UserServiceUsage {
+  id        Int      @id @default(autoincrement())
+  userUuid  String   // 用户uuid
+  serviceKey String  // 服务键，例如 "custom_item_level_1"
+
+  usedCount Int      @default(0)   // 已使用次数
+  lastUsedAt DateTime?             // 最近一次使用时间
+
+  extra     String?  @db.LongText  // 扩展字段（如备注、审批信息等）
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([userUuid, serviceKey], name: "user_service_unique")
+  @@index([userUuid])
+  @@index([serviceKey])
+}
+
+// 记录玩家改名历史（由GM或玩家触发）
+model PlayerNameChange {
+  id         Int      @id @default(autoincrement())
+  user_uuid  String   // 被修改名字的用户 uuid
+  old_name   String   // 旧昵称
+  new_name   String   // 新昵称
+  changed_by String   // 操作者 uuid（GM 或 用户自己）
+  reason     String?  // 可选理由或备注
+  created_at DateTime @default(now())
+
+  @@index([user_uuid])
+  @@index([changed_by])
+}
+
+/// 玩家在公会仓库的可个人提取份额（按物品汇总）
+model GuildInventoryPersonalBalance {
+  id        Int      @id @default(autoincrement())
+
+  guildUuid String
+  userUuid  String
+  itemId    String
+
+  /// 玩家对该物品的可用个人份额（不应小于 0）
+  count     BigInt   @default(0)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([guildUuid, userUuid, itemId], name: "guild_personal_balance_unique")
+  @@index([guildUuid])
+  @@index([userUuid])
+  @@index([itemId])
+}
+
+model CharacterInventory {
+  id             Int    @id @default(autoincrement())
+  user_uuid      String @unique
+  character_uuid String @unique
+  inventory      String @db.LongText
+
+  @@index([user_uuid])
+  @@index([character_uuid])
+}
+
+model CharacterNewItentory {
+  id             Int    @id @default(autoincrement())
+  user_uuid      String // 用户uuid
+  character_uuid String // 角色uuid
+
+  item_id  String // 物品唯一标识（如物品类型id）
+  count    Int // 数量
+  position String? // 位置（如背包、仓库、快捷栏等，可选）
+
+  extra String? @db.LongText // 扩展字段，如装备属性、耐久等
+
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  @@index([user_uuid])
+  @@index([character_uuid])
+  @@index([character_uuid, item_id])
+}
+
+model CharacterNewInventory {
+  id             BigInt @id @default(autoincrement())
+  user_uuid      String
+  character_uuid String
+  item_id        String
+  count          BigInt
+  position       String?
+  extra          String?  @db.LongText
+  created_at     DateTime @default(now())
+  updated_at     DateTime @updatedAt
+
+  @@unique([character_uuid, item_id], name: "character_uuid_item_id") // <--- 添加这一行
+  @@index([user_uuid])
+  // @@index([character_uuid])
+  // @@index([character_uuid, item_id])
+  @@index([item_id, count], name: "idx_inventory_item_count")
+}
+
+model CharacterBuilding {
+  id             Int    @id @default(autoincrement())
+  user_uuid      String @unique
+  character_uuid String @unique
+  building       String @db.LongText
+
+  @@index([user_uuid])
+  @@index([character_uuid])
+}
+
+model CharacterStatus {
+  id             Int    @id @default(autoincrement())
+  user_uuid      String @unique
+  character_uuid String @unique
+
+  collecting String? @db.LongText // 采集
+  mining     String? @db.LongText // 采矿
+
+  fishing String? @db.LongText 
+
+  farmingAnimal String? @db.LongText // 畜牧
+  farmingPlant  String? @db.LongText // 种植
+  cooking       String? @db.LongText // 烹饪
+  manufacturing String? @db.LongText // 制造
+  forging       String? @db.LongText // 锻造
+  sewing        String? @db.LongText // 锻造
+  trading       String? @db.LongText // 交易
+  knowledge     String? @db.LongText // 学识
+  exploring     String? @db.LongText // 探索
+
+  enhance String? @db.LongText // 神秘
+
+  mysterious String? @db.LongText // 神秘
+
+  luck String? @db.LongText // 幸运
+
+  battle String? @db.LongText // 战斗
+
+  strength     String? @db.LongText // 力量
+  dexterity    String? @db.LongText // 敏捷
+  intelligence String? @db.LongText // 智力
+  stamina      String? @db.LongText // 耐力
+
+  attacking String? @db.LongText // 攻击
+  defencing String? @db.LongText // 防御
+
+  @@index([user_uuid])
+  @@index([character_uuid])
+}
+
+model CharacterUnitInfo {
+  id             Int    @id @default(autoincrement())
+  user_uuid      String @unique
+  character_uuid String @unique
+
+  name String @default("")
+
+  level Int @default(1) // 力量
+
+  strength     Int // 力量
+  dexterity    Int // 敏捷
+  intelligence Int // 智力
+  stamina      Int // 耐力
+
+  attacking Int // 攻击
+  defencing Int // 防御
+
+  otherStatus String? @db.LongText // 其他状态信息，存储为JSON字符串
+
+  max_hp     Int @default(100)
+  current_hp Int @default(100)
+
+  max_mp     Int @default(100)
+  current_mp Int @default(100)
+
+  ability String @db.LongText // 可用技能列表，存储为JSON字符串
+  ai      String @db.LongText
+
+  equipment String? @db.LongText // 装备信息，存储为JSON字符串
+  inventory String? @db.LongText // 物品袋信息，存储为JSON字符串
+
+  skillTreeNodes String? @db.LongText // 学习的技能树节点，存储为JSON字符串
+  affix String? @db.LongText // 角色词缀，存储为JSON字符串
+
+  ip String @default("")
+
+  fp String? @db.LongText
+
+  @@index([user_uuid])
+  @@index([character_uuid])
+}
+
+model CharacterSkillInfo {
+  id             Int    @id @default(autoincrement())
+  user_uuid      String
+  character_uuid String
+
+  skill_id String @default("")
+  level    Int    @default(0)
+  exp      Float  @default(0)
+
+  enabled Boolean @default(true) // 是否启用技能
+  logic   String? @db.LongText
+
+  order Int @default(0)
+
+  extra  String? @db.LongText
+
+  available Boolean @default(true) // 是否可用（未被禁用）
+
+  @@index([user_uuid])
+  @@index([character_uuid])
+  @@index([character_uuid, user_uuid, skill_id])
+  @@unique([character_uuid, user_uuid, skill_id], name: "character_user_skill_unique")
+}
+
+model CharacterSkillOutfit {
+  id Int @id @default(autoincrement())
+
+  uuid String @unique
+
+  user_uuid      String
+  character_uuid String
+
+  name String
+
+  data String @db.LongText
+
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  @@index([user_uuid])
+  @@index([character_uuid])
+}
+
+model CharacterBattleInventoryInfo {
+  id            Int    @id @default(autoincrement())
+  userUuid      String
+  characterUuid String
+
+  resourceId String? @default("")
+
+  resourceRemainingCount Int @default(0) // 剩余数量
+  resourcePrepareCount   Int @default(0) // 准备数量
+
+  order Int @default(0)
+
+  ai String? @db.LongText
+
+  useWhen String? // 使用时机，如 'selfTurnStart' | 'battleStart'，逗号分割数组
+
+  @@index([userUuid])
+  @@index([characterUuid])
+  @@index([characterUuid, userUuid, resourceId])
+}
+
+model CharacterEquipment {
+  id             Int    @id @default(autoincrement())
+  user_uuid      String @unique
+  character_uuid String @unique
+
+  head      String? // 头部装备
+  body      String? // 身体装备
+  arm       String? // 臂部装备
+  leg       String? // 腿部装备
+  foot      String? // 鞋子装备
+
+  leftHand  String? // 左手装备
+  leftHand2  String? // 左手装备
+
+  rightHand String? // 右手装备
+  rightHand2 String? // 右手装备
+
+  cloak     String? // 披风装备 <--- 新增
+  decorate1 String? // 装饰1
+  decorate2 String? // 装饰2
+  decorate3 String? // 装饰3
+  decorate4 String? // 装饰4
+  decorate5 String? // 装饰3
+  decorate6 String? // 装饰4
+  decorate7 String? // 装饰3
+  decorate8 String? // 装饰4
+
+
+  decorate9 String? // 装饰4
+
+  @@index([user_uuid])
+  @@index([character_uuid])
+}
+
+model CharacterWorkEquipment {
+  id             Int    @id @default(autoincrement())
+  user_uuid      String @unique
+  character_uuid String @unique
+
+  head      String? // 头部装备
+  body      String? // 身体装备
+  arm       String? // 臂部装备
+  leg       String? // 腿部装备
+  foot      String? // 鞋子装备
+
+  leftHand  String? // 左手装备
+  leftHand2  String? // 左手装备
+
+  rightHand String? // 右手装备
+  rightHand2 String? // 右手装备
+
+  cloak     String? // 披风装备 <--- 新增
+  decorate1 String? // 装饰1
+  decorate2 String? // 装饰2
+  decorate3 String? // 装饰3
+  decorate4 String? // 装饰4
+  decorate5 String? // 装饰3
+  decorate6 String? // 装饰4
+  decorate7 String? // 装饰3
+  decorate8 String? // 装饰4
+
+  decorate9 String? // 装饰4
+
+  @@index([user_uuid])
+  @@index([character_uuid])
+}
+
+model CharacterEquipmentOutfit {
+  id   Int    @id @default(autoincrement())
+  uuid String @unique // 配装方案唯一标识
+
+  user_uuid      String
+  character_uuid String
+
+  name String
+  type String // "work" | "battle"
+
+  actionType String? // 适配的工作类型
+
+  head      String? // 头部装备
+  body      String? // 身体装备
+  arm       String? // 臂部装备
+  leg       String? // 腿部装备
+  foot      String? // 鞋子装备
+
+  leftHand  String? // 左手装备
+  leftHand2  String? // 左手装备
+
+  rightHand String? // 右手装备
+  rightHand2 String? // 右手装备
+
+  cloak     String? // 披风装备 <--- 新增
+  decorate1 String? // 装饰1
+  decorate2 String? // 装饰2
+  decorate3 String? // 装饰3
+  decorate4 String? // 装饰4
+  decorate5 String? // 装饰3
+  decorate6 String? // 装饰4
+  decorate7 String? // 装饰3
+  decorate8 String? // 装饰4
+
+
+  decorate9 String? // 装饰4
+
+  @@unique([user_uuid, character_uuid, uuid], name: "user_character_outfit_uuid") // 确保每个用户每个角色的配装方案名称唯一
+  @@index([user_uuid])
+  @@index([character_uuid])
+  @@index([type])
+}
+
+model Market {
+  id         Int    @id @default(autoincrement())
+  trade_uuid String @unique
+
+  seller                String // 卖房
+  sell_resource_id      String // 售卖资源id
+  sell_resource_count   Int // 售卖资源数量
+  selled_resource_count Int // 已出售的资源数量
+
+  cost_resource_id String // 购买此资源所需的资源id
+  cost_per_unit    Decimal @db.Decimal(13, 2) // 购买此资源所需的资源数量
+
+  buyer_info String? @db.LongText
+
+  is_closed Boolean
+
+  create_time DateTime  @default(now())
+  close_time  DateTime?
+
+  pay_listing_fee Boolean? @default(false) // 是否支付了上架手续费
+
+  @@index([seller, create_time], name: "idx_market_seller_created")
+  @@index([trade_uuid])
+  @@index([sell_resource_id, is_closed, cost_per_unit], name: "idx_market_sell_closed_cost")
+}
+
+model BuyerMarket {
+  id         Int    @id @default(autoincrement())
+  trade_uuid String @unique
+
+  buyer                  String // 买方
+  require_resource_id    String // 售卖资源id
+  require_resource_count Int // 售卖资源数量
+  done_resource_count    Int // 已出售的资源数量
+
+  pay_resource_id String // 购买此资源所需的资源id
+  pay_per_unit    Decimal @db.Decimal(13, 2) // 购买此资源所需的资源数量
+
+  is_closed Boolean
+
+  create_time DateTime  @default(now())
+  close_time  DateTime?
+
+  seller_info String? @db.LongText
+
+  // 预先扣除的市场税
+  pre_deducted_market_tax Int? @default(0)
+
+  @@index([trade_uuid])
+  @@index([require_resource_id, is_closed, pay_per_unit], name: "idx_buyermarket_require_closed_pay")
+  @@index([buyer], name: "idx_buyermarket_buyer")
+  @@index([buyer, is_closed], name: "idx_buyermarket_buyer_closed")
+}
+
+model ChatMessage {
+  id          Int    @id @default(autoincrement())
+  sender      String // 用户uuid
+  sender_name String // 发送者昵称（冗余，方便展示）
+
+  receiver_id   String? // 接收者uuid（私聊时用）
+  receiver_name String? // 接收者name （私聊时用）
+
+  content String // 消息内容
+
+  extraSFX String? // 附加的特效
+
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  is_revoked Boolean @default(false) // 是否撤回
+  is_deleted Boolean @default(false) // 是否删除
+  extra      String? @db.LongText // 扩展字段(JSON)，如图片URL、文件信息等
+
+  extra2 String? @db.LongText // 扩展字段(JSON)，如图片URL、文件信息等
+
+  @@index([receiver_id, is_deleted, created_at], name: "idx_chat_receiver_created")
+  @@index([sender, is_deleted, created_at], name: "idx_chat_sender_created")
+}
+
+/// 玩家屏蔽关系表：一条记录表示 blockerUuid 对 targetUuid 的屏蔽设置。
+/// 当前仅使用 blockPublic（屏蔽公屏/铁猫公屏），预留 blockPrivate / blockAll 供后续扩展。
+model UserBlock {
+  id           Int      @id @default(autoincrement())
+  blockerUuid  String   // 发起屏蔽的玩家
+  targetUuid   String   // 被屏蔽的玩家
+
+  // 通用屏蔽类型开关（按需拓展）
+  blockPublicChat   Boolean @default(true)  // 屏蔽公屏/铁猫公屏
+  blockPrivateChat  Boolean @default(false) // 屏蔽私聊
+  blockGuildChat    Boolean @default(false) // 屏蔽公会聊天（预留）
+  blockRoomChat     Boolean @default(false) // 屏蔽房间聊天（预留）
+  blockBattleInvite Boolean @default(false) // 屏蔽战斗相关邀请（预留）
+  blockTrade        Boolean @default(false) // 屏蔽交易请求（预留）
+  blockAll          Boolean @default(false) // 完全屏蔽（优先级最高）
+
+  reason    String?  // 可选：玩家自定义或系统记录屏蔽原因
+  extra     String?  @db.LongText // JSON 结构，存储可扩展字段
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // 唯一约束：同一对关系只保留一条记录
+  @@unique([blockerUuid, targetUuid], name: "blocker_target_unique")
+  @@index([blockerUuid])
+  @@index([targetUuid])
+  @@index([blockerUuid, blockAll])
+  @@index([blockerUuid, blockPublicChat])
+}
+
+model Quest {
+  id             Int     @id @default(autoincrement())
+  uuid           String  @unique
+  title          String
+  actionMainType String // AllGameActionMainType
+  description    String?
+  executor       String // 用户uuid或角色uuid
+  difficulty     Int
+
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime?
+  completedAt DateTime?
+  dueDate     DateTime?
+
+  status String // "PENDING" | "DOING" | "DONE" | "REROLL" | "EXPIRED"
+
+  targetActionId     String
+  targetGoalCount    Int
+  targetCurrentCount Int
+
+  rerollCount Int @default(0)
+
+  rewards String @db.LongText
+
+  @@index([uuid])
+  @@index([executor])
+  @@index([targetActionId])
+  @@index([status])
+}
+
+model Kitty {
+  id    Int    @id @default(autoincrement())
+  uuid  String @unique
+  owner String
+
+  name String
+
+  satiety     Float @default(0)
+  max_satiety Float @default(100)
+
+  mood     Float @default(100) // 新增：心情值，范围可自定义
+  max_mood Float @default(100) // 新增：心情值，范围可自定义
+
+  is_working Boolean?
+  action_id  String?
+
+  isInExpedition Boolean @default(false) // 是否在探险中
+  expeditionUuid String? // 探险的uuid（如果在探险中）
+
+  @@index([uuid])
+  @@index([owner])
+}
+
+model KittyEssay {
+  id        Int    @id @default(autoincrement())
+  uuid      String @unique // 随笔唯一标识
+  kittyUuid String // 对应猫咪的uuid
+  owner     String // 所属玩家uuid
+
+  title   String? // 随笔标题（可选）
+  content String  @db.LongText // 随笔内容
+  mood    Float? // 记录随笔时猫咪心情（可选）
+  action  String? // 行动类型（如“玩耍”、“工作”、“休息”等，可选）
+
+  createdAt DateTime @default(now()) // 创建时间
+  updatedAt DateTime @updatedAt // 更新时间
+
+  extra String? @db.LongText // 扩展字段（如图片、标签等）
+
+  // @@index([kittyUuid, createdAt], name: "idx_kittyessay_kitty_created")
+  @@index([kittyUuid])
+  @@index([owner])
+}
+
+model KittyEncounter {
+  id            Int      @id @default(autoincrement())
+  fromKittyUuid String // 发起偶遇的猫咪uuid
+  toKittyUuid   String // 被偶遇的猫咪uuid
+  encounterTime DateTime @default(now()) // 偶遇时间
+  location      String? // 偶遇地点（可选）
+  description   String? // 偶遇描述（可选）
+  extra         String?  @db.LongText // 扩展字段（如图片、标签等）
+  // @@unique([fromKittyUuid, toKittyUuid])
+
+  @@index([fromKittyUuid])
+  @@index([toKittyUuid])
+}
+
+model KittyFriendship {
+  id               Int      @id @default(autoincrement())
+  kittyAUuid       String // 猫咪A的uuid
+  kittyBUuid       String // 猫咪B的uuid
+  ownerA           String // 猫咪A所属玩家uuid
+  ownerB           String // 猫咪B所属玩家uuid
+  becomeFriendTime DateTime @default(now()) // 成为好友的时间
+  intimacy         Float    @default(1) // 好友亲密度，可用于后续玩法
+  extra            String?  @db.LongText // 扩展字段
+
+  del Boolean @default(false) // 是否删除好友关系
+
+  @@unique([kittyAUuid, kittyBUuid])
+  @@index([kittyAUuid])
+  @@index([kittyBUuid])
+  @@index([ownerA])
+  @@index([ownerB])
+}
+
+model KittyExpeditionTeam {
+  id   Int    @id @default(autoincrement())
+  uuid String @unique // 探险队唯一标识
+
+  owner String // 队伍归属玩家uuid
+  name  String // 队伍名称
+
+  guildUuid String? // 公会ID（可选）
+
+  kittyUuids String @db.LongText // 队伍成员（猫咪uuid数组，JSON字符串）
+  state      String @default("IDLE") // 队伍状态："IDLE" | "EXPEDITION" | "RETURNING" | "FINISHED"
+
+  turn Int // 当前轮次（可选）
+
+  expeditionAreaId String? // 当前探险任务ID（可选）
+
+  lastRewardAt DateTime? // 上次奖励发放时间（可选）
+
+  startTime DateTime? // 探险开始时间
+  endTime   DateTime? // 探险结束时间
+
+  reward String? @db.LongText // 探险奖励（JSON字符串）
+  extra  String? @db.LongText // 扩展字段（如队伍加成、特殊事件等）
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  del Boolean @default(false) // 是否删除
+
+  @@index([uuid])
+  @@index([owner])
+  @@index([expeditionAreaId])
+  @@index([guildUuid])
+}
+
+model KittyEquipment {
+  id   Int    @id @default(autoincrement())
+  uuid String @unique
+
+  head      String? // 头部装备
+  body      String? // 身体装备
+  arm       String? // 臂部装备
+  leg       String? // 腿部装备
+  foot      String? // 鞋子装备
+  decorate1 String? // 装饰3
+  decorate2 String? // 装饰4
+
+  @@index([uuid])
+}
+
+model UserKittyFurniture {
+  id           Int    @id @default(autoincrement())
+  uuid         String @unique @default(uuid()) // 家具实例唯一ID
+  user_uuid    String // 拥有者
+  furniture_id String // 家具类型ID（关联FurnitureDefinition.furniture_id）
+
+  // 家具状态
+  level      Int     @default(1) // 当前等级
+  durability Float   @default(100) // 耐久度（0-100）
+  is_active  Boolean @default(false) // 是否激活/工作中
+
+  // 配置信息（JSON格式）
+  config String? @db.LongText // 用户自定义配置，如投喂间隔、食物类型等
+
+  // 统计信息（JSON格式）
+  statistics String? @db.LongText // 统计数据，如总投喂次数、总节约时间等
+
+  // 时间记录
+  installed_at   DateTime  @default(now()) // 安装时间
+  last_active_at DateTime? // 最后活跃时间
+
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  @@unique([user_uuid, furniture_id], name: "user_furniture_id") // 唯一索引：每个用户每种家具类型只能有一个
+  @@index([user_uuid])
+  @@index([furniture_id])
+  @@index([user_uuid, furniture_id])
+  @@index([is_active])
+}
+
+model KittyTrait {
+  id         Int      @id @default(autoincrement())
+  uuid       String   @unique @default(uuid())
+  kittyUuid  String   // 对应 Kitty.uuid
+  traitId    String   // 对应 trait 定义 id（AllKittyTraitId）
+  level      Int      @default(0)
+  currentExp Int      @default(0)
+
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@unique([kittyUuid, traitId], name: "kitty_trait_unique") // 每只猫每个 trait 只有一条记录
+  @@index([kittyUuid])
+  @@index([traitId])
+}
+
+
+model Tavern {
+  id    Int    @id @default(autoincrement())
+  uuid  String @unique
+  owner String
+
+  start_date DateTime
+  end_date   DateTime
+
+  pause_date DateTime?
+
+  type String
+
+  level Int @default(0)
+
+  state String @default("IDLE") // "WORKING" | "IDLE" | "EXPIRED" | "PAUSED"
+
+  @@index([uuid])
+  @@index([owner])
+}
+
+model FriendRequest {
+  id           Int      @id @default(autoincrement())
+  fromUserUuid String // 发送方用户uuid
+  toUserUuid   String // 接收方用户uuid
+  status       String   @default("PENDING") // "PENDING" | "ACCEPTED" | "REJECTED"
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@unique([fromUserUuid, toUserUuid])
+  @@index([fromUserUuid])
+  @@index([toUserUuid])
+}
+
+model Friendship {
+  id        Int      @id @default(autoincrement())
+  userA     String // 用户A的uuid
+  userB     String // 用户B的uuid
+  createdAt DateTime @default(now())
+
+  @@unique([userA, userB])
+  @@index([userA])
+  @@index([userB])
+}
+
+model Guild {
+  id          Int     @id @default(autoincrement())
+  uuid        String  @unique
+  name        String
+  description String? @db.LongText
+  owner       String // 创建者的uuid
+
+  create_date DateTime @default(now())
+  update_date DateTime @updatedAt
+
+  is_open    Boolean @default(true) // 是否公开
+  is_active  Boolean @default(true) // 是否活跃
+  is_deleted Boolean @default(false) // 是否已删除
+
+  type String? @db.LongText
+
+  gold       Int @default(0) // 公会资金
+  level      Int @default(1) // 公会等级
+  experience Int @default(0) // 公会经验
+
+  ironcat Boolean? @default(false)
+
+  @@index([uuid])
+}
+
+model GuildTitle {
+  id Int @id @default(autoincrement())
+
+  uuid String @unique
+
+  guildUuid   String // 所属公会uuid
+  title       String // 头衔名称（如“长老”、“副会长”、“精英”等）
+  role        String // 角色（如“MEMBER”、“OFFICER”、“LEADER”等）
+  permissions String @db.LongText // 权限（JSON字符串，数组或对象，例：["INVITE_MEMBER","KICK_MEMBER"]）
+
+  description String? // 头衔描述（可选）
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@unique([guildUuid, title], name: "guild_title_unique") // 同一公会内头衔唯一
+  @@index([guildUuid])
+}
+
+model GuildMember {
+  id         Int      @id @default(autoincrement())
+  guildUuid  String // 公会uuid
+  userUuid   String // 成员的uuid
+  role       String   @default("MEMBER") // "MEMBER" | "OFFICER" | "LEADER"
+  joinDate   DateTime @default(now())
+  lastActive DateTime @default(now())
+  isOnline   Boolean  @default(false) // 是否在线
+  title      String?
+
+  @@unique([guildUuid, userUuid])
+  @@index([guildUuid])
+  @@index([userUuid])
+}
+
+model GuildJoinRequest {
+  id        Int       @id @default(autoincrement())
+  guildUuid String // 目标公会uuid
+  userUuid  String // 申请人uuid
+  message   String? // 申请留言
+  status    String    @default("PENDING") // "PENDING" | "APPROVED" | "REJECTED"
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  handledBy String? // 审核人uuid
+  handledAt DateTime?
+
+  @@unique([guildUuid, userUuid])
+  @@index([guildUuid])
+  @@index([userUuid])
+}
+
+model GuildBuilding {
+  id        Int    @id @default(autoincrement())
+  uuid      String @unique // 建筑唯一标识
+  guildUuid String // 所属公会uuid
+
+  type String // 建筑类型（如 "hall", "warehouse", "shop", "statue", "garden" 等）
+
+  level    Int @default(1) // 建筑等级
+  exp      Int @default(0) // 当前经验值
+  maxLevel Int @default(10) // 最大等级
+
+  status String @default("UNBUILD") // 状态："NORMAL" | "UPGRADING" | "DESTROYED" 等
+
+  startBuildAt DateTime? // 开始建造时间
+  endBuildAt   DateTime? // 建造完成时间
+
+  startUpgradeAt DateTime? // 开始升级时间
+  endUpgradeAt   DateTime? // 升级完成时间
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  extra String? @db.LongText // 扩展字段
+
+  @@unique([guildUuid, type], name: "guild_building_unique") // 确保每个公会每种建筑类型只能有一个
+  @@index([guildUuid])
+  @@index([type])
+}
+
+model GuildBuildingMaterialFund {
+  id           Int    @id @default(autoincrement())
+  guildUuid    String // 所属公会uuid
+  buildingType String // 建筑类型（如 "warehouse", "wishing_pool" 等）
+  materialId   String // 材料ID（如 "gold", "wood", "stone" 等）
+  required     Int // 需要的总数量
+  collected    Int // 已筹集数量
+
+  level        Int @default(0) // 建筑等级（可选）
+
+  status String @default("PENDING") // 状态："COLLECTING" | "COMPLETED" | "CANCELLED"
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([guildUuid, buildingType, materialId, level], name: "guild_building_material_level_unique")
+  @@index([guildUuid])
+  @@index([buildingType])
+  @@index([materialId])
+}
+
+model GuildBuildingMaterialDonation {
+  id           Int    @id @default(autoincrement())
+  guildUuid    String // 所属公会uuid
+  buildingType String // 建筑类型
+  materialId   String // 材料ID
+  donorUuid    String // 捐赠人用户uuid
+  amount       Int // 捐赠数量
+
+  buildingLevel Int @default(0) // 捐赠时的建筑等级（可选）
+
+  createdAt DateTime @default(now())
+
+  @@unique([guildUuid, buildingType, materialId, donorUuid, buildingLevel], name: "guild_building_material_donation_level_unique")
+  @@index([guildUuid])
+  @@index([buildingType])
+  @@index([materialId])
+  @@index([donorUuid])
+}
+
+model GuildInventory {
+  id        Int    @id @default(autoincrement())
+  guildUuid String // 所属公会uuid
+
+  itemId String // 物品ID
+  count  BigInt @default(0) // 物品数量
+
+  // 权限控制（可选）
+  minRoleToWithdraw String? @default("MEMBER") // 最低提取权限
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // 扩展字段
+  extra String? @db.LongText // 额外配置（如物品保质期、储存条件等）
+
+  @@unique([guildUuid, itemId], name: "guild_inventory_item_unique")
+  @@index([guildUuid])
+  @@index([itemId])
+  @@index([guildUuid, itemId])
+}
+
+model GuildInventoryDonate {
+  id        Int    @id @default(autoincrement())
+  uuid      String @unique // 捐赠记录唯一标识
+  guildUuid String // 所属公会uuid
+
+  // itemId    String   // 物品ID
+
+  donorUuid String // 捐赠人用户uuid
+  info      String? @db.LongText // 捐赠信息（如物品描述、来源等）
+
+  reason String? // 捐赠原因或备注（可选）
+
+  createdAt DateTime @default(now())
+  // @@index([itemId])
+  // @@unique([guildUuid, donorUuid], name: "guild_inventory_donate_unique")
+
+  @@index([guildUuid])
+  @@index([donorUuid])
+}
+
+model GuildInventoryWithdraw {
+  id        Int    @id @default(autoincrement())
+  uuid      String @unique // 提取记录唯一标识
+  guildUuid String // 所属公会uuid
+
+  itemId         String // 物品ID
+  withdrawerUuid String // 提取人用户uuid
+
+  amount BigInt // 提取数量
+
+  reason String? // 提取原因或备注（可选）
+  status String  @default("PENDING") // 状态："PENDING" | "APPROVED" | "REJECTED" | "CANCELLED"
+
+  handledBy String? // 审核人用户uuid（可选）
+  handledAt DateTime? // 审核时间（可选）
+
+  createdAt DateTime @default(now())
+
+  @@index([guildUuid, status], name: "guild_inventory_withdraw_status_index")
+  @@index([guildUuid])
+  @@index([status])
+  @@index([itemId])
+  @@index([withdrawerUuid])
+}
+
+model SponsorPointRecord {
+  id           Int      @id @default(autoincrement())
+  userUuid     String // 用户uuid
+  changeType   String // 类型："ADD" | "SUBTRACT" | "SET"
+  amount       Int // 本次变动的积分（正数或负数）
+  beforePoints Int // 变动前积分
+  afterPoints  Int // 变动后积分
+  reason       String? // 变动原因或备注
+  createdAt    DateTime @default(now())
+
+  @@index([userUuid])
+  @@index([changeType])
+}
+
+model UserUniqueFlag {
+  id        Int      @id @default(autoincrement())
+  userUuid  String // 用户uuid
+  flagType  String // 标记类型，如 "item"、"skin"
+  flagKey   String // 标记唯一键，如物品ID、皮肤ID
+  owned     Boolean  @default(false) // 是否拥有此标记
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([userUuid, flagType, flagKey], name: "user_flag_unique")
+  @@index([userUuid])
+  @@index([flagType])
+}
+
+model UserCustomStyle {
+  id       Int    @id @default(autoincrement())
+  userUuid String // 用户uuid
+
+  availableBattleCardStyles String? @db.LongText // 可用的战斗风格（JSON数组字符串）
+  currentBattleCardStyle    String  @default("") // 当前战斗风格
+
+  availableChatContentStyles String? @db.LongText // 可用的聊天风格（JSON数组字符串）
+  currentChatContentStyle    String  @default("") // 当前聊天风格
+
+  availableChatNameStyles String? @db.LongText // 可用的聊天名称风格（JSON数组字符串）
+  currentChatNameStyle    String  @default("") // 当前聊天名称风格
+
+  availableProfileStyles String? @db.LongText // 可用的聊天名称风格（JSON数组字符串）
+  currentProfileStyle    String  @default("") // 当前聊天名称风格
+
+  availableChatBubbleStyles String? @db.LongText // 可用的聊天气泡风格（JSON数组字符串）
+  currentChatBubbleStyle    String  @default("") // 当前聊天气泡风格
+
+  availableAvatarBorders String? @db.LongText // 可用的头像框
+  currentAvatarBorder    String  @default("") // 当前头像框
+
+  diyChatBubbleStyles String? @db.LongText // 自定义聊天气泡风格（JSON对象字符串）
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([userUuid])
+  @@index([userUuid])
+}
+
+model EnhanceRequire {
+  id Int @id @default(autoincrement())
+
+  uuid String @unique
+
+  userUuid String // 用户uuid
+
+  enhanceItemId String // 待强化物品ID
+
+  lastTimeEnhanceResultItemId String? // 待强化物品ID
+
+  protectedResourceId String? // 保护材料ID（可选）
+  startProtectedWhen  String? // 从第几次开始保护（可选）
+
+  currentRepeatCount Int @default(0) // 当前已重复次数
+
+  repeatCount         Int     @default(1) // 重复次数
+  stopWhenGetResource String? // 达到某个资源时停止
+
+  status String @default("PENDING") // "PENDING" | "PROCESSING" | "SUCCESS" | "FINISHED" | "CANCELLED" | "ERROR"
+
+  resultDetail String? @db.LongText // 结果详情（如消耗、概率、日志等，JSON）
+  allGetItems  String? @db.LongText // 所有获得的物品（JSON）
+  allUsedItems String? @db.LongText // 所有使用的物品（JSON）
+
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+  finishedAt DateTime?
+
+  // 可选：扩展字段
+  extra String? @db.LongText
+
+  @@index([userUuid])
+  @@index([status])
+  @@index([userUuid, status], name: "user_status_index")
+}
+
+model VillageBuilding {
+  id   Int    @id @default(autoincrement())
+  uuid String @unique // 建筑唯一标识
+
+  type String @unique // 建筑类型（如 "hall", "warehouse", "shop", "statue", "garden" 等）
+
+  level    Int @default(1) // 建筑等级
+  exp      Int @default(0) // 当前经验值
+  maxLevel Int @default(10) // 最大等级
+
+  status String @default("UNBUILD") // 状态："NORMAL" | "UPGRADING" | "DESTROYED" 等
+
+  startBuildAt DateTime? // 开始建造时间
+  endBuildAt   DateTime? // 建造完成时间
+
+  startUpgradeAt DateTime? // 开始升级时间
+  endUpgradeAt   DateTime? // 升级完成时间
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  extra String? @db.LongText // 扩展字段
+
+  @@index([type])
+  @@index([status])
+}
+
+model VillageBuildingMaterialFund {
+  id Int @id @default(autoincrement())
+
+  buildingType String // 建筑类型（如 "warehouse", "wishing_pool" 等）
+  materialId   String // 材料ID（如 "gold", "wood", "stone" 等）
+  required     BigInt // 需要的总数量
+  collected    BigInt // 已筹集数量
+
+  level        Int    @default(0) // 对应建造/升级的等级阶段（0 表示首次建造）
+
+  status String @default("PENDING") // 状态："COLLECTING" | "COMPLETED" | "CANCELLED"
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([buildingType, materialId, level], name: "village_building_material_level_unique")
+  @@index([buildingType])
+  @@index([materialId])
+  @@index([status])
+}
+
+model VillageBuildingMaterialDonation {
+  id Int @id @default(autoincrement())
+
+  buildingType String // 建筑类型
+  materialId   String // 材料ID
+  donorUuid    String // 捐赠人用户uuid
+  amount       BigInt // 捐赠数量
+
+  buildingLevel Int @default(0) // 捐赠时的建筑等级（可选）
+
+  createdAt DateTime @default(now())
+
+  @@unique([buildingType, materialId, donorUuid, buildingLevel], name: "village_building_material_donation_level_unique")
+  @@index([buildingType])
+  @@index([materialId])
+  @@index([donorUuid])
+}
+
+// 玩家每周数据统计表
+model WeeklyPlayerStats {
+  id   Int    @id @default(autoincrement())
+  uuid String @unique // 统计记录唯一标识
+
+  userUuid       String // 玩家uuid
+  weeklyPeriodId String // 2025-043 年-周
+
+  // 金币统计
+  goldEarned BigInt @default(0) @db.UnsignedBigInt // 本周获得的金币总数
+  goldSpent  BigInt @default(0) @db.UnsignedBigInt // 本周花费的金币总数 (可选)
+
+  // 属性经验统计 (对应 allCharacterStatus)
+  collecting    Float @default(0) // 采集经验
+  fishing       Float @default(0) // 钓鱼经验
+  mining        Float @default(0) // 挖掘经验
+  farmingAnimal Float @default(0) // 畜牧经验
+  farmingPlant  Float @default(0) // 种植经验
+  cooking       Float @default(0) // 烹饪经验
+  forging       Float @default(0) // 锻造经验
+  sewing        Float @default(0) // 缝纫经验
+  manufacturing Float @default(0) // 制造经验
+  trading       Float @default(0) // 交易经验
+  knowledge     Float @default(0) // 学识经验
+  mysterious    Float @default(0) // 神秘经验
+  enhance       Float @default(0) // 强化经验
+  exploring     Float @default(0) // 探索经验
+  luck          Float @default(0) // 幸运经验
+
+  battle       Float @default(0) // 战斗经验
+  strength     Float @default(0) // 力量经验
+  dexterity    Float @default(0) // 敏捷经验
+  intelligence Float @default(0) // 智力经验
+  stamina      Float @default(0) // 耐力经验
+  attacking    Float @default(0) // 攻击经验
+  defencing    Float @default(0) // 防御经验
+
+  // 总计经验
+  total Float @default(0) // 所有属性经验总和
+
+  // 额外统计 (可选)
+  // totalActions      Int    @default(0)          // 本周总行动次数
+  // uniqueActionsCount Int   @default(0)          // 本周不同行动类型数量
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([userUuid, weeklyPeriodId], name: "user_weekly_unique") // 确保每个玩家每周只有一条记录
+  @@index([userUuid])
+  @@index([weeklyPeriodId])
+}
+
+/// 战斗/生活 属性加点分配
+/// 说明：不记录总可用点数，available = 计算函数(基于已有等级/经验) - Σallocated
+model CharacterStatAllocation {
+  id             Int      @id @default(autoincrement())
+  userUuid       String   // 用户 uuid (冗余索引用于快速查询)
+  characterUuid  String   // 角色 uuid
+  statId         String   // 分配的属性ID (如 workEfficiency / physicalDamage / magicalDamage / critChance / maxHp / workExpGain)
+  points         Int      @default(0) // 已投入点数
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  @@unique([characterUuid, statId], name: "character_stat_unique")
+  @@index([userUuid])
+  @@index([characterUuid])
+  @@index([statId])
+}
+
+/// 技能树节点分配：每个节点可以有 level (0..maxLevel)，根据前置条件与可用点数提升
+model CharacterSkillTreeNodeAlloc {
+  id            Int      @id @default(autoincrement())
+  userUuid      String
+  characterUuid String
+  treeId        String   // 技能树ID (如 battle / life)
+  nodeId        String   // 节点ID (唯一于该技能树)
+  level         Int      @default(0) // 已分配等级
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@unique([characterUuid, treeId, nodeId], name: "char_tree_node_unique")
+  @@index([userUuid])
+  @@index([characterUuid])
+  @@index([treeId])
+  @@index([nodeId])
+}
+
+/// 技能树点数追踪（可选冗余，快速查询可用点）
+model CharacterSkillTreePointLedger {
+  id            Int      @id @default(autoincrement())
+  userUuid      String
+  characterUuid String
+  treeId        String   // battle / life
+
+  formulaEarned  Int      @default(0)  // 新增
+  bonusEarned    Int      @default(0)  // 新增
+  totalEarned    Int      @default(0)  // 兼容：= formulaEarned + bonusEarned
+
+  totalSpent    Int      @default(0) // 历史累计消耗（只增）
+  effectiveSpent Int     @default(0) // 当前有效占用点（= Σ 已分配等级对应增量成本，可回退减少）
+  extra         String?  @db.LongText // 扩展（版本、重置次数等）
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@unique([characterUuid, treeId], name: "char_tree_point_unique")
+  @@index([userUuid])
+  @@index([characterUuid])
+  @@index([treeId])
+}
+
+/// 邀请人自定义的单一新人奖励配置（每个邀请人仅一份，可每3天改一次）
+model UserInviteRewardSetting {
+  id           Int      @id @default(autoincrement())
+  uuid         String   @unique // 奖励配置唯一标识
+
+  userUuid     String   @unique // 创建人 uuid，每人仅一份奖励配置
+
+  rewardPayload String  @db.LongText // JSON 奖励定义：例如 [{type:"ITEM", id:"iron_sword", count:1}]
+
+  isActive     Boolean  @default(true) // 是否可用
+  lastUpdatedAt DateTime @default(now()) // 最近一次修改时间
+
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  extra        String?  @db.LongText // 扩展元数据
+
+  @@index([isActive])
+}
+
+model UserReferral {
+  id   Int    @id @default(autoincrement())
+  uuid String @unique // 推荐记录唯一标识
+
+  referrerUuid String // 推荐人uuid
+  referredUuid String @unique // 被推荐人uuid（确保每个用户只能被推荐一次）
+
+  // 推荐相关信息
+  referralCode   String? // 推荐码（可选）
+  referralSource String? // 推荐来源（如"link"、"code"、"qr"等）
+
+  // 状态和奖励
+  status String @default("PENDING") // "PENDING" | "CONFIRMED" | "REWARDED" | "INVALID"
+
+  // 奖励发放记录
+  matchStage1Reward      Boolean @default(false) // 是否已获得匹配阶段奖励
+  referrerRewardedStage1 Boolean @default(false) // 推荐人是否已获得奖励
+  referredRewardedStage1 Boolean @default(false) // 被推荐人是否已获得奖励
+
+  referrerStage1RewardAt DateTime? // 推荐人奖励发放时间
+  referredStage1RewardAt DateTime? // 被推荐人奖励发放时间
+
+  // 奖励发放记录
+  matchStage2Reward      Boolean @default(false) // 是否已获得匹配阶段奖励
+  referrerRewardedStage2 Boolean @default(false) // 推荐人是否已获得奖励
+  referredRewardedStage2 Boolean @default(false) // 被推荐人是否已获得奖励
+
+  referrerStage2RewardAt DateTime? // 推荐人奖励发放时间
+  referredStage2RewardAt DateTime? // 被推荐人奖励发放时间
+
+  // 验证相关
+  confirmedAt DateTime? // 推荐确认时间（如被推荐人完成某些任务后）
+  ipAddress   String? // 注册时IP（防作弊）
+  fingerprint String? // 设备指纹（防作弊）
+
+  // 时间记录
+  createdAt DateTime @default(now()) // 推荐创建时间
+  updatedAt DateTime @updatedAt // 更新时间
+
+  confirmedByReferred Boolean @default(false) // 被推荐人是否确认了关系
+  // 绑定时的奖励快照，避免后续修改影响已确认邀请
+  confirmReferredRelationRewardSnapshot String? @db.LongText // JSON，来源于邀请人的 UserInviteRewardSetting.rewardPayload，指本次确认时获取到的奖励
+
+  // 扩展字段
+  extra String? @db.LongText // 扩展信息（JSON格式）
+
+  @@unique([referrerUuid, referredUuid], name: "user_referral_unique")
+  @@index([referrerUuid]) // 推荐人查询索引
+  @@index([referralCode]) // 推荐码查询索引
+  @@index([status]) // 状态查询索引
+  @@index([referrerUuid, status]) // 复合索引
+}
+
+model Auction {
+  id   Int    @id @default(autoincrement())
+  uuid String @unique @default(uuid()) // 拍卖唯一标识
+
+  is_admin_action Boolean @default(false) // 是否为管理员操作的拍卖（如活动赠送等）
+
+  creator     String // 创建者（用户 uuid）
+  target_type String // 多态目标类型，如 "ITEM" | "TITLE" | "SHOP" | "BUILDING" | ...
+
+  target_id String // 业务目标 ID（目标实体的外部 id）
+  target_count BigInt @default(1) // 目标数量（如拍卖多个相同物品）
+
+  metadata String? @db.LongText // 可扩展 JSON：例如物品快照、标题描述、预览图等
+
+  state         String  @default("OPEN") // OPEN | ENDED | CANCELLED | SETTLED
+  start_price   BigInt // 起价
+  reserve_price BigInt? // 保留价（可选）
+  buyout_price  BigInt? // 一口价（可选，立即成交）
+  min_increment BigInt  @default(1) // 最小加价幅度
+
+  start_at          DateTime  @default(now())
+  end_at            DateTime // 拍卖结束时间（UTC）
+  extension_seconds Int?      @default(0) // 反延迟窗口（秒），若在结束前 N 秒有出价则延长
+  extended_until    DateTime? // 若被延长，记录延后后的时间（可选）
+
+  deposit_required BigInt? // 押金/保证金金额（可选）
+  deposit_token    String? // 押金货币类型（如 "gold" / "coin" / "iron"）
+
+  winner      String? // 成交者 uuid（结算时写入）
+  final_price BigInt? // 成交价（结算时写入）
+
+  extra      String?  @db.LongText // 扩展字段（策略、拍卖规则等 JSON）
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  @@index([state])
+  @@index([target_id])
+  @@index([is_admin_action])
+  @@index([creator])
+  @@index([end_at])
+}
+
+model AuctionBid {
+  id           Int      @id @default(autoincrement())
+  auction_uuid String // 关联 Auction.uuid
+  bidder       String // 出价人（用户 uuid）
+  amount       BigInt // 本次出价金额（实际生效金额）
+  max_proxy    BigInt // 代理出价上限（若启用 proxy bidding）
+  is_proxy     Boolean  @default(false) // 是否代理出价记录
+  refunded     Boolean  @default(false) // 押金/未成交退款标记
+  extra        String?  @db.LongText // 扩展信息（如渠道、ip、设备指纹）
+  created_at   DateTime @default(now())
+
+  @@index([auction_uuid])
+  @@index([bidder])
+  @@index([auction_uuid, amount], name: "auction_amount_idx")
+}
+
+// model AuctionDeposit {
+//   id           Int       @id @default(autoincrement())
+//   auction_uuid String
+//   user_uuid    String
+//   amount       BigInt // 押金金额
+//   token        String? // 货币类型
+//   refunded     Boolean   @default(false)
+//   locked_until DateTime? // 押金锁定时间（保证结算前不可退）
+//   created_at   DateTime  @default(now())
+
+//   @@unique([auction_uuid, user_uuid], name: "auction_deposit_unique")
+//   @@index([auction_uuid])
+//   @@index([user_uuid])
+// }
+
+
+
+model AlchemyAtlas {
+  id  Int    @id @default(autoincrement())
+
+  userUuid String 
+  recipeId String
+  recipeIndex Int
+
+  unlockOutputsOnSuccessWhenDay Boolean?
+  unlockOutputsOnFailWhenDay Boolean?
+  unlockOutputsOnSuccessWhenNight Boolean?
+  unlockOutputsOnFailWhenNight Boolean?
+  unlockOutputsOnMutationWhenDay Boolean?
+  unlockOutputsOnMutationWhenNight Boolean?
+
+  @@index([userUuid])
+  @@index([recipeId])
+  @@index([recipeIndex])
+
+  @@unique([userUuid, recipeId, recipeIndex], name: "alchemy_unique")
+}
+
+/// 玩家图鉴：单位击杀次数
+model PlayerCodexUnitKill {
+  id        Int      @id @default(autoincrement())
+  userUuid  String   // 玩家 UUID
+  unitId    String   // 敌人/单位唯一 ID
+
+  killCount BigInt   @default(0) // 累计击杀次数
+  firstKillAt DateTime?
+  lastKillAt  DateTime?
+
+  extra     String?  @db.LongText // 扩展字段：模式、难度、版本等
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([userUuid, unitId], name: "player_unit_unique")
+  @@index([userUuid])
+  @@index([unitId])
+  @@index([userUuid, killCount], name: "idx_unit_killcount_desc")
+}
+
+/// 玩家图鉴：物品收集（是否获得过）
+model PlayerCodexItemCollect {
+  id         Int      @id @default(autoincrement())
+  userUuid   String   // 玩家 UUID
+  itemId     String   // 物品唯一 ID
+
+  firstAcquiredAt DateTime? // 是否获得过：非空即可
+
+  extra      String?  @db.LongText // 扩展字段：来源、版本、限定标记等
+
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@unique([userUuid, itemId], name: "player_item_unique")
+  @@index([userUuid])
+  @@index([itemId])
+}
+
+
+model CharacterPhantomListing {
+  id               Int      @id @default(autoincrement())
+  uuid             String   @unique @default(uuid()) // listing 唯一 id
+
+  owner            String   // 发布者用户 uuid
+
+  guildUuid        String   // 工会UUID
+
+  characterUuid   String   // 对应 CharacterUnitInfo.character_uuid（冗余标识）
+
+  note            String  @default("")
+  snapshot         String   @db.LongText // CharacterUnitInfo 的 JSON 快照（属性、装备等），确保借出时属性不随原角色变动
+
+  // borrowFee       BigInt   @default(0) // 借用费用（可为 0）
+
+  isPublic        Boolean  @default(true) // 是否公开可借
+
+  // availableFrom   DateTime? @default(now())
+  // availableUntil  DateTime?
+
+  state            String   @default("OPEN") // OPEN | PAUSED | CLOSED | REMOVED
+
+  usageCount       Int      @default(0) // 累计借用次数
+
+  extra            String?  @db.LongText // 扩展字段（策略、规则等）
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([owner])
+  @@index([guildUuid])
+  @@index([characterUuid])
+  @@index([state])
+}
+model CharacterPhantomBorrow {
+  id             Int      @id @default(autoincrement())
+
+  uuid           String   @unique @default(uuid()) // 借用记录 id
+  listingUuid   String   // 关联 CharacterPhantomListing.uuid
+
+  borrower       String   // 借用者用户 uuid
+
+  phantomOwner  String   // 冗余记录发布者 uuid（便于查询）
+  characterUuid String   // 冗余记录（来源 listing）
+
+  snapshot       String   @db.LongText // 借用时的角色快照（一般复制自 listing.snapshot）
+
+  startAt       DateTime @default(now())
+
+  scheduledEnd  DateTime? // 计划结束时间（借用时传入）
+  returnedAt    DateTime? // 实际归还时间
+
+  state          String   @default("ACTIVE") // ACTIVE | RETURNED | EXPIRED | CANCELLED
+
+  extra          String?  @db.LongText
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@index([listingUuid])
+  @@index([borrower])
+  @@index([state])
+}
+
+/// 自动炼金状态
+enum AutoAlchemyStatus {
+  PENDING
+  PROCESSING
+  FINISHED
+  ERROR
+  CANCELLED
+}
+
+/// 记录玩家的自动炼金请求与进度
+model AutoAlchemy {
+  id    Int    @id @default(autoincrement())
+  uuid  String @unique @default(uuid()) // 自动炼金唯一标识
+
+  userUuid    String
+  recipeId    String
+  recipeIndex Int
+
+  // 输入材料（单次执行所需材料），JSON：ItemCountInfo
+  input  String @db.LongText
+  // 输出累计（JSON：ItemCountInfo）
+  output String? @db.LongText
+
+  // 目标执行次数与已完成次数
+  targetTimes Int @default(0)
+  doneTimes   Int @default(0)
+
+  status AutoAlchemyStatus @default(PENDING)
+  isActive Boolean @default(true)
+
+  lastError String? @db.LongText
+  allUsedItems   String? @db.LongText // JSON 累计消耗
+  allRewardItems String? @db.LongText // JSON 累计产出
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userUuid])
+  @@index([status])
+  @@index([userUuid, status])
+  @@index([recipeId])
+  @@index([recipeIndex])
+}
+
+/// 种植田地状态
+enum FarmPlotState {
+  LOCKED   // 未解锁
+  EMPTY    // 已解锁，未种植
+  GROWING  // 生长中（包含发芽/生长期）
+  READY    // 可收获
+  WITHERED // 失养分/超时导致的枯萎（可选流程）
+}
+
+/// 每个用户的种植田地
+model UserFarmPlot {
+  id    Int    @id @default(autoincrement())
+  uuid  String @unique @default(uuid()) // 田地实例唯一ID
+
+  userUuid  String // 所属玩家
+  plotIndex Int    // 田地序号（同一用户内唯一）
+
+  state FarmPlotState @default(LOCKED)
+
+  // 作物信息（未种植时为空）
+  seedId String? // 作物/种子资源ID（参考 allGameResource）
+
+  // 本轮种植配置
+  fertilizers   String?  @db.LongText // 使用的肥料（JSON 数组：[{ id: string, stacks?: number }]）
+  expectedYield String?  @db.LongText // 预计算的产出（JSON：ResourceRequirement[]）
+  mutationChance Float?  // 最终变异概率（0~1），可选
+
+  // 生长与离线推进
+  plantedAt              DateTime? // 播种时间
+  expectedHarvestAt      DateTime? // 预计成熟/收获时间（便于前端展示）
+  growthSecondsRequired  Int?      // 本次作物所需总生长时长（秒），冗余记录方便结算
+  growthSecondsAccumulated Int     @default(0) // 已累计的生长时长（秒）
+  lastTickAt             DateTime? // 上次离线推进时间戳
+
+  // 简化的养护/自动化
+  autoReplant Boolean @default(false) // 收获后自动播种同种作物
+  config      String?  @db.LongText   // 配置JSON（施肥策略、替代种子、优先级等）
+  extra       String?  @db.LongText   // 扩展字段
+
+  // 田地分区（预留：自宅/公会花园等），默认 home
+  area String @default("home")
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([userUuid, plotIndex], name: "user_plot_unique")
+  @@index([userUuid])
+  @@index([seedId])
+  @@index([state])
+}
+
+/// 收获箱来源枚举（系统通用，不绑定具体业务）
+enum HarvestBoxSource {
+  Auto // 系统自动产生（如自动收获、自动任务）
+  Manual // 手动触发（如手动收获、手动奖励）
+  Event // 活动/赛事/活动脚本
+  Mail  // 系统邮件或投递
+  GM    // GM或后台发放
+  Other // 其他未分类来源
+  ActionExtraReward
+  ActionDeductReturn
+}
+
+/// 通用收获箱：用于系统中记录任何来源的“待领取”产出（例如自动收获、活动奖励、邮件发送的物品等）
+model HarvestBox {
+  id        Int      @id @default(autoincrement())
+  uuid      String   @unique @default(uuid())
+
+  userUuid  String   // 接收用户的 uuid
+
+  // 可选来源标识（通用枚举）
+  source    HarvestBoxSource?
+  sourceId  String?  // 可选的来源关联 id（例如某个任务/日志 id）
+
+  // 人类可读短标题或说明
+  title     String?
+
+  // 任意扩展字段（JSON），用于保存原始播种配置快照或其他元数据
+  extra     String?  @db.LongText
+
+  // 过期时间（可选），到期后可由后台清理或转为系统邮件
+  expiresAt DateTime?
+
+  // 是否已整体领取（若支持按项领取，可忽略此字段）
+  claimed   Boolean  @default(false)
+  claimedAt DateTime?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // 关联明细
+  items HarvestBoxItem[]
+
+  @@index([userUuid])
+  @@index([createdAt])
+  @@index([userUuid, claimed, id], name: "idx_harvestbox_user_claimed_id")
+}
+
+/// 收获箱明细条目，每条记录一种资源及数量，可扩展 meta
+model HarvestBoxItem {
+  id           Int      @id @default(autoincrement())
+  harvestBoxId Int
+
+  // 资源 id（对应 allGameResource 中的 id）
+  resourceId   String
+
+  // 数量（使用 BigInt 与库存表保持一致）
+  amount       BigInt   @default(0)
+
+  // 可选元数据（例如品质/来源种子 id 等）
+  meta         String?  @db.LongText
+
+  // 如果需要按条目领取，可用以下字段
+  claimed      Boolean  @default(false)
+  claimedAt    DateTime?
+
+  createdAt    DateTime @default(now())
+
+  // 关联到父箱子
+  harvestBox   HarvestBox @relation(fields: [harvestBoxId], references: [id], onDelete: Cascade)
+
+  @@index([harvestBoxId])
+  @@index([resourceId])
+}
+
+/// 征战圣火纪念碑供奉记录（用于计算实时排行榜）
+/// 设计：每次供奉插入一条连续时间段记录 [startAt, endAt)，按用户累加，当前剩余时长依赖 now()
+model VillageDurationDonateContribution {
+  id       Int      @id @default(autoincrement())
+  userUuid String   // 供奉的玩家 uuid
+
+  type     String
+
+  // 本次供奉生效窗口，半开区间 [startAt, endAt)
+  startAt DateTime  // 生效开始时间（若此前有未结束的供奉，则从上一条 endAt 开始）
+  endAt   DateTime  // 生效结束时间 = startAt + minutes
+
+  // 冗余字段：供奉分钟数，便于统计和校验
+  minutes Int
+
+  createdAt DateTime @default(now())
+
+  @@index([userUuid])
+  @@index([startAt])
+  @@index([endAt])
+  @@index([userUuid, endAt])
+}
+
+/// 玩家自营商店（离线商店/仓库）
+/// 规则：支付租期费用后在有效期内保持 OPEN；到期自动转为 EXPIRED，并回退未售出库存到 HarvestBox
+model PlayerShop {
+  id    Int    @id @default(autoincrement())
+  uuid  String @unique @default(uuid()) // 商店唯一标识
+
+  owner String // 店主用户 uuid
+
+  name        String
+  description String? @db.LongText
+
+  // 可见性：PUBLIC | GUILD | PRIVATE（先用字符串，保持与现有风格一致）
+  visibility String  @default("PUBLIC")
+
+  // 店铺状态：OPEN | PAUSED | CLOSED | EXPIRED | REMOVED
+  state String @default("OPEN")
+
+  // 有效期：到此时间后自动失效（定时任务/请求时检测并切换状态）
+  expiresAt DateTime
+  
+  extra String? @db.LongText // 扩展字段（规则、公告等）
+
+  // 冗余：公会/分区可选
+  guildUuid String?
+  area      String? // 如 home / market / guild
+
+  sellResource String? @db.LongText
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([owner])
+  @@index([state])
+  @@index([expiresAt])
+  @@index([guildUuid])
+}
+
+/// 商店库存与定价（上架项）：将物品从角色背包转移到店铺托管
+model PlayerShopItem {
+  id   Int    @id @default(autoincrement())
+  uuid String @unique @default(uuid())
+
+  shopUuid  String // 归属商店
+  sellerUuid String // 冗余：店主用户 uuid
+
+  // 资源与库存
+  resourceId     String
+
+
+  inventoryRemainingCount BigInt  @default(0) // 库存保留数量
+  soldCount      BigInt  @default(0) // 历史售出
+
+  // 定价
+  unitPrice          Decimal @db.Decimal(13, 2)
+  currencyResourceId String
+
+  // 购买限制（可选）
+  // minPurchase BigInt @default(1)
+  // maxPerUser  BigInt @default(0) // 0 表示不限制
+
+  // 状态：ACTIVE | HIDDEN | OUT | REMOVED
+  state String @default("ACTIVE")
+
+  metadata String? @db.LongText // 附加信息（如品质、附魔等）
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([shopUuid])
+  @@index([shopUuid, state])
+  @@index([resourceId])
+  @@index([unitPrice])
+}
+
+/// 玩家店铺购买记录表
+/// 记录每次从玩家店铺购买的明细，用于追踪、统计与审计
+model PlayerShopPurchase {
+  id    Int    @id @default(autoincrement())
+  uuid  String @unique @default(uuid()) // 购买记录唯一标识
+
+  // 参与者与归属
+  buyerUuid  String // 购买者用户 uuid
+  sellerUuid String // 卖家用户 uuid（冗余自上架项）
+  shopUuid   String // 商店 uuid
+  itemUuid   String // 上架项 uuid
+
+  // 购买内容
+  resourceId          String            // 购买的资源 id
+  currencyResourceId  String            // 货币资源 id（通常为 gold）
+  unitPrice           Decimal @db.Decimal(13, 2) // 成交单价（冗余记录当时价格）
+  count               Int               // 购买数量
+  totalCost           BigInt            // 实际支付总额（整数，兼容金币）
+
+  // 备查信息（可选）
+  itemSnapshot String? @db.LongText // 购买时上架项快照（如 metadata、阈值等）
+  extra        String? @db.LongText // 其他扩展信息（如渠道、ip、备注）
+
+  // 状态（预留字段，当前固定为 SUCCESS）
+  state String @default("SUCCESS") // SUCCESS | REFUNDED | CANCELLED
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([buyerUuid])
+  @@index([sellerUuid])
+  @@index([shopUuid])
+  @@index([itemUuid])
+  @@index([resourceId])
+  @@index([createdAt])
+}
+
+/// ========================= 随机词条（Affix）系统（简化版） =========================
+
+/// 词条稀有度（保留在库内，仅用于实例/统计；定义与池在代码侧）
+enum AffixRarity {
+  COMMON
+  UNCOMMON
+  RARE
+  EPIC
+  LEGENDARY
+}
+
+/// 角色词条状态
+enum CharacterAffixState {
+  ACTIVE
+  INACTIVE
+  LOCKED
+}
+
+/// 角色已拥有的词条（每条记录一个词条实例；允许同词条多条记录进行叠加）
+model CharacterAffix {
+  id            Int    @id @default(autoincrement())
+  userUuid      String
+  characterUuid String
+
+  affixId String // 由代码侧定义的数据集提供
+  rarity  AffixRarity
+
+  /// 具体生效效果（JSON）：已解析为实际数值
+  /// 例如 {"add":{"maxHp":9}, "mul":{}}
+  effect String @db.LongText
+
+  /// 排序/评估用（可选）
+  score Decimal @db.Decimal(13, 4)
+
+  state  CharacterAffixState @default(ACTIVE)
+  source String? // INITIAL | REROLL | EVENT | GM ...
+  seed   String? // 随机种子（可审计）
+
+  /// 并发控制：乐观锁版本号
+  version Int @default(0)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userUuid])
+  @@index([characterUuid])
+  @@index([affixId])
+  @@index([state])
+  @@index([rarity])
+  @@index([characterUuid, state])
+}
+
+/// 词条操作日志：初始化/重铸/增删的审计记录
+model CharacterAffixLog {
+  id            Int    @id @default(autoincrement())
+  userUuid      String
+  characterUuid String
+  action        String // INITIALIZE | REROLL | ADD | REMOVE | UPDATE
+
+  before String? @db.LongText // JSON：操作前词条快照（数组）
+  after  String? @db.LongText // JSON：操作后词条快照（数组）
+  cost   String? @db.LongText // JSON：资源消耗
+  result String? @db.LongText // JSON：结果/错误信息
+
+  createdAt DateTime @default(now())
+
+  @@index([userUuid])
+  @@index([characterUuid])
+  @@index([action])
+  @@index([createdAt])
+}
+
+/// 通用的“玩家槽位扩展”记录表
+/// 用于存储每个用户在不同系统中的额外槽位上限增量。
+/// 例如词条系统的“启用上限/持有上限”扩展，未来也可在此表新增字段支持其他系统（农场、背包、商店等）。
+model UserSlotExpansion {
+  id       Int    @id @default(autoincrement())
+  userUuid String @unique // 每个用户一条记录
+
+  // 词条系统扩展量（相对于默认常量的增量）
+  extraAffixMaxActive Int @default(0) // 额外“启用上限
+  extraAffixMaxOwned  Int @default(0) // 额外“持有上限”
+
+  // 市场扩展：额外允许的卖家上架/买家求购交易数（相对于 BASE_MAX_* 常量的增量）
+  extraMarketMaxSellerTransactions Int @default(0)
+  extraMarketMaxBuyerTransactions  Int @default(0)
+
+  // 每个扩展方案已使用的次数（按方案分开计数，便于审核与限额控制）
+  // Market seller schemes
+  marketSellerSchemeUsage_schemeA Int @default(0)
+  marketSellerSchemeUsage_schemeB Int @default(0)
+  // Market buyer schemes
+  marketBuyerSchemeUsage_schemeA Int @default(0)
+  marketBuyerSchemeUsage_schemeB Int @default(0)
+
+  // 玩家店铺扩展：额外允许的店铺上架槽位数（相对于 BASE_MAX_PLAYER_SHOP_ITEM_SLOT 的增量）
+  extraPlayerShopItemSlots Int @default(0)
+
+  // 玩家店铺：按方案统计的已使用扩展次数
+  playerShopSchemeUsage_default Int @default(0)
+  playerShopSchemeUsage_fast    Int @default(0)
+
+  // 预留：扩展字段（JSON），可存放非结构化的扩展信息
+  extra String? @db.LongText
+
+  // 词条系统：按方案统计的已使用持有扩展次数（用于 CHARACTER_AFFIX_OWNED 扩展方案的区分）
+  affixOwnedSchemeUsage_schemeA Int @default(0)
+  affixOwnedSchemeUsage_schemeB Int @default(0)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userUuid])
+}
+
+model UserPersonalization {
+  id             Int      @id @default(autoincrement())
+  user_uuid      String   @unique
+  favorite_items String?  @db.LongText // JSON array string, e.g. '["item_a","item_b"]'
+  category_order String?  @db.LongText // JSON array string of category keys, e.g. '["mine","workEquipment","battleEquipment","..."]'
+  created_at     DateTime @default(now())
+  updated_at     DateTime @updatedAt
+
+  @@index([user_uuid])
+}
+
+/// ========================= 钓鱼系统相关模型 =========================
+/// 设计原则：尽量保持与现有 schema 的风格一致（JSON 使用 LongText 保存），
+/// 数据以 `userUuid` / `characterUuid` 字段为主索引方便查询。
+
+// Pond / PondPoint / FishSpecies / PondPointSpecies are intentionally omitted.
+// 您选择在代码侧与 JSON 数据中定义池塘、点位分布与鱼种信息。
+// 因此数据库仅记录玩家选择的坐标和会话快照（toolConfig、rngSeed 等）。
+
+/// 每次玩家进行的钓鱼会话记录（允许回放/查询）
+// Enums for fishing session actions and actor types
+enum EndAction {
+  STOP
+  CONTINUE
+}
+
+enum ActorType {
+  PLAYER
+  KITTY
+}
+
+model FishingSession {
+  id            Int      @id @default(autoincrement())
+  uuid          String   @unique // 会话唯一标识
+  userUuid      String   // 玩家 uuid
+  characterUuid String?  // 可选角色 uuid
+  // 玩家在地图上任意选择的点，以坐标存储（点位非固定）
+  pointX        Float
+  pointY        Float
+  pondId        String  // 可选：地图/区域标识，便于多地图扩展
+  startAt       DateTime @default(now())
+  endAt         DateTime?
+  durationSec   Int?     // 持续时长（秒），冗余字段便于快速查询
+
+  // 本次使用的道具配置与快照（JSON，记录物品 id 与属性，例如 { rod: "rod_01", bait: "worm", net: "net_01" }）
+  toolConfig    String?  @db.LongText
+
+  baitConfig    String?  @db.LongText
+  // 结束条件：支持可扩展的 JSON 列表，允许定义多个条件，任一条件触发即可
+  // 例如: [{ type: "DURATION", value: 300 }, { type: "COUNT", value: 10 }]
+  endConditions Json?
+  // 钓鱼结束后的动作（使用 enum）：STOP 表示结束会话；CONTINUE 表示触发后继续
+  endAction EndAction @default(STOP)
+
+  // 出战者信息：区分是玩家本人出马还是 Kitty（小猫）出马
+  // actorType 使用 enum：PLAYER | KITTY；当为 KITTY 时，可在 actorId 中存放 kitty 的 id
+  actorType ActorType @default(PLAYER)
+  actorId   String
+
+  status        String @default("ONGOING") // ONGOING | COMPLETED | CANCELLED | ERROR
+
+  // 随机数种子：用于确保在相同 (player + config + position + time) 下能生成可复现的产出
+  // 由服务端生成（例如 64 位整数或 hex 字符串），客户端/服务端在结算时使用该种子
+  rndSeed String @db.VarChar(64)
+
+  // 汇总结果的缓存（JSON），以及完整明细通过 CaughtFish 关联
+  resultSummary String?  @db.LongText
+
+  // 可选：查询附近玩家时的缓存（例如显示昵称/头像的简要信息）
+  visiblePlayers String? @db.LongText
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  catches CaughtFish[]
+
+  @@index([userUuid])
+  @@index([startAt])
+  @@index([pondId])
+}
+
+/// 单条捕获记录（一条记录代表一次“钓上来”的鱼）
+model CaughtFish {
+  id            Int      @id @default(autoincrement())
+  userUuid      String   // 玩家 uuid
+  sessionId     String
+  // fish species identified by code/string (由代码侧/JSON 数据定义)
+  pondId        String
+  fishId        String
+  length        Float    // 随机生成，范围由 species 定义
+  weight        Float
+  quality       Int     // 品质等级（可选）
+  caughtAt      DateTime @default(now())
+  extra         String?  @db.LongText // 额外属性，如附加掉落、是否是活动鱼等
+
+  createdAt DateTime @default(now())
+
+  session FishingSession @relation(fields: [sessionId], references: [uuid], onDelete: Cascade)
+
+  asResource    Boolean @default(false) // 是否是一种资源
+  resourceResult String?  @db.LongText  // 若作为资源，记录资源产出（JSON）
+
+  @@index([asResource], name: "idx_caughtfish_as_resource")
+  @@index([asResource, fishId, weight], name: "idx_caughtfish_asres_fishid_weight")
+  @@index([asResource, fishId, length], name: "idx_caughtfish_asres_fishid_length")
+  @@index([userUuid])
+  @@index([sessionId])
+  @@index([fishId])
+  @@index([pondId])
+  @@index([caughtAt])
+}
+
+/// 钓鱼道具模板：定义道具类型与效果（弧度由服务端逻辑解析）
+// 钓鱼道具由游戏逻辑在代码中维护，不在数据库建模（道具影响在会话 `toolConfig` 中快照存储）
+
+/// 为方便统计，记录活跃钓鱼会话（可以用作缓存/实时查询）
+model ActiveFishingSession {
+  id         Int      @id @default(autoincrement())
+  sessionId  String   @unique
+  userUuid   String
+  pointX     Float
+  pointY     Float
+  pondId      String?
+  startedAt  DateTime @default(now())
+
+  // inherit deterministic rnd seed from session
+  rndSeed String @db.VarChar(64)
+
+  // Mirror session-level end-conditions and actor info to make scheduling decisions easier
+  endConditions Json?
+  endAction EndAction @default(STOP)
+  actorType ActorType @default(PLAYER)
+  actorId   String
+
+  @@index([userUuid])
+  @@index([userUuid, pondId])
+}
+
+/// 玩家创建的钓鱼区域（诱饵/诱鱼区域）
+model FishingBaitArea {
+  id        Int      @id @default(autoincrement())
+  uuid      String   @unique @default(uuid())
+
+  // 创建者（玩家 uuid）
+  creatorUuid  String
+
+  // 可选关联钓场（pond）
+  pondId    String?
+
+  // 区域圆心坐标
+  pointX    Float
+  pointY    Float
+  // 区域半径（单位与地图坐标系一致）
+  radius    Float
+
+  // 使用的饵料 id（字符串），用于在 worker 中查找对应效果
+  baitId    String
+
+  // 可选的效果负载（JSON），例如 { "percentBoost": 0.2, "weightBoost": 1.5 }
+  effect    Json?
+
+  // 生效时间
+  startedAt DateTime @default(now())
+  // 过期时间（null 表示永久或手动删除）
+  expiresAt DateTime?
+
+  // 活跃标志（逻辑删除/禁用）
+  active    Boolean  @default(true)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([creatorUuid])
+  @@index([pondId])
+  @@index([expiresAt])
+}
+
+/// ========================= 结束：钓鱼模型 =========================
+
+/// ========================= 世界Boss伤害统计 =========================
+model WorldBossDamageRecord {
+  id          Int      @id @default(autoincrement())
+  uuid        String
+  bossId      String
+  roomId      String
+  playerUuids String   @db.LongText // JSON 数组字符串，记录房间内所有玩家 uuid
+  totalDamage BigInt
+  createdAt DateTime @default(now())
+  settledAt   DateTime @updatedAt
+
+  @@unique([uuid, roomId], name: "boss_room_unique")
+  @@index([bossId, settledAt])
+  @@index([bossId])
+  @@index([roomId])
+  @@index([totalDamage])
+}
+
+/// 记录每一场世界Boss战斗的奖励分发状态，防止重复分发
+model WorldBossRewardDistribution {
+  id           Int     @id @default(autoincrement())
+  uuid         String                 // worldBossBattleUuid
+  bossId       String
+  roomId       String?  @db.LongText  // 可选：所属房间
+  playerUuid   String
+  rewards      String?  @db.LongText  // JSON：奖励内容（ItemCountInfo-like）
+  processed    Boolean  @default(false)
+  processedAt  DateTime?
+  createdAt    DateTime @default(now())
+
+  @@unique([uuid, playerUuid], name: "uuid_player_unique")
+  @@index([bossId, processed])
+}
+
+/// ========================= 古董（AI 生成） =========================
+model CurioItem {
+  id                 Int      @id @default(autoincrement())
+  uuid               String   @unique @default(uuid())
+  owner              String   // 拥有者用户 uuid
+  ownerUser          User     @relation(fields: [owner], references: [uuid])
+  name               String
+  description        String   @db.LongText
+  lore_tag           String
+  rarity             Int
+
+  extra              String?  @db.LongText // 扩展字段（JSON）
+
+  is_deleted         Boolean  @default(false)
+
+  created_at         DateTime @default(now())
+  updated_at         DateTime @updatedAt
+
+  @@index([owner], name: "idx_curio_owner")
+  @@index([rarity, lore_tag], name: "idx_curio_rarity_tag")
+  @@index([created_at], name: "idx_curio_created")
+  @@index([lore_tag], name: "idx_curio_lore_tag")
+  @@fulltext([name, description])
+}
+
+/// ========================= 成就系统模型 =========================
+model UserAchievement {
+  id               Int      @id @default(autoincrement())
+  userUuid       String
+  achievementId  String
+  progress         BigInt   @default(0)
+  target           BigInt?
+  completed        Boolean  @default(false)
+  completedAt      DateTime?
+  extra            String?  @db.LongText
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  @@unique([userUuid, achievementId], name: "user_achievement_unique")
+  @@index([userUuid])
+  @@index([achievementId])
+}
+
+/// 用于高频计数的缓存表（可选：同步到 Redis；此表用于持久化/补偿）
+model UserAchievementCounter {
+  id        Int      @id @default(autoincrement())
+  userUuid String 
+  key       String                                    // e.g. "item:iron" or "kill:goblin"
+  value     BigInt   @default(0)
+  updatedAt DateTime @updatedAt
+
+  @@unique([userUuid, key], name: "user_achievement_counter_unique")
+  @@index([userUuid])
+	@@map("UserAchievementCounter")
+}
+
+/// 审计事件：保存原始事件以便回放/补偿
+model AchievementEvent {
+  id         Int      @id @default(autoincrement())
+  eventId    String?  @unique                               // 如果外部事件带有 id，用于去重
+  userUuid String?
+  type       String
+  payload    String?  @db.LongText                          // JSON string
+  processed  Boolean  @default(false)
+  processedAt DateTime?
+  createdAt  DateTime @default(now())
+
+  @@index([type])
+  @@index([userUuid])
+}
+
+/// 记录已发放的奖励（幂等/审计）
+model AchievementRewardLog {
+  id              Int      @id @default(autoincrement())
+  userUuid      String
+  achievementId String
+  reward          String?  @db.LongText
+  grantedAt       DateTime @default(now())
+
+  @@index([userUuid])
+  @@index([achievementId])
+  @@unique([userUuid, achievementId, grantedAt], name: "reward_unique_per_time")
+}

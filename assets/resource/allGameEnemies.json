@@ -1,0 +1,10949 @@
+{
+  "b_mercenary_tank": {
+    "id": "b_mercenary_tank",
+    "name": "见习雇佣兵猫咪",
+    "level": 6,
+    "hp": 120,
+    "attack": 25,
+    "defense": 10,
+    "description": "专业的雇佣兵猫咪，拿钱干活",
+    "drops": [],
+    "skills": {
+      "mercenaryTaunt": {
+        "level": 5
+      },
+      "sweep": {
+        "level": 5
+      },
+      "baseAttack": {
+        "level": 1
+      },
+      "powerStrike": {
+        "level": 5
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 10
+      },
+      "dexterity": {
+        "level": 16
+      },
+      "intelligence": {
+        "level": 10
+      },
+      "stamina": {
+        "level": 10
+      },
+      "attacking": {
+        "level": 25
+      },
+      "defencing": {
+        "level": 10
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 10
+      },
+      "dexterity": {
+        "level": 16
+      },
+      "intelligence": {
+        "level": 10
+      },
+      "stamina": {
+        "level": 10
+      },
+      "attacking": {
+        "level": 25
+      },
+      "defencing": {
+        "level": 10
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 0,
+    "maxHp": 120,
+    "maxMp": 10,
+    "mp": 10,
+    "keepWhenNewTurn": true,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "b_mercenary_pastor": {
+    "id": "b_mercenary_pastor",
+    "name": "见习雇佣兵猫咪",
+    "level": 6,
+    "hp": 80,
+    "attack": 5,
+    "defense": 10,
+    "description": "专业的雇佣兵猫咪，拿钱干活",
+    "drops": [],
+    "skills": {
+      "selfHeal": {
+        "level": 5
+      },
+      "baseHeal": {
+        "level": 5
+      },
+      "baseAttack": {
+        "level": 1
+      },
+      "baseGroupHeal": {
+        "level": 10
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 10
+      },
+      "dexterity": {
+        "level": 14
+      },
+      "intelligence": {
+        "level": 20
+      },
+      "stamina": {
+        "level": 10
+      },
+      "attacking": {
+        "level": 5
+      },
+      "defencing": {
+        "level": 10
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 10
+      },
+      "dexterity": {
+        "level": 14
+      },
+      "intelligence": {
+        "level": 20
+      },
+      "stamina": {
+        "level": 10
+      },
+      "attacking": {
+        "level": 5
+      },
+      "defencing": {
+        "level": 10
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 0,
+    "maxHp": 80,
+    "maxMp": 100,
+    "mp": 100,
+    "keepWhenNewTurn": true,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "b_mercenary_magician": {
+    "id": "b_mercenary_magician",
+    "name": "见习雇佣兵猫咪",
+    "level": 6,
+    "hp": 80,
+    "attack": 10,
+    "defense": 10,
+    "description": "专业的雇佣兵猫咪，拿钱干活",
+    "drops": [],
+    "skills": {
+      "freeze": {
+        "level": 5
+      },
+      "blizzard": {
+        "level": 5
+      },
+      "baseAttack": {
+        "level": 1
+      },
+      "baseHeal": {
+        "level": 10
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 10
+      },
+      "dexterity": {
+        "level": 12
+      },
+      "intelligence": {
+        "level": 15
+      },
+      "stamina": {
+        "level": 10
+      },
+      "attacking": {
+        "level": 10
+      },
+      "defencing": {
+        "level": 10
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 10
+      },
+      "dexterity": {
+        "level": 12
+      },
+      "intelligence": {
+        "level": 15
+      },
+      "stamina": {
+        "level": 10
+      },
+      "attacking": {
+        "level": 10
+      },
+      "defencing": {
+        "level": 10
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 0,
+    "maxHp": 80,
+    "maxMp": 100,
+    "mp": 100,
+    "keepWhenNewTurn": true,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "b_mercenary_tank_bb": {
+    "id": "b_mercenary_tank_bb",
+    "name": "守护者猫咪",
+    "level": 6,
+    "hp": 1200,
+    "attack": 75,
+    "defense": 50,
+    "description": "雇佣兵猫咪肩负着守护者的责任，守护见习猫猫的安全",
+    "drops": [],
+    "skills": {
+      "mercenaryTaunt": {
+        "level": 5
+      },
+      "roar": {
+        "level": 5
+      },
+      "sweep": {
+        "level": 5
+      },
+      "baseAttack": {
+        "level": 1
+      },
+      "powerStrike": {
+        "level": 5
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 80
+      },
+      "dexterity": {
+        "level": 46
+      },
+      "intelligence": {
+        "level": 30
+      },
+      "stamina": {
+        "level": 50
+      },
+      "attacking": {
+        "level": 75
+      },
+      "defencing": {
+        "level": 50
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 80
+      },
+      "dexterity": {
+        "level": 46
+      },
+      "intelligence": {
+        "level": 30
+      },
+      "stamina": {
+        "level": 50
+      },
+      "attacking": {
+        "level": 75
+      },
+      "defencing": {
+        "level": 50
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 0,
+    "maxHp": 1200,
+    "maxMp": 250,
+    "mp": 250,
+    "keepWhenNewTurn": true,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "b_mercenary_pastor_bb": {
+    "id": "b_mercenary_pastor_bb",
+    "name": "守护者猫咪",
+    "level": 6,
+    "hp": 800,
+    "attack": 55,
+    "defense": 30,
+    "description": "雇佣兵猫咪肩负着守护者的责任，守护见习猫猫的安全",
+    "drops": [],
+    "skills": {
+      "revive": {
+        "level": 1
+      },
+      "selfHeal": {
+        "level": 5
+      },
+      "groupCurse": {
+        "level": 5
+      },
+      "baseHeal": {
+        "level": 5
+      },
+      "baseAttack": {
+        "level": 1
+      },
+      "baseGroupHeal": {
+        "level": 10
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 30
+      },
+      "dexterity": {
+        "level": 24
+      },
+      "intelligence": {
+        "level": 70
+      },
+      "stamina": {
+        "level": 30
+      },
+      "attacking": {
+        "level": 55
+      },
+      "defencing": {
+        "level": 30
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 30
+      },
+      "dexterity": {
+        "level": 24
+      },
+      "intelligence": {
+        "level": 70
+      },
+      "stamina": {
+        "level": 30
+      },
+      "attacking": {
+        "level": 55
+      },
+      "defencing": {
+        "level": 30
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 0,
+    "maxHp": 800,
+    "maxMp": 250,
+    "mp": 250,
+    "keepWhenNewTurn": true,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "b_mercenary_magician_bb": {
+    "id": "b_mercenary_magician_bb",
+    "name": "守护者猫咪",
+    "level": 6,
+    "hp": 800,
+    "attack": 25,
+    "defense": 20,
+    "description": "雇佣兵猫咪肩负着守护者的责任，守护见习猫猫的安全",
+    "drops": [],
+    "skills": {
+      "revive: Lv1": {},
+      "freeze": {
+        "level": 5
+      },
+      "blizzard": {
+        "level": 5
+      },
+      "baseAttack": {
+        "level": 1
+      },
+      "baseHeal": {
+        "level": 10
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 20
+      },
+      "dexterity": {
+        "level": 32
+      },
+      "intelligence": {
+        "level": 65
+      },
+      "stamina": {
+        "level": 50
+      },
+      "attacking": {
+        "level": 25
+      },
+      "defencing": {
+        "level": 20
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 20
+      },
+      "dexterity": {
+        "level": 32
+      },
+      "intelligence": {
+        "level": 65
+      },
+      "stamina": {
+        "level": 50
+      },
+      "attacking": {
+        "level": 25
+      },
+      "defencing": {
+        "level": 20
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 0,
+    "maxHp": 800,
+    "maxMp": 500,
+    "mp": 500,
+    "keepWhenNewTurn": true,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "shadow_mew_cat": {
+    "id": "shadow_mew_cat",
+    "name": "喵影",
+    "level": 5,
+    "hp": 50,
+    "attack": 12,
+    "defense": 6,
+    "description": "神秘的喵影",
+    "drops": [],
+    "skills": {
+      "curse": {
+        "level": 2
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 10
+      },
+      "dexterity": {
+        "level": 25
+      },
+      "intelligence": {
+        "level": 10
+      },
+      "stamina": {
+        "level": 10
+      },
+      "attacking": {
+        "level": 12
+      },
+      "defencing": {
+        "level": 6
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 10
+      },
+      "dexterity": {
+        "level": 25
+      },
+      "intelligence": {
+        "level": 10
+      },
+      "stamina": {
+        "level": 10
+      },
+      "attacking": {
+        "level": 12
+      },
+      "defencing": {
+        "level": 6
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 4,
+    "maxHp": 50,
+    "maxMp": 50,
+    "mp": 50,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "forge_skill_auto_turret": {
+    "id": "forge_skill_auto_turret",
+    "name": "自动炮台",
+    "level": 1,
+    "hp": 100,
+    "attack": 10,
+    "defense": 10,
+    "description": "使用简单零件制作的炮台",
+    "drops": [],
+    "skills": {
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 1
+      },
+      "dexterity": {
+        "level": 1
+      },
+      "intelligence": {
+        "level": 1
+      },
+      "stamina": {
+        "level": 1
+      },
+      "attacking": {
+        "level": 10
+      },
+      "defencing": {
+        "level": 10
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 1
+      },
+      "dexterity": {
+        "level": 1
+      },
+      "intelligence": {
+        "level": 1
+      },
+      "stamina": {
+        "level": 1
+      },
+      "attacking": {
+        "level": 10
+      },
+      "defencing": {
+        "level": 10
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 0,
+    "maxHp": 100,
+    "maxMp": 0,
+    "mp": 0,
+    "keepWhenNewTurn": true,
+    "isBoss": false,
+    "ignoreTurn": true
+  },
+  "forgeSkillMeowColossus": {
+    "id": "forgeSkillMeowColossus",
+    "name": "喵喵巨像",
+    "level": 10,
+    "hp": 100,
+    "attack": 50,
+    "defense": 50,
+    "description": "精密的巨像",
+    "drops": [],
+    "skills": {
+      "meowColossusLaser": {
+        "level": 1
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 1
+      },
+      "dexterity": {
+        "level": 1
+      },
+      "intelligence": {
+        "level": 1
+      },
+      "stamina": {
+        "level": 1
+      },
+      "attacking": {
+        "level": 50
+      },
+      "defencing": {
+        "level": 50
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 1
+      },
+      "dexterity": {
+        "level": 1
+      },
+      "intelligence": {
+        "level": 1
+      },
+      "stamina": {
+        "level": 1
+      },
+      "attacking": {
+        "level": 50
+      },
+      "defencing": {
+        "level": 50
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 0,
+    "maxHp": 100,
+    "maxMp": 100,
+    "mp": 100,
+    "keepWhenNewTurn": true,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "berry_bird_001": {
+    "id": "berry_bird_001",
+    "name": "浆果鸟",
+    "level": 1,
+    "hp": 22,
+    "attack": 4,
+    "defense": 1,
+    "description": "喜欢在平原上啄食浆果的小鸟，胆小但数量众多。",
+    "drops": [
+      {
+        "id": "berry",
+        "percent": 0.8,
+        "range": {
+          "min": 2,
+          "max": 3
+        }
+      },
+      {
+        "id": "gold",
+        "percent": 0.8,
+        "range": {
+          "min": 10,
+          "max": 30
+        }
+      },
+      {
+        "id": "summonBerryBirdSkillBook",
+        "percent": 0.01,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "summonBerryBird": {
+        "level": 1
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 1
+      },
+      "dexterity": {
+        "level": 2
+      },
+      "intelligence": {
+        "level": 1
+      },
+      "stamina": {
+        "level": 1
+      },
+      "attacking": {
+        "level": 4
+      },
+      "defencing": {
+        "level": 1
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 1
+      },
+      "dexterity": {
+        "level": 2
+      },
+      "intelligence": {
+        "level": 1
+      },
+      "stamina": {
+        "level": 1
+      },
+      "attacking": {
+        "level": 4
+      },
+      "defencing": {
+        "level": 1
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 4,
+    "maxHp": 22,
+    "maxMp": 50,
+    "mp": 50,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "mushroom_bug_001": {
+    "id": "mushroom_bug_001",
+    "name": "蘑菇虫",
+    "level": 1,
+    "hp": 18,
+    "attack": 3,
+    "defense": 1,
+    "description": "以蘑菇为食的小虫，行动迟缓。",
+    "drops": [
+      {
+        "id": "mushroom",
+        "percent": 0.7,
+        "range": {
+          "min": 2,
+          "max": 3
+        }
+      },
+      {
+        "id": "gold",
+        "percent": 0.8,
+        "range": {
+          "min": 10,
+          "max": 30
+        }
+      },
+      {
+        "id": "plain_001_expedition_map",
+        "percent": 0.0015,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 1
+      },
+      "dexterity": {
+        "level": 1
+      },
+      "intelligence": {
+        "level": 1
+      },
+      "stamina": {
+        "level": 1
+      },
+      "attacking": {
+        "level": 3
+      },
+      "defencing": {
+        "level": 1
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 1
+      },
+      "dexterity": {
+        "level": 1
+      },
+      "intelligence": {
+        "level": 1
+      },
+      "stamina": {
+        "level": 1
+      },
+      "attacking": {
+        "level": 3
+      },
+      "defencing": {
+        "level": 1
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 3,
+    "maxHp": 18,
+    "maxMp": 50,
+    "mp": 50,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "plain_mouse_001": {
+    "id": "plain_mouse_001",
+    "name": "平原小鼠",
+    "level": 1,
+    "hp": 20,
+    "attack": 5,
+    "defense": 1,
+    "description": "活跃在草丛中的小老鼠，喜欢偷吃猫粮。",
+    "drops": [
+      {
+        "id": "berry",
+        "percent": 0.4,
+        "range": {
+          "min": 2,
+          "max": 3
+        }
+      },
+      {
+        "id": "catSnack",
+        "percent": 0.2,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "gold",
+        "percent": 0.8,
+        "range": {
+          "min": 10,
+          "max": 30
+        }
+      }
+    ],
+    "skills": {
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 1
+      },
+      "dexterity": {
+        "level": 2
+      },
+      "intelligence": {
+        "level": 1
+      },
+      "stamina": {
+        "level": 1
+      },
+      "attacking": {
+        "level": 5
+      },
+      "defencing": {
+        "level": 1
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 1
+      },
+      "dexterity": {
+        "level": 2
+      },
+      "intelligence": {
+        "level": 1
+      },
+      "stamina": {
+        "level": 1
+      },
+      "attacking": {
+        "level": 5
+      },
+      "defencing": {
+        "level": 1
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 5,
+    "maxHp": 20,
+    "maxMp": 50,
+    "mp": 50,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "lazy_rabbit_001": {
+    "id": "lazy_rabbit_001",
+    "name": "慵懒兔",
+    "level": 2,
+    "hp": 28,
+    "attack": 4,
+    "defense": 2,
+    "description": "喜欢晒太阳的兔子，遇到危险会逃跑。",
+    "drops": [
+      {
+        "id": "berry",
+        "percent": 0.6,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "mushroom",
+        "percent": 0.6,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "gold",
+        "percent": 0.9,
+        "range": {
+          "min": 10,
+          "max": 20
+        }
+      }
+    ],
+    "skills": {
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 1
+      },
+      "dexterity": {
+        "level": 2
+      },
+      "intelligence": {
+        "level": 1
+      },
+      "stamina": {
+        "level": 2
+      },
+      "attacking": {
+        "level": 4
+      },
+      "defencing": {
+        "level": 2
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 1
+      },
+      "dexterity": {
+        "level": 2
+      },
+      "intelligence": {
+        "level": 1
+      },
+      "stamina": {
+        "level": 2
+      },
+      "attacking": {
+        "level": 4
+      },
+      "defencing": {
+        "level": 2
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 6,
+    "maxHp": 28,
+    "maxMp": 50,
+    "mp": 50,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "snail_001": {
+    "id": "snail_001",
+    "name": "悠闲蜗牛",
+    "level": 2,
+    "hp": 30,
+    "attack": 2,
+    "defense": 3,
+    "description": "慢吞吞的蜗牛，壳很坚硬。",
+    "drops": [
+      {
+        "id": "mushroom",
+        "percent": 0.5,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "shell",
+        "percent": 0.6,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "gold",
+        "percent": 0.9,
+        "range": {
+          "min": 10,
+          "max": 20
+        }
+      }
+    ],
+    "skills": {
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 1
+      },
+      "dexterity": {
+        "level": 1
+      },
+      "intelligence": {
+        "level": 1
+      },
+      "stamina": {
+        "level": 2
+      },
+      "attacking": {
+        "level": 2
+      },
+      "defencing": {
+        "level": 3
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 1
+      },
+      "dexterity": {
+        "level": 1
+      },
+      "intelligence": {
+        "level": 1
+      },
+      "stamina": {
+        "level": 2
+      },
+      "attacking": {
+        "level": 2
+      },
+      "defencing": {
+        "level": 3
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 5,
+    "maxHp": 30,
+    "maxMp": 50,
+    "mp": 50,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "catnip_kitten_001": {
+    "id": "catnip_kitten_001",
+    "name": "猫薄荷幼崽",
+    "level": 2,
+    "hp": 24,
+    "attack": 3,
+    "defense": 2,
+    "description": "喜欢在平原上打滚的猫薄荷幼猫，偶尔会掉落猫薄荷。",
+    "drops": [
+      {
+        "id": "catMint",
+        "percent": 0.1,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "berry",
+        "percent": 0.3,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "gold",
+        "percent": 0.9,
+        "range": {
+          "min": 10,
+          "max": 15
+        }
+      }
+    ],
+    "skills": {
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 1
+      },
+      "dexterity": {
+        "level": 2
+      },
+      "intelligence": {
+        "level": 1
+      },
+      "stamina": {
+        "level": 1
+      },
+      "attacking": {
+        "level": 3
+      },
+      "defencing": {
+        "level": 2
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 1
+      },
+      "dexterity": {
+        "level": 2
+      },
+      "intelligence": {
+        "level": 1
+      },
+      "stamina": {
+        "level": 1
+      },
+      "attacking": {
+        "level": 3
+      },
+      "defencing": {
+        "level": 2
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 7,
+    "maxHp": 24,
+    "maxMp": 50,
+    "mp": 50,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "plain_boss_001": {
+    "id": "plain_boss_001",
+    "name": "平原守护猫",
+    "level": 4,
+    "hp": 80,
+    "attack": 10,
+    "defense": 5,
+    "description": "守护平原和平的猫咪，实力虽不强但很有威严。",
+    "drops": [
+      {
+        "id": "catMint",
+        "percent": 0.2,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "berry",
+        "percent": 0.8,
+        "range": {
+          "min": 2,
+          "max": 4
+        }
+      },
+      {
+        "id": "mushroom",
+        "percent": 0.8,
+        "range": {
+          "min": 2,
+          "max": 4
+        }
+      },
+      {
+        "id": "gold",
+        "percent": 0.9,
+        "range": {
+          "min": 30,
+          "max": 55
+        }
+      },
+      {
+        "id": "plain_001_expedition_map",
+        "percent": 0.01,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "baseAttack": {
+        "level": 2
+      },
+      "baseHeal": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 3
+      },
+      "dexterity": {
+        "level": 3
+      },
+      "intelligence": {
+        "level": 2
+      },
+      "stamina": {
+        "level": 3
+      },
+      "attacking": {
+        "level": 10
+      },
+      "defencing": {
+        "level": 5
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 3
+      },
+      "dexterity": {
+        "level": 3
+      },
+      "intelligence": {
+        "level": 2
+      },
+      "stamina": {
+        "level": 3
+      },
+      "attacking": {
+        "level": 10
+      },
+      "defencing": {
+        "level": 5
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 30,
+    "maxHp": 80,
+    "maxMp": 20,
+    "mp": 20,
+    "isBoss": true,
+    "ignoreTurn": false
+  },
+  "forest_healer_001": {
+    "id": "forest_healer_001",
+    "name": "森林治愈精灵",
+    "level": 2,
+    "hp": 38,
+    "attack": 4,
+    "defense": 2,
+    "description": "生活在幽暗森林中的治愈精灵，能为同伴施展群体治疗。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 12,
+          "max": 18
+        }
+      },
+      {
+        "id": "herb",
+        "percent": 0.18,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "berry",
+        "percent": 0.12,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "baseGroupHealSkillBook",
+        "percent": 0.021,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "selfHealSkillBook",
+        "percent": 0.021,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "selfHeal": {
+        "level": 1
+      },
+      "baseGroupHeal": {
+        "level": 1
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 1
+      },
+      "dexterity": {
+        "level": 2
+      },
+      "intelligence": {
+        "level": 4
+      },
+      "stamina": {
+        "level": 2
+      },
+      "attacking": {
+        "level": 4
+      },
+      "defencing": {
+        "level": 2
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 1
+      },
+      "dexterity": {
+        "level": 2
+      },
+      "intelligence": {
+        "level": 4
+      },
+      "stamina": {
+        "level": 2
+      },
+      "attacking": {
+        "level": 4
+      },
+      "defencing": {
+        "level": 2
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 14,
+    "maxHp": 38,
+    "maxMp": 30,
+    "mp": 30,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "slime_001": {
+    "id": "slime_001",
+    "name": "史莱姆",
+    "level": 1,
+    "hp": 40,
+    "attack": 5,
+    "defense": 1,
+    "description": "最常见的绿色史莱姆，攻击力低但数量众多。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 8,
+          "max": 10
+        }
+      },
+      {
+        "id": "wood",
+        "percent": 0.04,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "berry",
+        "percent": 0.24,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "slimeGel",
+        "percent": 0.0105,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "slimeCore",
+        "percent": 0.0105,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "sweepSkillBook",
+        "percent": 0.05,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "baseHealSkillBook",
+        "percent": 0.05,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "forest_001_expedition_map",
+        "percent": 0.0015,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 1
+      },
+      "dexterity": {
+        "level": 1
+      },
+      "intelligence": {
+        "level": 1
+      },
+      "stamina": {
+        "level": 1
+      },
+      "attacking": {
+        "level": 5
+      },
+      "defencing": {
+        "level": 1
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 1
+      },
+      "dexterity": {
+        "level": 1
+      },
+      "intelligence": {
+        "level": 1
+      },
+      "stamina": {
+        "level": 1
+      },
+      "attacking": {
+        "level": 5
+      },
+      "defencing": {
+        "level": 1
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 5,
+    "maxHp": 40,
+    "maxMp": 50,
+    "mp": 50,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "slime_002": {
+    "id": "slime_002",
+    "name": "变异史莱姆",
+    "level": 2,
+    "hp": 45,
+    "attack": 6,
+    "defense": 2,
+    "description": "体型更大、攻击更强的史莱姆。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 10,
+          "max": 14
+        }
+      },
+      {
+        "id": "slimeGel",
+        "percent": 0.002,
+        "range": {
+          "min": 2,
+          "max": 3
+        }
+      },
+      {
+        "id": "slimeCore",
+        "percent": 0.002,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "wood",
+        "percent": 0.08,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "berry",
+        "percent": 0.34,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "slimeGel",
+        "percent": 0.0105,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "slimeCore",
+        "percent": 0.0075,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 2
+      },
+      "dexterity": {
+        "level": 1
+      },
+      "intelligence": {
+        "level": 1
+      },
+      "stamina": {
+        "level": 2
+      },
+      "attacking": {
+        "level": 6
+      },
+      "defencing": {
+        "level": 2
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 2
+      },
+      "dexterity": {
+        "level": 1
+      },
+      "intelligence": {
+        "level": 1
+      },
+      "stamina": {
+        "level": 2
+      },
+      "attacking": {
+        "level": 6
+      },
+      "defencing": {
+        "level": 2
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 8,
+    "maxHp": 45,
+    "maxMp": 50,
+    "mp": 50,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "goblin_001": {
+    "id": "goblin_001",
+    "name": "哥布林",
+    "level": 3,
+    "hp": 50,
+    "attack": 8,
+    "defense": 3,
+    "description": "狡猾的哥布林，攻击力和防御力都比史莱姆高。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 15,
+          "max": 22
+        }
+      },
+      {
+        "id": "goblinEar",
+        "percent": 0.0015,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "goblinDagger",
+        "percent": 0.0034999999999999996,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "wood",
+        "percent": 0.08,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "stone",
+        "percent": 0.08,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "iron",
+        "percent": 0.06,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "doubleStrikeSkillBook",
+        "percent": 0.021,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "doubleStrike": {
+        "level": 1
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 3
+      },
+      "dexterity": {
+        "level": 2
+      },
+      "intelligence": {
+        "level": 2
+      },
+      "stamina": {
+        "level": 2
+      },
+      "attacking": {
+        "level": 8
+      },
+      "defencing": {
+        "level": 3
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 3
+      },
+      "dexterity": {
+        "level": 2
+      },
+      "intelligence": {
+        "level": 2
+      },
+      "stamina": {
+        "level": 2
+      },
+      "attacking": {
+        "level": 8
+      },
+      "defencing": {
+        "level": 3
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 12,
+    "maxHp": 50,
+    "maxMp": 50,
+    "mp": 50,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "goblin_002": {
+    "id": "goblin_002",
+    "name": "哥布林弓手",
+    "level": 3,
+    "hp": 40,
+    "attack": 12,
+    "defense": 2,
+    "description": "擅长远程攻击的哥布林弓手。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 16,
+          "max": 24
+        }
+      },
+      {
+        "id": "goblinEar",
+        "percent": 0.0015,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "goblinDagger",
+        "percent": 0.0045000000000000005,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "wood",
+        "percent": 0.12,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "stone",
+        "percent": 0.12,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "iron",
+        "percent": 0.04,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "explosiveShotSkillBook",
+        "percent": 0.012,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "explosiveShot": {
+        "level": 1
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 2
+      },
+      "dexterity": {
+        "level": 3
+      },
+      "intelligence": {
+        "level": 2
+      },
+      "stamina": {
+        "level": 2
+      },
+      "attacking": {
+        "level": 12
+      },
+      "defencing": {
+        "level": 2
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 2
+      },
+      "dexterity": {
+        "level": 3
+      },
+      "intelligence": {
+        "level": 2
+      },
+      "stamina": {
+        "level": 2
+      },
+      "attacking": {
+        "level": 12
+      },
+      "defencing": {
+        "level": 2
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 14,
+    "maxHp": 40,
+    "maxMp": 50,
+    "mp": 50,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "bat_001": {
+    "id": "bat_001",
+    "name": "洞穴蝙蝠",
+    "level": 2,
+    "hp": 25,
+    "attack": 7,
+    "defense": 1,
+    "description": "在黑暗中出没的蝙蝠，行动敏捷。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 8,
+          "max": 12
+        }
+      },
+      {
+        "id": "batWing",
+        "percent": 0.002,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "batTooth",
+        "percent": 0.001,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "coal",
+        "percent": 0.11,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "berry",
+        "percent": 0.12,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "mushroom",
+        "percent": 0.12,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "cave_001_expedition_map",
+        "percent": 0.0015,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 1
+      },
+      "dexterity": {
+        "level": 3
+      },
+      "intelligence": {
+        "level": 1
+      },
+      "stamina": {
+        "level": 1
+      },
+      "attacking": {
+        "level": 7
+      },
+      "defencing": {
+        "level": 1
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 1
+      },
+      "dexterity": {
+        "level": 3
+      },
+      "intelligence": {
+        "level": 1
+      },
+      "stamina": {
+        "level": 1
+      },
+      "attacking": {
+        "level": 7
+      },
+      "defencing": {
+        "level": 1
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 7,
+    "maxHp": 25,
+    "maxMp": 50,
+    "mp": 50,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "wolf_001": {
+    "id": "wolf_001",
+    "name": "野狼",
+    "level": 4,
+    "hp": 60,
+    "attack": 18,
+    "defense": 4,
+    "description": "凶猛的野狼，攻击性极强。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 20,
+          "max": 30
+        }
+      },
+      {
+        "id": "wolfFang",
+        "percent": 0.002,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "wolfPelt",
+        "percent": 0.01,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "berry",
+        "percent": 0.12,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "mushroom",
+        "percent": 0.12,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "lowestHpStrikeSkillBook",
+        "percent": 0.012,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "lowestHpStrike": {
+        "level": 1
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 4
+      },
+      "dexterity": {
+        "level": 3
+      },
+      "intelligence": {
+        "level": 1
+      },
+      "stamina": {
+        "level": 3
+      },
+      "attacking": {
+        "level": 18
+      },
+      "defencing": {
+        "level": 4
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 4
+      },
+      "dexterity": {
+        "level": 3
+      },
+      "intelligence": {
+        "level": 1
+      },
+      "stamina": {
+        "level": 3
+      },
+      "attacking": {
+        "level": 18
+      },
+      "defencing": {
+        "level": 4
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 20,
+    "maxHp": 60,
+    "maxMp": 50,
+    "mp": 50,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "skeleton_001": {
+    "id": "skeleton_001",
+    "name": "骷髅战士",
+    "level": 4,
+    "hp": 55,
+    "attack": 14,
+    "defense": 5,
+    "description": "被黑暗魔法复活的骷髅士兵。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 18,
+          "max": 28
+        }
+      },
+      {
+        "id": "skeletonBone",
+        "percent": 0.002,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "skeletonShield",
+        "percent": 0.001,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "coal",
+        "percent": 0.2,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "boneShieldSkillBook",
+        "percent": 0.008,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "boneShield": {
+        "level": 1
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 3
+      },
+      "dexterity": {
+        "level": 2
+      },
+      "intelligence": {
+        "level": 2
+      },
+      "stamina": {
+        "level": 3
+      },
+      "attacking": {
+        "level": 14
+      },
+      "defencing": {
+        "level": 5
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 3
+      },
+      "dexterity": {
+        "level": 2
+      },
+      "intelligence": {
+        "level": 2
+      },
+      "stamina": {
+        "level": 3
+      },
+      "attacking": {
+        "level": 14
+      },
+      "defencing": {
+        "level": 5
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 18,
+    "maxHp": 55,
+    "maxMp": 50,
+    "mp": 50,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "mushroom_001": {
+    "id": "mushroom_001",
+    "name": "毒蘑菇怪",
+    "level": 2,
+    "hp": 35,
+    "attack": 10,
+    "defense": 2,
+    "description": "会释放毒素的蘑菇怪物。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 10,
+          "max": 16
+        }
+      },
+      {
+        "id": "toxicSpore",
+        "percent": 0.002,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "mushroomCap",
+        "percent": 0.001,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "mushroom",
+        "percent": 0.2,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "poisonSkillBook",
+        "percent": 0.012,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      }
+    ],
+    "skills": {
+      "poison": {
+        "level": 1
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 1
+      },
+      "dexterity": {
+        "level": 1
+      },
+      "intelligence": {
+        "level": 2
+      },
+      "stamina": {
+        "level": 2
+      },
+      "attacking": {
+        "level": 10
+      },
+      "defencing": {
+        "level": 2
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 1
+      },
+      "dexterity": {
+        "level": 1
+      },
+      "intelligence": {
+        "level": 2
+      },
+      "stamina": {
+        "level": 2
+      },
+      "attacking": {
+        "level": 10
+      },
+      "defencing": {
+        "level": 2
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 8,
+    "maxHp": 35,
+    "maxMp": 50,
+    "mp": 50,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "lizard_001": {
+    "id": "lizard_001",
+    "name": "蜥蜴人",
+    "level": 5,
+    "hp": 70,
+    "attack": 20,
+    "defense": 6,
+    "description": "生活在洞穴深处的蜥蜴人。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 10,
+          "max": 15
+        }
+      },
+      {
+        "id": "lizardScale",
+        "percent": 0.002,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "lizardTail",
+        "percent": 0.001,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "herb",
+        "percent": 0.1,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "mushroom",
+        "percent": 0.1,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "corrosiveBreathSkillBook",
+        "percent": 0.01,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "ruins_001_expedition_map",
+        "percent": 0.0015,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "corrosiveBreath": {
+        "level": 3
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 5
+      },
+      "dexterity": {
+        "level": 3
+      },
+      "intelligence": {
+        "level": 2
+      },
+      "stamina": {
+        "level": 4
+      },
+      "attacking": {
+        "level": 20
+      },
+      "defencing": {
+        "level": 6
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 5
+      },
+      "dexterity": {
+        "level": 3
+      },
+      "intelligence": {
+        "level": 2
+      },
+      "stamina": {
+        "level": 4
+      },
+      "attacking": {
+        "level": 20
+      },
+      "defencing": {
+        "level": 6
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 30,
+    "maxHp": 70,
+    "maxMp": 50,
+    "mp": 50,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "spirit_001": {
+    "id": "spirit_001",
+    "name": "幽灵",
+    "level": 5,
+    "hp": 40,
+    "attack": 16,
+    "defense": 0,
+    "description": "虚无缥缈的幽灵，物理攻击难以奏效。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 10,
+          "max": 13
+        }
+      },
+      {
+        "id": "spiritEssence",
+        "percent": 0.002,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "ectoplasm",
+        "percent": 0.001,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "curseSkillBook",
+        "percent": 0.005,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "cave_001_expedition_map",
+        "percent": 0.0015,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "curse": {
+        "level": 1
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 2
+      },
+      "dexterity": {
+        "level": 4
+      },
+      "intelligence": {
+        "level": 5
+      },
+      "stamina": {
+        "level": 2
+      },
+      "attacking": {
+        "level": 16
+      },
+      "defencing": {
+        "level": 0
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 2
+      },
+      "dexterity": {
+        "level": 4
+      },
+      "intelligence": {
+        "level": 5
+      },
+      "stamina": {
+        "level": 2
+      },
+      "attacking": {
+        "level": 16
+      },
+      "defencing": {
+        "level": 0
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 28,
+    "maxHp": 40,
+    "maxMp": 50,
+    "mp": 50,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "forest_boss_001": {
+    "id": "forest_boss_001",
+    "name": "森林巨魔",
+    "level": 6,
+    "hp": 200,
+    "attack": 18,
+    "defense": 8,
+    "description": "幽暗森林的霸主，拥有强大的力量。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 200,
+          "max": 300
+        }
+      },
+      {
+        "id": "trollHide",
+        "percent": 0.002,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "trollClub",
+        "percent": 0.001,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "herb",
+        "percent": 0.1,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "mushroom",
+        "percent": 0.1,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "powerStrikeSkillBook",
+        "percent": 0.01,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "forest_001_expedition_map",
+        "percent": 0.01,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "powerStrike": {
+        "level": 1
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 8
+      },
+      "dexterity": {
+        "level": 4
+      },
+      "intelligence": {
+        "level": 3
+      },
+      "stamina": {
+        "level": 8
+      },
+      "attacking": {
+        "level": 18
+      },
+      "defencing": {
+        "level": 8
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 8
+      },
+      "dexterity": {
+        "level": 4
+      },
+      "intelligence": {
+        "level": 3
+      },
+      "stamina": {
+        "level": 8
+      },
+      "attacking": {
+        "level": 18
+      },
+      "defencing": {
+        "level": 8
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 120,
+    "maxHp": 200,
+    "maxMp": 150,
+    "mp": 150,
+    "isBoss": true,
+    "ignoreTurn": false
+  },
+  "cave_boss_001": {
+    "id": "cave_boss_001",
+    "name": "洞窟巨蝎",
+    "level": 9,
+    "hp": 260,
+    "attack": 32,
+    "defense": 10,
+    "description": "黑石洞窟的深处潜伏着的巨大毒蝎。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 80,
+          "max": 120
+        }
+      },
+      {
+        "id": "scorpionStinger",
+        "percent": 0.002,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "scorpionCarapace",
+        "percent": 0.001,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "poisonSkillBook",
+        "percent": 0.08,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "sweepSkillBook",
+        "percent": 0.08,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "cave_001_expedition_map",
+        "percent": 0.01,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "sweep": {
+        "level": 10
+      },
+      "poison": {
+        "level": 10
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 10
+      },
+      "dexterity": {
+        "level": 7
+      },
+      "intelligence": {
+        "level": 4
+      },
+      "stamina": {
+        "level": 10
+      },
+      "attacking": {
+        "level": 32
+      },
+      "defencing": {
+        "level": 10
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 10
+      },
+      "dexterity": {
+        "level": 7
+      },
+      "intelligence": {
+        "level": 4
+      },
+      "stamina": {
+        "level": 10
+      },
+      "attacking": {
+        "level": 32
+      },
+      "defencing": {
+        "level": 10
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 220,
+    "maxHp": 260,
+    "maxMp": 50,
+    "mp": 50,
+    "isBoss": true,
+    "ignoreTurn": false
+  },
+  "ruins_boss_001": {
+    "id": "ruins_boss_001",
+    "name": "遗迹守卫者",
+    "level": 14,
+    "hp": 350,
+    "attack": 40,
+    "defense": 15,
+    "description": "古老遗迹的守护者，几乎无人能敌。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 300,
+          "max": 420
+        }
+      },
+      {
+        "id": "guardianCore",
+        "percent": 0.02,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "ancientGear",
+        "percent": 0.05,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "guardianLaserSkillBook",
+        "percent": 0.013500000000000002,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "ruins_001_expedition_map",
+        "percent": 0.01,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "guardianLaser": {
+        "level": 1
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 15
+      },
+      "dexterity": {
+        "level": 8
+      },
+      "intelligence": {
+        "level": 6
+      },
+      "stamina": {
+        "level": 14
+      },
+      "attacking": {
+        "level": 40
+      },
+      "defencing": {
+        "level": 15
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 15
+      },
+      "dexterity": {
+        "level": 8
+      },
+      "intelligence": {
+        "level": 6
+      },
+      "stamina": {
+        "level": 14
+      },
+      "attacking": {
+        "level": 40
+      },
+      "defencing": {
+        "level": 15
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 400,
+    "maxHp": 350,
+    "maxMp": 50,
+    "mp": 50,
+    "isBoss": true,
+    "ignoreTurn": false
+  },
+  "dragon_boss_001": {
+    "id": "dragon_boss_001",
+    "name": "熔岩巨龙",
+    "level": 20,
+    "hp": 500,
+    "attack": 60,
+    "defense": 20,
+    "description": "传说中的熔岩巨龙，喷吐烈焰，极其危险。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 420,
+          "max": 545
+        }
+      },
+      {
+        "id": "lavaHeart",
+        "percent": 0.002,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "dragonScale",
+        "percent": 0.001,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "lavaBreathSkillBook",
+        "percent": 0.015,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "dragonRoarSkillBook",
+        "percent": 0.015,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "cave_001_expedition_map",
+        "percent": 0.01,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "lavaBreath": {
+        "level": 2
+      },
+      "dragonRoar": {
+        "level": 2
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 20
+      },
+      "dexterity": {
+        "level": 12
+      },
+      "intelligence": {
+        "level": 10
+      },
+      "stamina": {
+        "level": 20
+      },
+      "attacking": {
+        "level": 60
+      },
+      "defencing": {
+        "level": 20
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 20
+      },
+      "dexterity": {
+        "level": 12
+      },
+      "intelligence": {
+        "level": 10
+      },
+      "stamina": {
+        "level": 20
+      },
+      "attacking": {
+        "level": 60
+      },
+      "defencing": {
+        "level": 20
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 1000,
+    "maxHp": 500,
+    "maxMp": 50,
+    "mp": 50,
+    "isBoss": true,
+    "ignoreTurn": false
+  },
+  "ice_slime_001": {
+    "id": "ice_slime_001",
+    "name": "冰霜史莱姆",
+    "level": 10,
+    "hp": 55,
+    "attack": 8,
+    "defense": 3,
+    "description": "寒冷环境下变异的史莱姆，攻击时有概率冻结敌人。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 18,
+          "max": 25
+        }
+      },
+      {
+        "id": "iceGel",
+        "percent": 0.05,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "frostCrystal",
+        "percent": 0.01,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "freezeSkillBook",
+        "percent": 0.025,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "freeze": {
+        "level": 1
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 2
+      },
+      "dexterity": {
+        "level": 2
+      },
+      "intelligence": {
+        "level": 2
+      },
+      "stamina": {
+        "level": 3
+      },
+      "attacking": {
+        "level": 8
+      },
+      "defencing": {
+        "level": 3
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 2
+      },
+      "dexterity": {
+        "level": 2
+      },
+      "intelligence": {
+        "level": 2
+      },
+      "stamina": {
+        "level": 3
+      },
+      "attacking": {
+        "level": 8
+      },
+      "defencing": {
+        "level": 3
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 18,
+    "maxHp": 55,
+    "maxMp": 50,
+    "mp": 50,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "snow_wolf_001": {
+    "id": "snow_wolf_001",
+    "name": "雪原狼",
+    "level": 12,
+    "hp": 70,
+    "attack": 16,
+    "defense": 5,
+    "description": "在雪原上游荡的狼群成员，速度极快。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 25,
+          "max": 35
+        }
+      },
+      {
+        "id": "snowWolfFur",
+        "percent": 0.03,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "wolfFang",
+        "percent": 0.01,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "doubleStrikeSkillBook",
+        "percent": 0.031200000000000002,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "doubleStrike": {
+        "level": 1
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 4
+      },
+      "dexterity": {
+        "level": 5
+      },
+      "intelligence": {
+        "level": 2
+      },
+      "stamina": {
+        "level": 3
+      },
+      "attacking": {
+        "level": 16
+      },
+      "defencing": {
+        "level": 5
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 4
+      },
+      "dexterity": {
+        "level": 5
+      },
+      "intelligence": {
+        "level": 2
+      },
+      "stamina": {
+        "level": 3
+      },
+      "attacking": {
+        "level": 16
+      },
+      "defencing": {
+        "level": 5
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 28,
+    "maxHp": 70,
+    "maxMp": 50,
+    "mp": 50,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "frost_goblin_001": {
+    "id": "frost_goblin_001",
+    "name": "冰霜哥布林",
+    "level": 11,
+    "hp": 60,
+    "attack": 14,
+    "defense": 4,
+    "description": "擅长偷袭的哥布林，偶尔会投掷冰弹。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 20,
+          "max": 28
+        }
+      },
+      {
+        "id": "frostDagger",
+        "percent": 0.02,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "iceBomb",
+        "percent": 0.01,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "iceBombSkillBook",
+        "percent": 0.0212,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "iceBomb": {
+        "level": 1
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 3
+      },
+      "dexterity": {
+        "level": 4
+      },
+      "intelligence": {
+        "level": 2
+      },
+      "stamina": {
+        "level": 3
+      },
+      "attacking": {
+        "level": 14
+      },
+      "defencing": {
+        "level": 4
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 3
+      },
+      "dexterity": {
+        "level": 4
+      },
+      "intelligence": {
+        "level": 2
+      },
+      "stamina": {
+        "level": 3
+      },
+      "attacking": {
+        "level": 14
+      },
+      "defencing": {
+        "level": 4
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 22,
+    "maxHp": 60,
+    "maxMp": 50,
+    "mp": 50,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "ice_bat_001": {
+    "id": "ice_bat_001",
+    "name": "冰翼蝙蝠",
+    "level": 10,
+    "hp": 38,
+    "attack": 10,
+    "defense": 2,
+    "description": "翅膀覆盖着冰晶的蝙蝠，攻击时吸取体力。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 15,
+          "max": 20
+        }
+      },
+      {
+        "id": "iceBatWing",
+        "percent": 0.03,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "batTooth",
+        "percent": 0.01,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "lifeDrainSkillBook",
+        "percent": 0.0212,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "snowfield_001_expedition_map",
+        "percent": 0.0015,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "lifeDrain": {
+        "level": 1
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 2
+      },
+      "dexterity": {
+        "level": 4
+      },
+      "intelligence": {
+        "level": 2
+      },
+      "stamina": {
+        "level": 2
+      },
+      "attacking": {
+        "level": 10
+      },
+      "defencing": {
+        "level": 2
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 2
+      },
+      "dexterity": {
+        "level": 4
+      },
+      "intelligence": {
+        "level": 2
+      },
+      "stamina": {
+        "level": 2
+      },
+      "attacking": {
+        "level": 10
+      },
+      "defencing": {
+        "level": 2
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 14,
+    "maxHp": 38,
+    "maxMp": 50,
+    "mp": 50,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "snow_rabbit_001": {
+    "id": "snow_rabbit_001",
+    "name": "雪原兔",
+    "level": 10,
+    "hp": 30,
+    "attack": 7,
+    "defense": 1,
+    "description": "看似温顺，实则行动敏捷的雪原兔。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 8,
+          "max": 12
+        }
+      },
+      {
+        "id": "snowRabbitFur",
+        "percent": 0.04,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "berry",
+        "percent": 0.12,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      }
+    ],
+    "skills": {
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 1
+      },
+      "dexterity": {
+        "level": 4
+      },
+      "intelligence": {
+        "level": 1
+      },
+      "stamina": {
+        "level": 2
+      },
+      "attacking": {
+        "level": 7
+      },
+      "defencing": {
+        "level": 1
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 1
+      },
+      "dexterity": {
+        "level": 4
+      },
+      "intelligence": {
+        "level": 1
+      },
+      "stamina": {
+        "level": 2
+      },
+      "attacking": {
+        "level": 7
+      },
+      "defencing": {
+        "level": 1
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 10,
+    "maxHp": 30,
+    "maxMp": 50,
+    "mp": 50,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "frost_spirit_001": {
+    "id": "frost_spirit_001",
+    "name": "霜之精灵",
+    "level": 13,
+    "hp": 48,
+    "attack": 12,
+    "defense": 2,
+    "description": "雪原中诞生的神秘精灵，能为同伴施展冰盾。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 28,
+          "max": 38
+        }
+      },
+      {
+        "id": "frostEssence",
+        "percent": 0.03,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 2
+      },
+      "dexterity": {
+        "level": 3
+      },
+      "intelligence": {
+        "level": 5
+      },
+      "stamina": {
+        "level": 2
+      },
+      "attacking": {
+        "level": 12
+      },
+      "defencing": {
+        "level": 2
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 2
+      },
+      "dexterity": {
+        "level": 3
+      },
+      "intelligence": {
+        "level": 5
+      },
+      "stamina": {
+        "level": 2
+      },
+      "attacking": {
+        "level": 12
+      },
+      "defencing": {
+        "level": 2
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 32,
+    "maxHp": 48,
+    "maxMp": 30,
+    "mp": 30,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "snowfield_boss_001": {
+    "id": "snowfield_boss_001",
+    "name": "雪原巨兽",
+    "level": 16,
+    "hp": 320,
+    "attack": 38,
+    "defense": 12,
+    "description": "雪原上的霸主，力量惊人，能震慑敌人。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 480,
+          "max": 605
+        }
+      },
+      {
+        "id": "snowBeastFang",
+        "percent": 0.03,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "snowBeastHide",
+        "percent": 0.01,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "powerStrikeSkillBook",
+        "percent": 0.03,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "roarSkillBook",
+        "percent": 0.021,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "snowfield_001_expedition_map",
+        "percent": 0.0025,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "powerStrike": {
+        "level": 1
+      },
+      "roar": {
+        "level": 1
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 12
+      },
+      "dexterity": {
+        "level": 6
+      },
+      "intelligence": {
+        "level": 3
+      },
+      "stamina": {
+        "level": 10
+      },
+      "attacking": {
+        "level": 38
+      },
+      "defencing": {
+        "level": 12
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 12
+      },
+      "dexterity": {
+        "level": 6
+      },
+      "intelligence": {
+        "level": 3
+      },
+      "stamina": {
+        "level": 10
+      },
+      "attacking": {
+        "level": 38
+      },
+      "defencing": {
+        "level": 12
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 180,
+    "maxHp": 320,
+    "maxMp": 50,
+    "mp": 50,
+    "isBoss": true,
+    "ignoreTurn": false
+  },
+  "snowfield_boss_002": {
+    "id": "snowfield_boss_002",
+    "name": "极寒冰灵王",
+    "level": 18,
+    "hp": 420,
+    "attack": 28,
+    "defense": 18,
+    "description": "雪原最古老的冰灵，能操控极寒之力。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 500,
+          "max": 625
+        }
+      },
+      {
+        "id": "frostCrown",
+        "percent": 0.01,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "frostEssence",
+        "percent": 0.03,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "blizzardSkillBook",
+        "percent": 0.021,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "freezeSkillBook",
+        "percent": 0.021,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "snowfield_001_expedition_map",
+        "percent": 0.01,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "blizzard": {
+        "level": 1
+      },
+      "freeze": {
+        "level": 2
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 8
+      },
+      "dexterity": {
+        "level": 8
+      },
+      "intelligence": {
+        "level": 16
+      },
+      "stamina": {
+        "level": 12
+      },
+      "attacking": {
+        "level": 28
+      },
+      "defencing": {
+        "level": 18
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 8
+      },
+      "dexterity": {
+        "level": 8
+      },
+      "intelligence": {
+        "level": 16
+      },
+      "stamina": {
+        "level": 12
+      },
+      "attacking": {
+        "level": 28
+      },
+      "defencing": {
+        "level": 18
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 350,
+    "maxHp": 420,
+    "maxMp": 200,
+    "mp": 200,
+    "isBoss": true,
+    "ignoreTurn": false
+  },
+  "shadow_cat_001": {
+    "id": "shadow_cat_001",
+    "name": "暗影猫灵",
+    "level": 16,
+    "hp": 90,
+    "attack": 22,
+    "defense": 8,
+    "description": "潜伏于黑暗中的猫灵，行动迅捷，能短暂隐身。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 38,
+          "max": 52
+        }
+      },
+      {
+        "id": "shadowFur",
+        "percent": 0.04,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "catShadowGem",
+        "percent": 0.01,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 6
+      },
+      "dexterity": {
+        "level": 10
+      },
+      "intelligence": {
+        "level": 5
+      },
+      "stamina": {
+        "level": 6
+      },
+      "attacking": {
+        "level": 22
+      },
+      "defencing": {
+        "level": 8
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 6
+      },
+      "dexterity": {
+        "level": 10
+      },
+      "intelligence": {
+        "level": 5
+      },
+      "stamina": {
+        "level": 6
+      },
+      "attacking": {
+        "level": 22
+      },
+      "defencing": {
+        "level": 8
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 38,
+    "maxHp": 90,
+    "maxMp": 200,
+    "mp": 200,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "dungeon_guard_001": {
+    "id": "dungeon_guard_001",
+    "name": "地牢守卫猫",
+    "level": 18,
+    "hp": 120,
+    "attack": 28,
+    "defense": 14,
+    "description": "忠诚的地牢守卫，防御极高。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 48,
+          "max": 65
+        }
+      },
+      {
+        "id": "dungeonKey",
+        "percent": 0.005,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "ironPawArmor",
+        "percent": 0.01,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "ironWallSkillBook",
+        "percent": 0.01,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "ironWall": {
+        "level": 1
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 10
+      },
+      "dexterity": {
+        "level": 5
+      },
+      "intelligence": {
+        "level": 3
+      },
+      "stamina": {
+        "level": 10
+      },
+      "attacking": {
+        "level": 28
+      },
+      "defencing": {
+        "level": 14
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 10
+      },
+      "dexterity": {
+        "level": 5
+      },
+      "intelligence": {
+        "level": 3
+      },
+      "stamina": {
+        "level": 10
+      },
+      "attacking": {
+        "level": 28
+      },
+      "defencing": {
+        "level": 14
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 48,
+    "maxHp": 120,
+    "maxMp": 120,
+    "mp": 120,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "phantom_mouse_001": {
+    "id": "phantom_mouse_001",
+    "name": "幻影鼠",
+    "level": 16,
+    "hp": 60,
+    "attack": 18,
+    "defense": 5,
+    "description": "会穿墙的神秘老鼠，偶尔会偷取物品。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 20,
+          "max": 32
+        }
+      },
+      {
+        "id": "phantomWhisker",
+        "percent": 0.03,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "catnipGem",
+        "percent": 0.01,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 4
+      },
+      "dexterity": {
+        "level": 10
+      },
+      "intelligence": {
+        "level": 4
+      },
+      "stamina": {
+        "level": 4
+      },
+      "attacking": {
+        "level": 18
+      },
+      "defencing": {
+        "level": 5
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 4
+      },
+      "dexterity": {
+        "level": 10
+      },
+      "intelligence": {
+        "level": 4
+      },
+      "stamina": {
+        "level": 4
+      },
+      "attacking": {
+        "level": 18
+      },
+      "defencing": {
+        "level": 5
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 30,
+    "maxHp": 60,
+    "maxMp": 80,
+    "mp": 80,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "curse_bat_001": {
+    "id": "curse_bat_001",
+    "name": "诅咒蝙蝠",
+    "level": 17,
+    "hp": 70,
+    "attack": 20,
+    "defense": 6,
+    "description": "带有诅咒气息的蝙蝠，攻击时有概率使敌人虚弱。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 28,
+          "max": 40
+        }
+      },
+      {
+        "id": "curseWing",
+        "percent": 0.03,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "batTooth",
+        "percent": 0.01,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "curseSkillBook",
+        "percent": 0.012,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "cat_dungeon_001_expedition_map",
+        "percent": 0.0015,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "curse": {
+        "level": 1
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 5
+      },
+      "dexterity": {
+        "level": 8
+      },
+      "intelligence": {
+        "level": 6
+      },
+      "stamina": {
+        "level": 5
+      },
+      "attacking": {
+        "level": 20
+      },
+      "defencing": {
+        "level": 6
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 5
+      },
+      "dexterity": {
+        "level": 8
+      },
+      "intelligence": {
+        "level": 6
+      },
+      "stamina": {
+        "level": 5
+      },
+      "attacking": {
+        "level": 20
+      },
+      "defencing": {
+        "level": 6
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 34,
+    "maxHp": 70,
+    "maxMp": 80,
+    "mp": 80,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "iron_golem_001": {
+    "id": "iron_golem_001",
+    "name": "铁甲猫偶",
+    "level": 19,
+    "hp": 180,
+    "attack": 32,
+    "defense": 18,
+    "description": "由猫族工匠打造的铁甲傀儡，攻击力极高。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 60,
+          "max": 80
+        }
+      },
+      {
+        "id": "iron",
+        "percent": 0.08,
+        "range": {
+          "min": 2,
+          "max": 4
+        }
+      },
+      {
+        "id": "golemCore",
+        "percent": 0.01,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "powerStrikeSkillBook",
+        "percent": 0.015,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "powerStrike": {
+        "level": 1
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 14
+      },
+      "dexterity": {
+        "level": 3
+      },
+      "intelligence": {
+        "level": 2
+      },
+      "stamina": {
+        "level": 12
+      },
+      "attacking": {
+        "level": 32
+      },
+      "defencing": {
+        "level": 18
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 14
+      },
+      "dexterity": {
+        "level": 3
+      },
+      "intelligence": {
+        "level": 2
+      },
+      "stamina": {
+        "level": 12
+      },
+      "attacking": {
+        "level": 32
+      },
+      "defencing": {
+        "level": 18
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 60,
+    "maxHp": 180,
+    "maxMp": 80,
+    "mp": 80,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "witch_cat_001": {
+    "id": "witch_cat_001",
+    "name": "巫术猫女",
+    "level": 18,
+    "hp": 85,
+    "attack": 18,
+    "defense": 7,
+    "description": "掌握黑暗魔法的猫族巫女，能施展群体治疗或诅咒。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 38,
+          "max": 55
+        }
+      },
+      {
+        "id": "witchHat",
+        "percent": 0.02,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "mysticalEssence",
+        "percent": 0.01,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "baseGroupHealSkillBook",
+        "percent": 0.018000000000000002,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "curseSkillBook",
+        "percent": 0.01,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "baseGroupHeal": {
+        "level": 1
+      },
+      "curse": {
+        "level": 1
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 4
+      },
+      "dexterity": {
+        "level": 6
+      },
+      "intelligence": {
+        "level": 12
+      },
+      "stamina": {
+        "level": 6
+      },
+      "attacking": {
+        "level": 18
+      },
+      "defencing": {
+        "level": 7
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 4
+      },
+      "dexterity": {
+        "level": 6
+      },
+      "intelligence": {
+        "level": 12
+      },
+      "stamina": {
+        "level": 6
+      },
+      "attacking": {
+        "level": 18
+      },
+      "defencing": {
+        "level": 7
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 42,
+    "maxHp": 85,
+    "maxMp": 80,
+    "mp": 80,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "shadow_mage_001": {
+    "id": "shadow_mage_001",
+    "name": "暗影法师猫",
+    "level": 20,
+    "hp": 100,
+    "attack": 22,
+    "defense": 8,
+    "description": "操控暗影魔法的猫族法师，能释放暗影爆发。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 55,
+          "max": 75
+        }
+      },
+      {
+        "id": "shadowOrb",
+        "percent": 0.02,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "catShadowGem",
+        "percent": 0.01,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "shadowBurstSkillBook",
+        "percent": 0.01,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "curseSkillBook",
+        "percent": 0.013999999999999999,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "shadowBurst": {
+        "level": 1
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 5
+      },
+      "dexterity": {
+        "level": 7
+      },
+      "intelligence": {
+        "level": 15
+      },
+      "stamina": {
+        "level": 7
+      },
+      "attacking": {
+        "level": 22
+      },
+      "defencing": {
+        "level": 8
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 5
+      },
+      "dexterity": {
+        "level": 7
+      },
+      "intelligence": {
+        "level": 15
+      },
+      "stamina": {
+        "level": 7
+      },
+      "attacking": {
+        "level": 22
+      },
+      "defencing": {
+        "level": 8
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 55,
+    "maxHp": 100,
+    "maxMp": 250,
+    "mp": 250,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "abyssal_lord_001": {
+    "id": "abyssal_lord_001",
+    "name": "深渊领主",
+    "level": 24,
+    "hp": 420,
+    "attack": 48,
+    "defense": 22,
+    "description": "地牢最深处的统治者，能释放强力暗影冲击。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 580,
+          "max": 680
+        }
+      },
+      {
+        "id": "abyssalCloak",
+        "percent": 0.02,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "shadowOrb",
+        "percent": 0.03,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "shadowBurstSkillBook",
+        "percent": 0.01,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "groupCurseSkillBook",
+        "percent": 0.01,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "cat_dungeon_001_expedition_map",
+        "percent": 0.01,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "shadowBurst": {
+        "level": 14
+      },
+      "groupCurse": {
+        "level": 2
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 18
+      },
+      "dexterity": {
+        "level": 10
+      },
+      "intelligence": {
+        "level": 18
+      },
+      "stamina": {
+        "level": 18
+      },
+      "attacking": {
+        "level": 48
+      },
+      "defencing": {
+        "level": 22
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 18
+      },
+      "dexterity": {
+        "level": 10
+      },
+      "intelligence": {
+        "level": 18
+      },
+      "stamina": {
+        "level": 18
+      },
+      "attacking": {
+        "level": 48
+      },
+      "defencing": {
+        "level": 22
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 320,
+    "maxHp": 420,
+    "maxMp": 350,
+    "mp": 350,
+    "isBoss": true,
+    "ignoreTurn": false
+  },
+  "cat_ancestor_king_001": {
+    "id": "cat_ancestor_king_001",
+    "name": "猫祖王",
+    "level": 28,
+    "hp": 600,
+    "attack": 60,
+    "defense": 28,
+    "description": "猫族先祖的王者，拥有最强的猫之魔法。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 600,
+          "max": 800
+        }
+      },
+      {
+        "id": "ancestorCrown",
+        "percent": 0.005,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "catShadowGem",
+        "percent": 0.03,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "shadowBurstSkillBook",
+        "percent": 0.01,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "curseSkillBook",
+        "percent": 0.01,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "cat_dungeon_001_expedition_map",
+        "percent": 0.01,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "shadowBurst": {
+        "level": 10
+      },
+      "baseGroupHeal": {
+        "level": 2
+      },
+      "curse": {
+        "level": 2
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 25
+      },
+      "dexterity": {
+        "level": 18
+      },
+      "intelligence": {
+        "level": 28
+      },
+      "stamina": {
+        "level": 22
+      },
+      "attacking": {
+        "level": 60
+      },
+      "defencing": {
+        "level": 28
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 25
+      },
+      "dexterity": {
+        "level": 18
+      },
+      "intelligence": {
+        "level": 28
+      },
+      "stamina": {
+        "level": 22
+      },
+      "attacking": {
+        "level": 60
+      },
+      "defencing": {
+        "level": 28
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 600,
+    "maxHp": 600,
+    "maxMp": 500,
+    "mp": 500,
+    "isBoss": true,
+    "ignoreTurn": false
+  },
+  "cat_priest_001": {
+    "id": "cat_priest_001",
+    "name": "猫祭司",
+    "level": 13,
+    "hp": 120,
+    "attack": 10,
+    "defense": 10,
+    "description": "擅长神圣祈祷与治疗的猫咪祭司。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 30,
+          "max": 50
+        }
+      },
+      {
+        "id": "reviveSkillBook",
+        "percent": 0.0008,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "baseHeal": {
+        "level": 2
+      },
+      "revive": {
+        "level": 1
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 6
+      },
+      "dexterity": {
+        "level": 8
+      },
+      "intelligence": {
+        "level": 30
+      },
+      "stamina": {
+        "level": 8
+      },
+      "attacking": {
+        "level": 10
+      },
+      "defencing": {
+        "level": 10
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 6
+      },
+      "dexterity": {
+        "level": 8
+      },
+      "intelligence": {
+        "level": 30
+      },
+      "stamina": {
+        "level": 8
+      },
+      "attacking": {
+        "level": 10
+      },
+      "defencing": {
+        "level": 10
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 35,
+    "maxHp": 120,
+    "maxMp": 150,
+    "mp": 150,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "cat_paladin_001": {
+    "id": "cat_paladin_001",
+    "name": "猫圣骑士",
+    "level": 15,
+    "hp": 300,
+    "attack": 10,
+    "defense": 10,
+    "description": "身披圣光的猫族守护者，能为队友提供庇护。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 40,
+          "max": 60
+        }
+      },
+      {
+        "id": "holyLightSkillBook",
+        "percent": 0.001,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "ironWall": {
+        "level": 2
+      },
+      "holyLight": {
+        "level": 1
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 25
+      },
+      "dexterity": {
+        "level": 10
+      },
+      "intelligence": {
+        "level": 25
+      },
+      "stamina": {
+        "level": 15
+      },
+      "attacking": {
+        "level": 10
+      },
+      "defencing": {
+        "level": 10
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 25
+      },
+      "dexterity": {
+        "level": 10
+      },
+      "intelligence": {
+        "level": 25
+      },
+      "stamina": {
+        "level": 15
+      },
+      "attacking": {
+        "level": 10
+      },
+      "defencing": {
+        "level": 10
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 35,
+    "maxHp": 300,
+    "maxMp": 150,
+    "mp": 150,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "cat_sage_001": {
+    "id": "cat_sage_001",
+    "name": "猫贤者",
+    "level": 16,
+    "hp": 250,
+    "attack": 10,
+    "defense": 10,
+    "description": "通晓神圣与复苏之力的猫族智者。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 50,
+          "max": 70
+        }
+      },
+      {
+        "id": "blessSkillBook",
+        "percent": 0.0008,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "baseGroupHealSkillBook",
+        "percent": 0.0038,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "holy_cat_temple_001_expedition_map",
+        "percent": 0.0015,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "baseGroupHeal": {
+        "level": 20
+      },
+      "bless": {
+        "level": 2
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 8
+      },
+      "dexterity": {
+        "level": 10
+      },
+      "intelligence": {
+        "level": 25
+      },
+      "stamina": {
+        "level": 10
+      },
+      "attacking": {
+        "level": 10
+      },
+      "defencing": {
+        "level": 10
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 8
+      },
+      "dexterity": {
+        "level": 10
+      },
+      "intelligence": {
+        "level": 25
+      },
+      "stamina": {
+        "level": 10
+      },
+      "attacking": {
+        "level": 10
+      },
+      "defencing": {
+        "level": 10
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 35,
+    "maxHp": 250,
+    "maxMp": 250,
+    "mp": 250,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "cat_guardian_001": {
+    "id": "cat_guardian_001",
+    "name": "猫守护者",
+    "level": 14,
+    "hp": 350,
+    "attack": 10,
+    "defense": 10,
+    "description": "守护神殿的强壮猫咪，能为队友分担伤害。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 35,
+          "max": 55
+        }
+      }
+    ],
+    "skills": {
+      "ironWall": {
+        "level": 2
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 20
+      },
+      "dexterity": {
+        "level": 8
+      },
+      "intelligence": {
+        "level": 6
+      },
+      "stamina": {
+        "level": 20
+      },
+      "attacking": {
+        "level": 10
+      },
+      "defencing": {
+        "level": 10
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 20
+      },
+      "dexterity": {
+        "level": 8
+      },
+      "intelligence": {
+        "level": 6
+      },
+      "stamina": {
+        "level": 20
+      },
+      "attacking": {
+        "level": 10
+      },
+      "defencing": {
+        "level": 10
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 45,
+    "maxHp": 350,
+    "maxMp": 100,
+    "mp": 100,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "cat_acolyte_001": {
+    "id": "cat_acolyte_001",
+    "name": "猫侍祭",
+    "level": 12,
+    "hp": 250,
+    "attack": 10,
+    "defense": 10,
+    "description": "年轻的神殿侍祭，擅长基础治疗。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 20,
+          "max": 35
+        }
+      },
+      {
+        "id": "groupRegenSkillBook",
+        "percent": 0.0012,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "blessSkillBook",
+        "percent": 0.0012,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "groupRegen": {
+        "level": 1
+      },
+      "bless": {
+        "level": 2
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 5
+      },
+      "dexterity": {
+        "level": 7
+      },
+      "intelligence": {
+        "level": 25
+      },
+      "stamina": {
+        "level": 7
+      },
+      "attacking": {
+        "level": 10
+      },
+      "defencing": {
+        "level": 10
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 5
+      },
+      "dexterity": {
+        "level": 7
+      },
+      "intelligence": {
+        "level": 25
+      },
+      "stamina": {
+        "level": 7
+      },
+      "attacking": {
+        "level": 10
+      },
+      "defencing": {
+        "level": 10
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 45,
+    "maxHp": 250,
+    "maxMp": 250,
+    "mp": 250,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "holy_cat_king_001": {
+    "id": "holy_cat_king_001",
+    "name": "神圣猫王",
+    "level": 22,
+    "hp": 650,
+    "attack": 10,
+    "defense": 10,
+    "description": "神殿的主宰，拥有最强的神圣与复苏之力。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 750,
+          "max": 950
+        }
+      },
+      {
+        "id": "holyLightSkillBook",
+        "percent": 0.0058,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "blessSkillBook",
+        "percent": 0.0058,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "reviveSkillBook",
+        "percent": 0.0058,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "holy_cat_temple_001_expedition_map",
+        "percent": 0.01,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "bless": {
+        "level": 10
+      },
+      "holyLight": {
+        "level": 10
+      },
+      "revive": {
+        "level": 10
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 20
+      },
+      "dexterity": {
+        "level": 16
+      },
+      "intelligence": {
+        "level": 50
+      },
+      "stamina": {
+        "level": 28
+      },
+      "attacking": {
+        "level": 10
+      },
+      "defencing": {
+        "level": 10
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 20
+      },
+      "dexterity": {
+        "level": 16
+      },
+      "intelligence": {
+        "level": 50
+      },
+      "stamina": {
+        "level": 28
+      },
+      "attacking": {
+        "level": 10
+      },
+      "defencing": {
+        "level": 10
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 500,
+    "maxHp": 650,
+    "maxMp": 500,
+    "mp": 500,
+    "isBoss": true,
+    "ignoreTurn": false
+  },
+  "starguard_001": {
+    "id": "starguard_001",
+    "name": "星辉守卫猫",
+    "level": 30,
+    "hp": 460,
+    "attack": 45,
+    "defense": 30,
+    "description": "天塔的忠诚守卫，拥有群体护盾技能，能为同伴分担伤害。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 40,
+          "max": 60
+        }
+      },
+      {
+        "id": "steel",
+        "percent": 0.2,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "starShard",
+        "percent": 0.002,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "astralBarrierSkillBook",
+        "percent": 0.0008,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "astralEmpressTrial_expedition_map",
+        "percent": 0.0015,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "astralBarrier": {
+        "level": 1
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 25
+      },
+      "dexterity": {
+        "level": 14
+      },
+      "intelligence": {
+        "level": 25
+      },
+      "stamina": {
+        "level": 30
+      },
+      "attacking": {
+        "level": 45
+      },
+      "defencing": {
+        "level": 30
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 25
+      },
+      "dexterity": {
+        "level": 14
+      },
+      "intelligence": {
+        "level": 25
+      },
+      "stamina": {
+        "level": 30
+      },
+      "attacking": {
+        "level": 45
+      },
+      "defencing": {
+        "level": 30
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 55,
+    "maxHp": 460,
+    "maxMp": 115,
+    "mp": 115,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "astral_mage_001": {
+    "id": "astral_mage_001",
+    "name": "星辉法师猫",
+    "level": 32,
+    "hp": 510,
+    "attack": 25,
+    "defense": 18,
+    "description": "精通星辰魔法的猫咪，能施放群体沉默与高伤害魔法。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 38,
+          "max": 55
+        }
+      },
+      {
+        "id": "magicScroll",
+        "percent": 0.1,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "starEssence",
+        "percent": 0.002,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "astralBlastSkillBook",
+        "percent": 0.0001,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "groupSilenceSkillBook",
+        "percent": 0.0001,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "astralBlast": {
+        "level": 2
+      },
+      "groupSilence": {
+        "level": 1
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 6
+      },
+      "dexterity": {
+        "level": 8
+      },
+      "intelligence": {
+        "level": 46
+      },
+      "stamina": {
+        "level": 18
+      },
+      "attacking": {
+        "level": 25
+      },
+      "defencing": {
+        "level": 18
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 6
+      },
+      "dexterity": {
+        "level": 8
+      },
+      "intelligence": {
+        "level": 46
+      },
+      "stamina": {
+        "level": 18
+      },
+      "attacking": {
+        "level": 25
+      },
+      "defencing": {
+        "level": 18
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 60,
+    "maxHp": 510,
+    "maxMp": 150,
+    "mp": 150,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "clockwork_cat_001": {
+    "id": "clockwork_cat_001",
+    "name": "星塔齿轮猫",
+    "level": 32,
+    "hp": 540,
+    "attack": 24,
+    "defense": 25,
+    "description": "机关驱动的猫咪，能自我修复并反弹部分物理伤害。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 35,
+          "max": 50
+        }
+      },
+      {
+        "id": "ancientGear",
+        "percent": 0.012,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "steel",
+        "percent": 0.1,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      }
+    ],
+    "skills": {
+      "selfRepair": {
+        "level": 1
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 25
+      },
+      "dexterity": {
+        "level": 17
+      },
+      "intelligence": {
+        "level": 24
+      },
+      "stamina": {
+        "level": 25
+      },
+      "attacking": {
+        "level": 24
+      },
+      "defencing": {
+        "level": 25
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 25
+      },
+      "dexterity": {
+        "level": 17
+      },
+      "intelligence": {
+        "level": 24
+      },
+      "stamina": {
+        "level": 25
+      },
+      "attacking": {
+        "level": 24
+      },
+      "defencing": {
+        "level": 25
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 52,
+    "maxHp": 540,
+    "maxMp": 95,
+    "mp": 95,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "starlight_healer_001": {
+    "id": "starlight_healer_001",
+    "name": "星光治愈猫",
+    "level": 32,
+    "hp": 520,
+    "attack": 12,
+    "defense": 10,
+    "description": "能为全体回复并解除异常状态的治愈猫，优先治疗最虚弱队友。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 32,
+          "max": 48
+        }
+      },
+      {
+        "id": "herb",
+        "percent": 0.15,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "starEssence",
+        "percent": 0.002,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "baseGroupHeal": {
+        "level": 20
+      },
+      "cleanse": {
+        "level": 1
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 7
+      },
+      "dexterity": {
+        "level": 8
+      },
+      "intelligence": {
+        "level": 34
+      },
+      "stamina": {
+        "level": 16
+      },
+      "attacking": {
+        "level": 12
+      },
+      "defencing": {
+        "level": 10
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 7
+      },
+      "dexterity": {
+        "level": 8
+      },
+      "intelligence": {
+        "level": 34
+      },
+      "stamina": {
+        "level": 16
+      },
+      "attacking": {
+        "level": 12
+      },
+      "defencing": {
+        "level": 10
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 58,
+    "maxHp": 520,
+    "maxMp": 125,
+    "mp": 125,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "comet_rogue_001": {
+    "id": "comet_rogue_001",
+    "name": "彗星潜行猫",
+    "level": 33,
+    "hp": 505,
+    "attack": 32,
+    "defense": 7,
+    "description": "擅长偷袭与破甲的猫咪刺客，能对后排造成高额伤害。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 36,
+          "max": 54
+        }
+      },
+      {
+        "id": "cometStrikeSkillBook",
+        "percent": 0.0005,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "armorBreakSkillBook",
+        "percent": 0.0005,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "shadowOrb",
+        "percent": 0.002,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "starShard",
+        "percent": 0.002,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "cometStrike": {
+        "level": 2
+      },
+      "armorBreak": {
+        "level": 1
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 10
+      },
+      "dexterity": {
+        "level": 42
+      },
+      "intelligence": {
+        "level": 17
+      },
+      "stamina": {
+        "level": 11
+      },
+      "attacking": {
+        "level": 32
+      },
+      "defencing": {
+        "level": 7
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 10
+      },
+      "dexterity": {
+        "level": 42
+      },
+      "intelligence": {
+        "level": 17
+      },
+      "stamina": {
+        "level": 11
+      },
+      "attacking": {
+        "level": 32
+      },
+      "defencing": {
+        "level": 7
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 62,
+    "maxHp": 505,
+    "maxMp": 85,
+    "mp": 85,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "astral_trap_001": {
+    "id": "astral_trap_001",
+    "name": "星辉陷阱猫",
+    "level": 33,
+    "hp": 500,
+    "attack": 18,
+    "defense": 8,
+    "description": "擅长布置星能陷阱，能使敌人眩晕或降低命中。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 30,
+          "max": 45
+        }
+      },
+      {
+        "id": "trapParts",
+        "percent": 0.002,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "starDust",
+        "percent": 0.002,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "starTrapSkillBook",
+        "percent": 0.0008,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "starTrap": {
+        "level": 1
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 11
+      },
+      "dexterity": {
+        "level": 24
+      },
+      "intelligence": {
+        "level": 15
+      },
+      "stamina": {
+        "level": 12
+      },
+      "attacking": {
+        "level": 18
+      },
+      "defencing": {
+        "level": 8
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 11
+      },
+      "dexterity": {
+        "level": 24
+      },
+      "intelligence": {
+        "level": 15
+      },
+      "stamina": {
+        "level": 12
+      },
+      "attacking": {
+        "level": 18
+      },
+      "defencing": {
+        "level": 8
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 50,
+    "maxHp": 500,
+    "maxMp": 90,
+    "mp": 90,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "starguardian_boss_001": {
+    "id": "starguardian_boss_001",
+    "name": "星辉天塔守护者",
+    "level": 35,
+    "hp": 720,
+    "attack": 38,
+    "defense": 22,
+    "description": "天塔的终极守护者，能释放群体护盾、星辰冲击与反击。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 180,
+          "max": 260
+        }
+      },
+      {
+        "id": "starRelic",
+        "percent": 0.002,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "guardianCore",
+        "percent": 0.002,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "steel",
+        "percent": 0.2,
+        "range": {
+          "min": 2,
+          "max": 4
+        }
+      },
+      {
+        "id": "astralBarrierSkillBook",
+        "percent": 0.0001,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "astralBarrier": {
+        "level": 2
+      },
+      "astralBlast": {
+        "level": 2
+      },
+      "baseAttack": {
+        "level": 2
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 22
+      },
+      "dexterity": {
+        "level": 12
+      },
+      "intelligence": {
+        "level": 14
+      },
+      "stamina": {
+        "level": 22
+      },
+      "attacking": {
+        "level": 38
+      },
+      "defencing": {
+        "level": 22
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 22
+      },
+      "dexterity": {
+        "level": 12
+      },
+      "intelligence": {
+        "level": 14
+      },
+      "stamina": {
+        "level": 22
+      },
+      "attacking": {
+        "level": 38
+      },
+      "defencing": {
+        "level": 22
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 240,
+    "maxHp": 720,
+    "maxMp": 120,
+    "mp": 120,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "astral_empress_boss_001": {
+    "id": "astral_empress_boss_001",
+    "name": "星辉帝王猫",
+    "level": 45,
+    "hp": 1750,
+    "attack": 36,
+    "defense": 16,
+    "description": "星辉天塔的主宰，能释放群体沉默、星辰风暴与大范围驱散。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 1100,
+          "max": 1300
+        }
+      },
+      {
+        "id": "starCrown",
+        "percent": 0.0005,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "starEssence",
+        "percent": 0.002,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "astralStormSkillBook",
+        "percent": 0.0001,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "groupSilenceSkillBook",
+        "percent": 0.0005,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "astralEmpressTrial_expedition_map",
+        "percent": 0.008,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "emperorCatFinale_forAstralEmpressBoss": {
+        "level": 5
+      },
+      "astralStorm": {
+        "level": 2
+      },
+      "groupSilence": {
+        "level": 2
+      },
+      "cleanse": {
+        "level": 2
+      },
+      "baseAttack": {
+        "level": 2
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 24
+      },
+      "dexterity": {
+        "level": 24
+      },
+      "intelligence": {
+        "level": 48
+      },
+      "stamina": {
+        "level": 24
+      },
+      "attacking": {
+        "level": 36
+      },
+      "defencing": {
+        "level": 16
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 24
+      },
+      "dexterity": {
+        "level": 24
+      },
+      "intelligence": {
+        "level": 48
+      },
+      "stamina": {
+        "level": 24
+      },
+      "attacking": {
+        "level": 36
+      },
+      "defencing": {
+        "level": 16
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 1200,
+    "maxHp": 1750,
+    "maxMp": 500,
+    "mp": 500,
+    "isBoss": true,
+    "ignoreTurn": false
+  },
+  "shadow_paw_apprentice_001": {
+    "id": "shadow_paw_apprentice_001",
+    "name": "影爪学徒",
+    "level": 19,
+    "hp": 275,
+    "attack": 75,
+    "defense": 10,
+    "description": "初入门的猫咪刺客学徒，擅长潜行与偷袭。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 0.7,
+        "range": {
+          "min": 40,
+          "max": 90
+        }
+      },
+      {
+        "id": "rareClaw",
+        "percent": 0.005,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "sneakSkillBook",
+        "percent": 0.0085,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "ambushSkillBook",
+        "percent": 0.0085,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "shadow_paw_hideout_expedition_map",
+        "percent": 0.0015,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "sneak": {
+        "level": 1
+      },
+      "ambush": {
+        "level": 1
+      },
+      "baseAttack": {
+        "level": 2
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 10
+      },
+      "dexterity": {
+        "level": 38
+      },
+      "intelligence": {
+        "level": 12
+      },
+      "stamina": {
+        "level": 10
+      },
+      "attacking": {
+        "level": 75
+      },
+      "defencing": {
+        "level": 10
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 10
+      },
+      "dexterity": {
+        "level": 38
+      },
+      "intelligence": {
+        "level": 12
+      },
+      "stamina": {
+        "level": 10
+      },
+      "attacking": {
+        "level": 75
+      },
+      "defencing": {
+        "level": 10
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 110,
+    "maxHp": 275,
+    "maxMp": 60,
+    "mp": 60,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "toxic_claw_001": {
+    "id": "toxic_claw_001",
+    "name": "毒爪猫",
+    "level": 21,
+    "hp": 325,
+    "attack": 82,
+    "defense": 10,
+    "description": "擅长使用带毒猫爪，攻击附带中毒效果。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 0.75,
+        "range": {
+          "min": 50,
+          "max": 110
+        }
+      },
+      {
+        "id": "toxicFur",
+        "percent": 0.25,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "poisonClawSkillBook",
+        "percent": 0.0085,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "poisonClaw": {
+        "level": 2
+      },
+      "baseAttack": {
+        "level": 2
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 10
+      },
+      "dexterity": {
+        "level": 38
+      },
+      "intelligence": {
+        "level": 12
+      },
+      "stamina": {
+        "level": 10
+      },
+      "attacking": {
+        "level": 82
+      },
+      "defencing": {
+        "level": 10
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 10
+      },
+      "dexterity": {
+        "level": 38
+      },
+      "intelligence": {
+        "level": 12
+      },
+      "stamina": {
+        "level": 10
+      },
+      "attacking": {
+        "level": 82
+      },
+      "defencing": {
+        "level": 10
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 140,
+    "maxHp": 325,
+    "maxMp": 80,
+    "mp": 80,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "silent_whisker_001": {
+    "id": "silent_whisker_001",
+    "name": "静须刺客",
+    "level": 23,
+    "hp": 275,
+    "attack": 75,
+    "defense": 10,
+    "description": "行动无声的猫咪刺客，能快速接近目标。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 0.8,
+        "range": {
+          "min": 60,
+          "max": 130
+        }
+      },
+      {
+        "id": "silenceStrikeSkillBook",
+        "percent": 0.0085,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "shadowStepSkillBook",
+        "percent": 0.0085,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "whiskerCharm",
+        "percent": 0.15,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "shadowStep": {
+        "level": 2
+      },
+      "silenceStrike": {
+        "level": 2
+      },
+      "baseAttack": {
+        "level": 3
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 10
+      },
+      "dexterity": {
+        "level": 38
+      },
+      "intelligence": {
+        "level": 12
+      },
+      "stamina": {
+        "level": 10
+      },
+      "attacking": {
+        "level": 75
+      },
+      "defencing": {
+        "level": 10
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 10
+      },
+      "dexterity": {
+        "level": 38
+      },
+      "intelligence": {
+        "level": 12
+      },
+      "stamina": {
+        "level": 10
+      },
+      "attacking": {
+        "level": 75
+      },
+      "defencing": {
+        "level": 10
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 170,
+    "maxHp": 275,
+    "maxMp": 90,
+    "mp": 90,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "smoke_tail_001": {
+    "id": "smoke_tail_001",
+    "name": "烟尾猫",
+    "level": 22,
+    "hp": 350,
+    "attack": 55,
+    "defense": 10,
+    "description": "擅长甩动烟雾尾巴，扰乱敌人视线。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 0.65,
+        "range": {
+          "min": 40,
+          "max": 100
+        }
+      },
+      {
+        "id": "smokeBall",
+        "percent": 0.3,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "slientSmokeScreenSkillBook",
+        "percent": 0.0085,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "slientSmokeScreen": {
+        "level": 2
+      },
+      "baseAttack": {
+        "level": 2
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 10
+      },
+      "dexterity": {
+        "level": 38
+      },
+      "intelligence": {
+        "level": 12
+      },
+      "stamina": {
+        "level": 10
+      },
+      "attacking": {
+        "level": 55
+      },
+      "defencing": {
+        "level": 10
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 10
+      },
+      "dexterity": {
+        "level": 38
+      },
+      "intelligence": {
+        "level": 12
+      },
+      "stamina": {
+        "level": 10
+      },
+      "attacking": {
+        "level": 55
+      },
+      "defencing": {
+        "level": 10
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 130,
+    "maxHp": 350,
+    "maxMp": 70,
+    "mp": 70,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "mirror_paw_001": {
+    "id": "mirror_paw_001",
+    "name": "镜爪刺客",
+    "level": 25,
+    "hp": 275,
+    "attack": 65,
+    "defense": 10,
+    "description": "能制造分身迷惑敌人的高级猫咪刺客。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 0.9,
+        "range": {
+          "min": 80,
+          "max": 160
+        }
+      },
+      {
+        "id": "sneakSkillBook",
+        "percent": 0.0085,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "mirrorImageSkillBook",
+        "percent": 0.0085,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "ambushSkillBook",
+        "percent": 0.0025,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "sneak": {
+        "level": 1
+      },
+      "mirrorImage": {
+        "level": 2
+      },
+      "ambush": {
+        "level": 1
+      },
+      "baseAttack": {
+        "level": 3
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 10
+      },
+      "dexterity": {
+        "level": 38
+      },
+      "intelligence": {
+        "level": 12
+      },
+      "stamina": {
+        "level": 10
+      },
+      "attacking": {
+        "level": 65
+      },
+      "defencing": {
+        "level": 10
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 10
+      },
+      "dexterity": {
+        "level": 38
+      },
+      "intelligence": {
+        "level": 12
+      },
+      "stamina": {
+        "level": 10
+      },
+      "attacking": {
+        "level": 65
+      },
+      "defencing": {
+        "level": 10
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 200,
+    "maxHp": 275,
+    "maxMp": 120,
+    "mp": 120,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "shadow_paw_master_boss_001": {
+    "id": "shadow_paw_master_boss_001",
+    "name": "影爪首领",
+    "level": 30,
+    "hp": 1250,
+    "attack": 95,
+    "defense": 10,
+    "description": "影爪巢穴的统领，身法诡异，杀人无形。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 850,
+          "max": 1050
+        }
+      },
+      {
+        "id": "sneakSkillBook",
+        "percent": 0.013500000000000002,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "mirrorImageSkillBook",
+        "percent": 0.013500000000000002,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "shadowAssassinUltSkillBook",
+        "percent": 0.0055000000000000005,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "shadowCape",
+        "percent": 0.005,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "rareClaw",
+        "percent": 0.005,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "nightEyeGem",
+        "percent": 0.005,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "shadow_paw_hideout_expedition_map",
+        "percent": 0.01,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "sneak": {
+        "level": 1
+      },
+      "mirrorImage": {
+        "level": 2
+      },
+      "shadowAssassinUlt": {
+        "level": 1
+      },
+      "baseAttack": {
+        "level": 4
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 10
+      },
+      "dexterity": {
+        "level": 60
+      },
+      "intelligence": {
+        "level": 12
+      },
+      "stamina": {
+        "level": 10
+      },
+      "attacking": {
+        "level": 95
+      },
+      "defencing": {
+        "level": 10
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 10
+      },
+      "dexterity": {
+        "level": 60
+      },
+      "intelligence": {
+        "level": 12
+      },
+      "stamina": {
+        "level": 10
+      },
+      "attacking": {
+        "level": 95
+      },
+      "defencing": {
+        "level": 10
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 600,
+    "maxHp": 1250,
+    "maxMp": 200,
+    "mp": 200,
+    "isBoss": true,
+    "ignoreTurn": false
+  },
+  "stardust_mouse_001": {
+    "id": "stardust_mouse_001",
+    "name": "星尘鼠",
+    "level": 45,
+    "hp": 450,
+    "attack": 50,
+    "defense": 20,
+    "description": "喜欢偷吃星尘的调皮小老鼠。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 0.8,
+        "range": {
+          "min": 30,
+          "max": 50
+        }
+      },
+      {
+        "id": "starDust",
+        "percent": 0.001,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "starShard",
+        "percent": 0.0004,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "stardustMouseSwapSkillBook",
+        "percent": 0.0005,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "amusement_park_expedition_map",
+        "percent": 0.0015,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "stardustMouseSwap": {
+        "level": 2
+      },
+      "baseAttack": {
+        "level": 2
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 25
+      },
+      "dexterity": {
+        "level": 35
+      },
+      "intelligence": {
+        "level": 8
+      },
+      "stamina": {
+        "level": 8
+      },
+      "attacking": {
+        "level": 50
+      },
+      "defencing": {
+        "level": 20
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 25
+      },
+      "dexterity": {
+        "level": 35
+      },
+      "intelligence": {
+        "level": 8
+      },
+      "stamina": {
+        "level": 8
+      },
+      "attacking": {
+        "level": 50
+      },
+      "defencing": {
+        "level": 20
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 75,
+    "maxHp": 450,
+    "maxMp": 80,
+    "mp": 80,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "carousel_cat_001": {
+    "id": "carousel_cat_001",
+    "name": "旋转木马猫",
+    "level": 52,
+    "hp": 680,
+    "attack": 80,
+    "defense": 25,
+    "description": "游乐园的守卫，能群体旋转攻击。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 0.8,
+        "range": {
+          "min": 40,
+          "max": 60
+        }
+      },
+      {
+        "id": "dizzySpinSkillBook",
+        "percent": 0.0005,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "carouselOverdriveSkillBook",
+        "percent": 0.0005,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "dizzySpin": {
+        "level": 2
+      },
+      "carouselOverdrive": {
+        "level": 2
+      },
+      "baseAttack": {
+        "level": 2
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 35
+      },
+      "dexterity": {
+        "level": 25
+      },
+      "intelligence": {
+        "level": 5
+      },
+      "stamina": {
+        "level": 40
+      },
+      "attacking": {
+        "level": 80
+      },
+      "defencing": {
+        "level": 25
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 35
+      },
+      "dexterity": {
+        "level": 25
+      },
+      "intelligence": {
+        "level": 5
+      },
+      "stamina": {
+        "level": 40
+      },
+      "attacking": {
+        "level": 80
+      },
+      "defencing": {
+        "level": 25
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 85,
+    "maxHp": 680,
+    "maxMp": 90,
+    "mp": 90,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "candy_clown_001": {
+    "id": "candy_clown_001",
+    "name": "糖果小丑猫",
+    "level": 52,
+    "hp": 680,
+    "attack": 80,
+    "defense": 25,
+    "description": "擅长投掷糖果炸弹，造成范围伤害。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 0.9,
+        "range": {
+          "min": 30,
+          "max": 50
+        }
+      },
+      {
+        "id": "candyBomb",
+        "percent": 0.002,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "candyBombSkillBook",
+        "percent": 0.0008,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "prankSmokeSkillBook",
+        "percent": 0.008,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "candyBomb": {
+        "level": 2
+      },
+      "prankSmoke": {
+        "level": 2
+      },
+      "baseAttack": {
+        "level": 2
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 35
+      },
+      "dexterity": {
+        "level": 25
+      },
+      "intelligence": {
+        "level": 5
+      },
+      "stamina": {
+        "level": 40
+      },
+      "attacking": {
+        "level": 80
+      },
+      "defencing": {
+        "level": 25
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 35
+      },
+      "dexterity": {
+        "level": 25
+      },
+      "intelligence": {
+        "level": 5
+      },
+      "stamina": {
+        "level": 40
+      },
+      "attacking": {
+        "level": 80
+      },
+      "defencing": {
+        "level": 25
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 85,
+    "maxHp": 680,
+    "maxMp": 100,
+    "mp": 100,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "plush_guard_001": {
+    "id": "plush_guard_001",
+    "name": "毛绒守卫猫",
+    "level": 52,
+    "hp": 680,
+    "attack": 80,
+    "defense": 40,
+    "description": "结实的毛绒玩偶守卫，防御极高。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 0.9,
+        "range": {
+          "min": 40,
+          "max": 70
+        }
+      },
+      {
+        "id": "plushFur",
+        "percent": 0.0025,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "plushTauntSkillBook",
+        "percent": 0.0008,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      }
+    ],
+    "skills": {
+      "plushTaunt": {
+        "level": 2
+      },
+      "baseAttack": {
+        "level": 2
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 35
+      },
+      "dexterity": {
+        "level": 5
+      },
+      "intelligence": {
+        "level": 5
+      },
+      "stamina": {
+        "level": 40
+      },
+      "attacking": {
+        "level": 80
+      },
+      "defencing": {
+        "level": 40
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 35
+      },
+      "dexterity": {
+        "level": 5
+      },
+      "intelligence": {
+        "level": 5
+      },
+      "stamina": {
+        "level": 40
+      },
+      "attacking": {
+        "level": 80
+      },
+      "defencing": {
+        "level": 40
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 85,
+    "maxHp": 680,
+    "maxMp": 80,
+    "mp": 80,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "starlight_healer_002": {
+    "id": "starlight_healer_002",
+    "name": "星光治愈猫",
+    "level": 55,
+    "hp": 400,
+    "attack": 40,
+    "defense": 25,
+    "description": "能为同伴回复生命并解除异常。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 35,
+          "max": 55
+        }
+      },
+      {
+        "id": "herb",
+        "percent": 0.0034999999999999996,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "starDust",
+        "percent": 0.0015,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "starShard",
+        "percent": 0.001,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "starlightSanctuarySkillBook",
+        "percent": 0.0012,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      }
+    ],
+    "skills": {
+      "starlightSanctuary": {
+        "level": 2
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 8
+      },
+      "dexterity": {
+        "level": 10
+      },
+      "intelligence": {
+        "level": 22
+      },
+      "stamina": {
+        "level": 10
+      },
+      "attacking": {
+        "level": 40
+      },
+      "defencing": {
+        "level": 25
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 8
+      },
+      "dexterity": {
+        "level": 10
+      },
+      "intelligence": {
+        "level": 22
+      },
+      "stamina": {
+        "level": 10
+      },
+      "attacking": {
+        "level": 40
+      },
+      "defencing": {
+        "level": 25
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 90,
+    "maxHp": 400,
+    "maxMp": 120,
+    "mp": 120,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "ghostly_rider_001": {
+    "id": "ghostly_rider_001",
+    "name": "幽灵骑手猫",
+    "level": 65,
+    "hp": 1125,
+    "attack": 80,
+    "defense": 40,
+    "description": "游乐园的幽灵骑士，能对后排造成高伤害。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 40,
+          "max": 60
+        }
+      },
+      {
+        "id": "ghostEssence",
+        "percent": 0.001,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "ghostlyStrikeSkillBook",
+        "percent": 0.0008,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "ghostlyStrike": {
+        "level": 2
+      },
+      "baseAttack": {
+        "level": 2
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 12
+      },
+      "dexterity": {
+        "level": 18
+      },
+      "intelligence": {
+        "level": 10
+      },
+      "stamina": {
+        "level": 10
+      },
+      "attacking": {
+        "level": 80
+      },
+      "defencing": {
+        "level": 40
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 12
+      },
+      "dexterity": {
+        "level": 18
+      },
+      "intelligence": {
+        "level": 10
+      },
+      "stamina": {
+        "level": 10
+      },
+      "attacking": {
+        "level": 80
+      },
+      "defencing": {
+        "level": 40
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 225,
+    "maxHp": 1125,
+    "maxMp": 90,
+    "mp": 90,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "parade_king_boss_001": {
+    "id": "parade_king_boss_001",
+    "name": "游行王猫",
+    "level": 75,
+    "hp": 1625,
+    "attack": 125,
+    "defense": 50,
+    "description": "游乐园的主宰，能召唤小丑猫并群体加速。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 1400,
+          "max": 1700
+        }
+      },
+      {
+        "id": "loadOfamusementPark",
+        "percent": 0.0001,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "paradeCape",
+        "percent": 0.0001,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "empressCloak",
+        "percent": 0.0001,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "paradeHornSkillBook",
+        "percent": 0.0004,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "clownSummonSkillBook",
+        "percent": 0.0005,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "kingAegisSkillBook",
+        "percent": 0.0006,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "amusement_park_expedition_map",
+        "percent": 0.01,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "paradeHorn": {
+        "level": 5
+      },
+      "clownSummon": {
+        "level": 20
+      },
+      "kingAegis": {
+        "level": 2
+      },
+      "baseAttack": {
+        "level": 3
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 22
+      },
+      "dexterity": {
+        "level": 28
+      },
+      "intelligence": {
+        "level": 18
+      },
+      "stamina": {
+        "level": 22
+      },
+      "attacking": {
+        "level": 125
+      },
+      "defencing": {
+        "level": 50
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 22
+      },
+      "dexterity": {
+        "level": 28
+      },
+      "intelligence": {
+        "level": 18
+      },
+      "stamina": {
+        "level": 22
+      },
+      "attacking": {
+        "level": 125
+      },
+      "defencing": {
+        "level": 50
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 1200,
+    "maxHp": 1625,
+    "maxMp": 200,
+    "mp": 200,
+    "isBoss": true,
+    "ignoreTurn": false
+  },
+  "silence_tome_001": {
+    "id": "silence_tome_001",
+    "name": "沉默魔典",
+    "level": 120,
+    "hp": 1425,
+    "attack": 120,
+    "defense": 80,
+    "description": "散发禁魔气息的古老魔法书，能让猫咪陷入沉默。",
+    "drops": [
+      {
+        "id": "sealMagicSkillBook",
+        "percent": 0.0004,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "tomeFragment",
+        "percent": 0.001,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "gold",
+        "percent": 0.8,
+        "range": {
+          "min": 80,
+          "max": 100
+        }
+      }
+    ],
+    "skills": {
+      "groupSilence": {
+        "level": 3
+      },
+      "sealMagic": {
+        "level": 3
+      },
+      "baseAttack": {
+        "level": 2
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 15
+      },
+      "dexterity": {
+        "level": 15
+      },
+      "intelligence": {
+        "level": 60
+      },
+      "stamina": {
+        "level": 10
+      },
+      "attacking": {
+        "level": 120
+      },
+      "defencing": {
+        "level": 80
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 15
+      },
+      "dexterity": {
+        "level": 15
+      },
+      "intelligence": {
+        "level": 60
+      },
+      "stamina": {
+        "level": 10
+      },
+      "attacking": {
+        "level": 120
+      },
+      "defencing": {
+        "level": 80
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 120,
+    "maxHp": 1425,
+    "maxMp": 800,
+    "mp": 800,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "forbidden_librarian_001": {
+    "id": "forbidden_librarian_001",
+    "name": "禁魔图书管理员猫",
+    "level": 125,
+    "hp": 1625,
+    "attack": 150,
+    "defense": 130,
+    "description": "禁魔图书馆的守护者，擅长封印与驱逐魔法。",
+    "drops": [
+      {
+        "id": "punishSkillBook",
+        "percent": 0.0004,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "banishSkillBook",
+        "percent": 0.0004,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "sealBell",
+        "percent": 0.0005,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "gold",
+        "percent": 0.9,
+        "range": {
+          "min": 80,
+          "max": 100
+        }
+      }
+    ],
+    "skills": {
+      "punish": {
+        "level": 2
+      },
+      "banish": {
+        "level": 2
+      },
+      "baseAttack": {
+        "level": 2
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 15
+      },
+      "dexterity": {
+        "level": 15
+      },
+      "intelligence": {
+        "level": 50
+      },
+      "stamina": {
+        "level": 20
+      },
+      "attacking": {
+        "level": 150
+      },
+      "defencing": {
+        "level": 130
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 15
+      },
+      "dexterity": {
+        "level": 15
+      },
+      "intelligence": {
+        "level": 50
+      },
+      "stamina": {
+        "level": 20
+      },
+      "attacking": {
+        "level": 150
+      },
+      "defencing": {
+        "level": 130
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 130,
+    "maxHp": 1625,
+    "maxMp": 900,
+    "mp": 900,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "arcane_lock_001": {
+    "id": "arcane_lock_001",
+    "name": "驱魔锁陷阱",
+    "level": 115,
+    "hp": 1,
+    "attack": 0,
+    "defense": 0,
+    "description": "用于封印禁书的魔法锁链。",
+    "drops": [
+      {
+        "id": "gold",
+        "percent": 0.7,
+        "range": {
+          "min": 80,
+          "max": 160
+        }
+      }
+    ],
+    "skills": {
+      "bind": {
+        "level": 1
+      },
+      "baseAttack": {
+        "level": 2
+      }
+    },
+    "ai": {},
+    "state": {
+      "arcaneLock": {
+        "id": "arcaneLock",
+        "duration": 5,
+        "remainingDuration": 5
+      }
+    },
+    "status": {
+      "strength": {
+        "level": 1
+      },
+      "dexterity": {
+        "level": 1
+      },
+      "intelligence": {
+        "level": 1
+      },
+      "stamina": {
+        "level": 1
+      },
+      "attacking": {
+        "level": 0
+      },
+      "defencing": {
+        "level": 0
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 1
+      },
+      "dexterity": {
+        "level": 1
+      },
+      "intelligence": {
+        "level": 1
+      },
+      "stamina": {
+        "level": 1
+      },
+      "attacking": {
+        "level": 0
+      },
+      "defencing": {
+        "level": 0
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 110,
+    "maxHp": 1,
+    "maxMp": 0,
+    "mp": 0,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "watcher_owl_001": {
+    "id": "watcher_owl_001",
+    "name": "审查猫头鹰",
+    "level": 130,
+    "hp": 2025,
+    "attack": 150,
+    "defense": 125,
+    "description": "监视一切违规行为的猫头鹰，能识破并惩戒魔法使用者。",
+    "drops": [
+      {
+        "id": "detectMagicSkillBook",
+        "percent": 0.15,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "punishSkillBook",
+        "percent": 0.0004,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "owlFeather",
+        "percent": 0.002,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "gold",
+        "percent": 0.75,
+        "range": {
+          "min": 90,
+          "max": 180
+        }
+      }
+    ],
+    "skills": {
+      "detectMagic": {
+        "level": 3
+      },
+      "punish": {
+        "level": 2
+      },
+      "baseAttack": {
+        "level": 2
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 10
+      },
+      "dexterity": {
+        "level": 10
+      },
+      "intelligence": {
+        "level": 62
+      },
+      "stamina": {
+        "level": 10
+      },
+      "attacking": {
+        "level": 150
+      },
+      "defencing": {
+        "level": 125
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 10
+      },
+      "dexterity": {
+        "level": 10
+      },
+      "intelligence": {
+        "level": 62
+      },
+      "stamina": {
+        "level": 10
+      },
+      "attacking": {
+        "level": 150
+      },
+      "defencing": {
+        "level": 125
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 125,
+    "maxHp": 2025,
+    "maxMp": 700,
+    "mp": 700,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "living_bookmark_001": {
+    "id": "living_bookmark_001",
+    "name": "活体书签",
+    "level": 118,
+    "hp": 620,
+    "attack": 90,
+    "defense": 60,
+    "description": "会在书页间跳跃的神奇书签，能扰乱敌人的思路。",
+    "drops": [
+      {
+        "id": "confuseSkillBook",
+        "percent": 0.4,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "memoryPage",
+        "percent": 0.0001,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "gold",
+        "percent": 0.5,
+        "range": {
+          "min": 30,
+          "max": 60
+        }
+      }
+    ],
+    "skills": {
+      "confuse": {
+        "level": 2
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 12
+      },
+      "dexterity": {
+        "level": 18
+      },
+      "intelligence": {
+        "level": 10
+      },
+      "stamina": {
+        "level": 10
+      },
+      "attacking": {
+        "level": 90
+      },
+      "defencing": {
+        "level": 60
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 12
+      },
+      "dexterity": {
+        "level": 18
+      },
+      "intelligence": {
+        "level": 10
+      },
+      "stamina": {
+        "level": 10
+      },
+      "attacking": {
+        "level": 90
+      },
+      "defencing": {
+        "level": 60
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 140,
+    "maxHp": 620,
+    "maxMp": 300,
+    "mp": 300,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "banished_cat_001": {
+    "id": "banished_cat_001",
+    "name": "被放逐的猫",
+    "level": 135,
+    "hp": 1400,
+    "attack": 250,
+    "defense": 180,
+    "description": "曾试图窃取禁书而被放逐的猫，拥有危险的禁忌之力。",
+    "drops": [
+      {
+        "id": "forbiddenMagicSkillBook",
+        "percent": 0.08,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "darkCrystal",
+        "percent": 0.0001,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "gold",
+        "percent": 0.95,
+        "range": {
+          "min": 150,
+          "max": 250
+        }
+      },
+      {
+        "id": "forbidden_library_expedition_map",
+        "percent": 0.00005,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "forbiddenMagic": {
+        "level": 3
+      },
+      "baseAttack": {
+        "level": 3
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 22
+      },
+      "dexterity": {
+        "level": 28
+      },
+      "intelligence": {
+        "level": 18
+      },
+      "stamina": {
+        "level": 22
+      },
+      "attacking": {
+        "level": 250
+      },
+      "defencing": {
+        "level": 180
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 22
+      },
+      "dexterity": {
+        "level": 28
+      },
+      "intelligence": {
+        "level": 18
+      },
+      "stamina": {
+        "level": 22
+      },
+      "attacking": {
+        "level": 250
+      },
+      "defencing": {
+        "level": 180
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 250,
+    "maxHp": 1400,
+    "maxMp": 1200,
+    "mp": 1200,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "library_keeper_boss_001": {
+    "id": "library_keeper_boss_001",
+    "name": "图书馆守护者猫王",
+    "level": 80,
+    "hp": 2500,
+    "attack": 450,
+    "defense": 200,
+    "description": "星辰图书馆的终极守护者，能操控星象与幻象，改变战斗规则。",
+    "drops": [
+      {
+        "id": "groupSilenceSkillBook",
+        "percent": 0.0008,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "libraryKingBadge",
+        "percent": 0.00005,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "knowledgeCrown",
+        "percent": 0.0001,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 1700,
+          "max": 1900
+        }
+      },
+      {
+        "id": "forbidden_library_expedition_map",
+        "percent": 0.0001,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "ultimateLibraryJudgement": {
+        "level": 4
+      },
+      "groupSilence": {
+        "level": 3
+      },
+      "baseAttack": {
+        "level": 3
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 40
+      },
+      "dexterity": {
+        "level": 36
+      },
+      "intelligence": {
+        "level": 60
+      },
+      "stamina": {
+        "level": 40
+      },
+      "attacking": {
+        "level": 450
+      },
+      "defencing": {
+        "level": 200
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 40
+      },
+      "dexterity": {
+        "level": 36
+      },
+      "intelligence": {
+        "level": 60
+      },
+      "stamina": {
+        "level": 40
+      },
+      "attacking": {
+        "level": 450
+      },
+      "defencing": {
+        "level": 200
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 2000,
+    "maxHp": 2500,
+    "maxMp": 300,
+    "mp": 300,
+    "isBoss": true,
+    "ignoreTurn": false
+  },
+  "nightmare_warden_001": {
+    "id": "nightmare_warden_001",
+    "name": "噩梦狱卒",
+    "level": 220,
+    "hp": 2500,
+    "attack": 150,
+    "defense": 100,
+    "description": "监狱中的残酷看守，挥舞着锈迹斑斑的锁链。每次攻击都带有折磨的快感",
+    "drops": [
+      {
+        "id": "rusted_chain_link",
+        "percent": 0.001,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "gold",
+        "percent": 0.9,
+        "range": {
+          "min": 120,
+          "max": 210
+        }
+      }
+    ],
+    "skills": {
+      "chainWhip": {
+        "level": 3
+      },
+      "fearInduction": {
+        "level": 2
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 55
+      },
+      "dexterity": {
+        "level": 42
+      },
+      "intelligence": {
+        "level": 30
+      },
+      "stamina": {
+        "level": 40
+      },
+      "attacking": {
+        "level": 150
+      },
+      "defencing": {
+        "level": 100
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 55
+      },
+      "dexterity": {
+        "level": 42
+      },
+      "intelligence": {
+        "level": 30
+      },
+      "stamina": {
+        "level": 40
+      },
+      "attacking": {
+        "level": 150
+      },
+      "defencing": {
+        "level": 100
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 480,
+    "maxHp": 2500,
+    "maxMp": 200,
+    "mp": 200,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "soul_eater_demon_001": {
+    "id": "soul_eater_demon_001",
+    "name": "噬魂恶魔",
+    "level": 240,
+    "hp": 2750,
+    "attack": 120,
+    "defense": 75,
+    "description": "以猫咪灵魂为食的恐怖恶魔，每次攻击都会吞噬目标的一部分生命力",
+    "drops": [
+      {
+        "id": "soul_energy_shard",
+        "percent": 0.001,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "gold",
+        "percent": 0.95,
+        "range": {
+          "min": 140,
+          "max": 230
+        }
+      }
+    ],
+    "skills": {
+      "demonicRage": {
+        "level": 2
+      },
+      "soulDrain": {
+        "level": 4
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 15
+      },
+      "dexterity": {
+        "level": 60
+      },
+      "intelligence": {
+        "level": 100
+      },
+      "stamina": {
+        "level": 40
+      },
+      "attacking": {
+        "level": 120
+      },
+      "defencing": {
+        "level": 75
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 15
+      },
+      "dexterity": {
+        "level": 60
+      },
+      "intelligence": {
+        "level": 100
+      },
+      "stamina": {
+        "level": 40
+      },
+      "attacking": {
+        "level": 120
+      },
+      "defencing": {
+        "level": 75
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 460,
+    "maxHp": 2750,
+    "maxMp": 200,
+    "mp": 200,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "corrupted_cat_spirit_001": {
+    "id": "corrupted_cat_spirit_001",
+    "name": "堕落猫灵",
+    "level": 210,
+    "hp": 2800,
+    "attack": 200,
+    "defense": 120,
+    "description": "曾经高贵的猫族战士，如今被黑暗力量腐蚀，成为复仇的怨灵",
+    "drops": [
+      {
+        "id": "dark_sigil_fragment",
+        "percent": 0.001,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "royal_claw_fragment",
+        "percent": 0.00005,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "gold",
+        "percent": 0.95,
+        "range": {
+          "min": 170,
+          "max": 240
+        }
+      }
+    ],
+    "skills": {
+      "spectralClaw": {
+        "level": 3
+      },
+      "hauntingWail": {
+        "level": 2
+      },
+      "vengeanceStrike": {
+        "level": 4
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {
+      "curse": {
+        "id": "curse",
+        "duration": 999,
+        "remainingDuration": 999
+      }
+    },
+    "status": {
+      "strength": {
+        "level": 33
+      },
+      "dexterity": {
+        "level": 82
+      },
+      "intelligence": {
+        "level": 42
+      },
+      "stamina": {
+        "level": 20
+      },
+      "attacking": {
+        "level": 200
+      },
+      "defencing": {
+        "level": 120
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 33
+      },
+      "dexterity": {
+        "level": 82
+      },
+      "intelligence": {
+        "level": 42
+      },
+      "stamina": {
+        "level": 20
+      },
+      "attacking": {
+        "level": 200
+      },
+      "defencing": {
+        "level": 120
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 495,
+    "maxHp": 2800,
+    "maxMp": 200,
+    "mp": 200,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "despair_phantom_001": {
+    "id": "despair_phantom_001",
+    "name": "绝望幻影",
+    "level": 230,
+    "hp": 3000,
+    "attack": 200,
+    "defense": 0,
+    "description": "由无数绝望灵魂凝聚而成的恐怖幻影，散发着令人窒息的绝望气息",
+    "drops": [
+      {
+        "id": "faded_remnant",
+        "percent": 0.001,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "phantom_minor_core",
+        "percent": 0.0001,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "gold",
+        "percent": 0.95,
+        "range": {
+          "min": 170,
+          "max": 240
+        }
+      }
+    ],
+    "skills": {
+      "phantomStrike": {
+        "level": 4
+      },
+      "mentalBreak": {
+        "level": 2
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {
+      "curse": {
+        "id": "curse",
+        "duration": 999,
+        "remainingDuration": 999
+      }
+    },
+    "status": {
+      "strength": {
+        "level": 22
+      },
+      "dexterity": {
+        "level": 52
+      },
+      "intelligence": {
+        "level": 30
+      },
+      "stamina": {
+        "level": 18
+      },
+      "attacking": {
+        "level": 200
+      },
+      "defencing": {
+        "level": 0
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 22
+      },
+      "dexterity": {
+        "level": 52
+      },
+      "intelligence": {
+        "level": 30
+      },
+      "stamina": {
+        "level": 18
+      },
+      "attacking": {
+        "level": 200
+      },
+      "defencing": {
+        "level": 0
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 420,
+    "maxHp": 3000,
+    "maxMp": 200,
+    "mp": 200,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "torture_machine_001": {
+    "id": "torture_machine_001",
+    "name": "酷刑机器",
+    "level": 250,
+    "hp": 3000,
+    "attack": 80,
+    "defense": 120,
+    "description": "冰冷的机械构造体，专为折磨囚犯而设计，每个零件都沾满了痛苦的记忆",
+    "drops": [
+      {
+        "id": "loose_gear_piece",
+        "percent": 0.001,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "gold",
+        "percent": 0.92,
+        "range": {
+          "min": 200,
+          "max": 250
+        }
+      }
+    ],
+    "skills": {
+      "tortureProtocol": {
+        "level": 4
+      },
+      "mechanicalGrip": {
+        "level": 2
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 40
+      },
+      "dexterity": {
+        "level": 10
+      },
+      "intelligence": {
+        "level": 8
+      },
+      "stamina": {
+        "level": 450
+      },
+      "attacking": {
+        "level": 80
+      },
+      "defencing": {
+        "level": 120
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 40
+      },
+      "dexterity": {
+        "level": 10
+      },
+      "intelligence": {
+        "level": 8
+      },
+      "stamina": {
+        "level": 450
+      },
+      "attacking": {
+        "level": 80
+      },
+      "defencing": {
+        "level": 120
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 500,
+    "maxHp": 3000,
+    "maxMp": 100,
+    "mp": 100,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "nightmare_cat_lord_001": {
+    "id": "nightmare_cat_lord_001",
+    "name": "噩梦猫王",
+    "level": 280,
+    "hp": 5500,
+    "attack": 250,
+    "defense": 250,
+    "description": "曾经的猫族王者，如今被噩梦吞噬，成为监狱中最可怕的存在之一",
+    "drops": [
+      {
+        "id": "royal_claw_fragment",
+        "percent": 0.0001,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "nightmarePrisonChestNew",
+        "percent": 0.4,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 1500,
+          "max": 1900
+        }
+      },
+      {
+        "id": "nightmare_prison_expedition_map",
+        "percent": 0.0001,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "nightmareSlam": {
+        "level": 3
+      },
+      "shadowCorruption": {
+        "level": 5
+      },
+      "apocalypticRoar": {
+        "level": 4
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 45
+      },
+      "dexterity": {
+        "level": 80
+      },
+      "intelligence": {
+        "level": 40
+      },
+      "stamina": {
+        "level": 38
+      },
+      "attacking": {
+        "level": 250
+      },
+      "defencing": {
+        "level": 250
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 45
+      },
+      "dexterity": {
+        "level": 80
+      },
+      "intelligence": {
+        "level": 40
+      },
+      "stamina": {
+        "level": 38
+      },
+      "attacking": {
+        "level": 250
+      },
+      "defencing": {
+        "level": 250
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 2500,
+    "maxHp": 5500,
+    "maxMp": 1000,
+    "mp": 1000,
+    "isBoss": true,
+    "ignoreTurn": false
+  },
+  "prison_overlord_boss_001": {
+    "id": "prison_overlord_boss_001",
+    "name": "深层监狱霸主",
+    "level": 350,
+    "hp": 8000,
+    "attack": 400,
+    "defense": 400,
+    "description": "监狱最深层的绝对统治者，掌控着无数囚犯的生死。它的存在就是绝望本身的化身",
+    "drops": [
+      {
+        "id": "nightmarePrisonChestNew",
+        "percent": 0.5,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "gold",
+        "percent": 1,
+        "range": {
+          "min": 2000,
+          "max": 2800
+        }
+      },
+      {
+        "id": "nightmare_prison_expedition_map",
+        "percent": 0.0001,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "chainWhip": {
+        "level": 3
+      },
+      "prisonDomination": {
+        "level": 6
+      },
+      "darkRitual": {
+        "level": 5
+      },
+      "baseAttack": {
+        "level": 5
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 60
+      },
+      "dexterity": {
+        "level": 75
+      },
+      "intelligence": {
+        "level": 55
+      },
+      "stamina": {
+        "level": 58
+      },
+      "attacking": {
+        "level": 400
+      },
+      "defencing": {
+        "level": 400
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 60
+      },
+      "dexterity": {
+        "level": 75
+      },
+      "intelligence": {
+        "level": 55
+      },
+      "stamina": {
+        "level": 58
+      },
+      "attacking": {
+        "level": 400
+      },
+      "defencing": {
+        "level": 400
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 5000,
+    "maxHp": 8000,
+    "maxMp": 1500,
+    "mp": 1500,
+    "isBoss": true,
+    "ignoreTurn": false
+  },
+  "cd_br1": {
+    "id": "cd_br1",
+    "name": "黑岩执盾者",
+    "level": 400,
+    "hp": 5000,
+    "attack": 150,
+    "defense": 175,
+    "description": "以玄黑巨盾固阵破线的岩裔先锋。",
+    "drops": [
+      {
+        "id": "br1_onyx_shield_shard",
+        "percent": 0.001,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "gold",
+        "percent": 0.95,
+        "range": {
+          "min": 150,
+          "max": 250
+        }
+      }
+    ],
+    "skills": {
+      "groupShield": {
+        "level": 10
+      },
+      "echoShieldBash": {
+        "level": 5
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 60
+      },
+      "dexterity": {
+        "level": 60
+      },
+      "intelligence": {
+        "level": 40
+      },
+      "stamina": {
+        "level": 50
+      },
+      "attacking": {
+        "level": 150
+      },
+      "defencing": {
+        "level": 175
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 60
+      },
+      "dexterity": {
+        "level": 60
+      },
+      "intelligence": {
+        "level": 40
+      },
+      "stamina": {
+        "level": 50
+      },
+      "attacking": {
+        "level": 150
+      },
+      "defencing": {
+        "level": 175
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 2000,
+    "maxHp": 5000,
+    "maxMp": 800,
+    "mp": 800,
+    "isBoss": false,
+    "ignoreTurn": false,
+    "equipment": {
+      "body": "fishscaleMineralCoat+5"
+    }
+  },
+  "cd_wd1": {
+    "id": "cd_wd1",
+    "name": "铁誓狱卫",
+    "level": 400,
+    "hp": 6500,
+    "attack": 150,
+    "defense": 175,
+    "description": "以锁链与誓约执法的狱廷守卫。",
+    "drops": [
+      {
+        "id": "wd1_wardens_verdict",
+        "percent": 0.001,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "wd1_oathbound_link",
+        "percent": 0.0001,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "gold",
+        "percent": 0.95,
+        "range": {
+          "min": 150,
+          "max": 250
+        }
+      }
+    ],
+    "skills": {
+      "boneShield": {
+        "level": 1
+      },
+      "mercenaryTaunt": {
+        "level": 1
+      },
+      "chainWhip": {
+        "level": 1
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 65
+      },
+      "dexterity": {
+        "level": 55
+      },
+      "intelligence": {
+        "level": 20
+      },
+      "stamina": {
+        "level": 50
+      },
+      "attacking": {
+        "level": 150
+      },
+      "defencing": {
+        "level": 175
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 65
+      },
+      "dexterity": {
+        "level": 55
+      },
+      "intelligence": {
+        "level": 20
+      },
+      "stamina": {
+        "level": 50
+      },
+      "attacking": {
+        "level": 150
+      },
+      "defencing": {
+        "level": 175
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 2000,
+    "maxHp": 6500,
+    "maxMp": 800,
+    "mp": 800,
+    "isBoss": false,
+    "ignoreTurn": false,
+    "equipment": {
+      "rightHand": "shadowSteelSword+5"
+    }
+  },
+  "cd_ma1": {
+    "id": "cd_ma1",
+    "name": "碎骨重锤猫",
+    "level": 420,
+    "hp": 6000,
+    "attack": 300,
+    "defense": 150,
+    "description": "一锤定胜负的魁梧战喵。",
+    "drops": [
+      {
+        "id": "ma1_tremor_fur",
+        "percent": 0.001,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "wd1_oathbound_link",
+        "percent": 0.0001,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "gold",
+        "percent": 0.95,
+        "range": {
+          "min": 150,
+          "max": 250
+        }
+      }
+    ],
+    "skills": {
+      "boneBreaker": {
+        "level": 10
+      },
+      "quakeSlam": {
+        "level": 10
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 80
+      },
+      "dexterity": {
+        "level": 40
+      },
+      "intelligence": {
+        "level": 20
+      },
+      "stamina": {
+        "level": 50
+      },
+      "attacking": {
+        "level": 300
+      },
+      "defencing": {
+        "level": 150
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 80
+      },
+      "dexterity": {
+        "level": 40
+      },
+      "intelligence": {
+        "level": 20
+      },
+      "stamina": {
+        "level": 50
+      },
+      "attacking": {
+        "level": 300
+      },
+      "defencing": {
+        "level": 150
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 2200,
+    "maxHp": 6000,
+    "maxMp": 500,
+    "mp": 500,
+    "isBoss": false,
+    "ignoreTurn": false,
+    "equipment": {
+      "rightHand": "trollClubPlus+3"
+    }
+  },
+  "cd_ec1": {
+    "id": "cd_ec1",
+    "name": "回声巨像",
+    "level": 450,
+    "hp": 15000,
+    "attack": 100,
+    "defense": 200,
+    "description": "将声波反击为冲击的石像。",
+    "drops": [
+      {
+        "id": "ec1_echoing_stone",
+        "percent": 0.001,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "ec1_resonance_lattice",
+        "percent": 0.001,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "gold",
+        "percent": 0.95,
+        "range": {
+          "min": 150,
+          "max": 250
+        }
+      }
+    ],
+    "skills": {
+      "powerStrike": {
+        "level": 5
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {
+      "echoResonanceState": {
+        "id": "echoResonanceState",
+        "duration": 999,
+        "remainingDuration": 999
+      },
+      "resonancePassive": {
+        "id": "resonancePassive",
+        "duration": 999,
+        "remainingDuration": 999
+      }
+    },
+    "status": {
+      "strength": {
+        "level": 100
+      },
+      "dexterity": {
+        "level": 10
+      },
+      "intelligence": {
+        "level": 10
+      },
+      "stamina": {
+        "level": 10
+      },
+      "attacking": {
+        "level": 100
+      },
+      "defencing": {
+        "level": 200
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 100
+      },
+      "dexterity": {
+        "level": 10
+      },
+      "intelligence": {
+        "level": 10
+      },
+      "stamina": {
+        "level": 10
+      },
+      "attacking": {
+        "level": 100
+      },
+      "defencing": {
+        "level": 200
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 3500,
+    "maxHp": 15000,
+    "maxMp": 100,
+    "mp": 100,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "cd_rg1": {
+    "id": "cd_rg1",
+    "name": "裂爪破阵喵",
+    "level": 450,
+    "hp": 4000,
+    "attack": 350,
+    "defense": 100,
+    "description": "专撕薄弱点的锋爪斗士。",
+    "drops": [
+      {
+        "id": "rg1_riftclaw_talon",
+        "percent": 0.001,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "wd1_wardens_verdict",
+        "percent": 0.001,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "gold",
+        "percent": 0.95,
+        "range": {
+          "min": 150,
+          "max": 250
+        }
+      }
+    ],
+    "skills": {
+      "shadowStep": {
+        "level": 10
+      },
+      "poisonClaw": {
+        "level": 20
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {
+      "chargeRendState": {
+        "id": "chargeRendState",
+        "duration": 999,
+        "remainingDuration": 999
+      }
+    },
+    "status": {
+      "strength": {
+        "level": 50
+      },
+      "dexterity": {
+        "level": 70
+      },
+      "intelligence": {
+        "level": 30
+      },
+      "stamina": {
+        "level": 20
+      },
+      "attacking": {
+        "level": 350
+      },
+      "defencing": {
+        "level": 100
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 50
+      },
+      "dexterity": {
+        "level": 70
+      },
+      "intelligence": {
+        "level": 30
+      },
+      "stamina": {
+        "level": 20
+      },
+      "attacking": {
+        "level": 350
+      },
+      "defencing": {
+        "level": 100
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 3000,
+    "maxHp": 4000,
+    "maxMp": 200,
+    "mp": 200,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "cd_sw1": {
+    "id": "cd_sw1",
+    "name": "静语织咒喵",
+    "level": 430,
+    "hp": 4000,
+    "attack": 50,
+    "defense": 150,
+    "description": "低语成网的咒术编织者。",
+    "drops": [
+      {
+        "id": "sw1_hushwoven_thread",
+        "percent": 0.001,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "gold",
+        "percent": 0.8,
+        "range": {
+          "min": 220,
+          "max": 270
+        }
+      }
+    ],
+    "skills": {
+      "groupSilence": {
+        "level": 1
+      },
+      "groupCurse": {
+        "level": 25
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 40
+      },
+      "dexterity": {
+        "level": 20
+      },
+      "intelligence": {
+        "level": 80
+      },
+      "stamina": {
+        "level": 40
+      },
+      "attacking": {
+        "level": 50
+      },
+      "defencing": {
+        "level": 150
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 40
+      },
+      "dexterity": {
+        "level": 20
+      },
+      "intelligence": {
+        "level": 80
+      },
+      "stamina": {
+        "level": 40
+      },
+      "attacking": {
+        "level": 50
+      },
+      "defencing": {
+        "level": 150
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 3000,
+    "maxHp": 4000,
+    "maxMp": 2000,
+    "mp": 2000,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "cd_nb1": {
+    "id": "cd_nb1",
+    "name": "夜影喵",
+    "level": 470,
+    "hp": 5000,
+    "attack": 400,
+    "defense": 200,
+    "description": "借影潜行、背击致命的猎手。",
+    "drops": [
+      {
+        "id": "nb1_duskshade_whisker",
+        "percent": 0.001,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "nb1_shadow_pounce_band",
+        "percent": 0.0001,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "gold",
+        "percent": 0.8,
+        "range": {
+          "min": 120,
+          "max": 170
+        }
+      }
+    ],
+    "skills": {
+      "slientSmokeScreen": {
+        "level": 1
+      },
+      "ambush": {
+        "level": 1
+      },
+      "shadowAssassinUlt": {
+        "level": 5
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {
+      "sneak": {
+        "id": "sneak",
+        "duration": 2,
+        "remainingDuration": 2
+      }
+    },
+    "status": {
+      "strength": {
+        "level": 40
+      },
+      "dexterity": {
+        "level": 90
+      },
+      "intelligence": {
+        "level": 30
+      },
+      "stamina": {
+        "level": 20
+      },
+      "attacking": {
+        "level": 400
+      },
+      "defencing": {
+        "level": 200
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 40
+      },
+      "dexterity": {
+        "level": 90
+      },
+      "intelligence": {
+        "level": 30
+      },
+      "stamina": {
+        "level": 20
+      },
+      "attacking": {
+        "level": 400
+      },
+      "defencing": {
+        "level": 200
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 3500,
+    "maxHp": 5000,
+    "maxMp": 200,
+    "mp": 200,
+    "isBoss": false,
+    "ignoreTurn": false,
+    "equipment": {
+      "rightHand": "shadowSteelScythe+3"
+    }
+  },
+  "cd_ha1": {
+    "id": "cd_ha1",
+    "name": "咒缚弓手",
+    "level": 400,
+    "hp": 3000,
+    "attack": 150,
+    "defense": 100,
+    "description": "一矢成禁的符弦射手。",
+    "drops": [
+      {
+        "id": "ha1_hexstring_bowstring",
+        "percent": 0.0001,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "ha1_binding_arrowhead",
+        "percent": 0.001,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "gold",
+        "percent": 0.8,
+        "range": {
+          "min": 120,
+          "max": 170
+        }
+      }
+    ],
+    "skills": {
+      "explosiveShot": {
+        "level": 10
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {
+      "boneShield": {
+        "id": "boneShield",
+        "duration": 5,
+        "remainingDuration": 5
+      }
+    },
+    "status": {
+      "strength": {
+        "level": 20
+      },
+      "dexterity": {
+        "level": 30
+      },
+      "intelligence": {
+        "level": 10
+      },
+      "stamina": {
+        "level": 10
+      },
+      "attacking": {
+        "level": 150
+      },
+      "defencing": {
+        "level": 100
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 20
+      },
+      "dexterity": {
+        "level": 30
+      },
+      "intelligence": {
+        "level": 10
+      },
+      "stamina": {
+        "level": 10
+      },
+      "attacking": {
+        "level": 150
+      },
+      "defencing": {
+        "level": 100
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 2000,
+    "maxHp": 3000,
+    "maxMp": 100,
+    "mp": 100,
+    "isBoss": false,
+    "ignoreTurn": false,
+    "equipment": {
+      "leftHand": "spiritfeatherBow+3"
+    }
+  },
+  "cd_mk1": {
+    "id": "cd_mk1",
+    "name": "镜纹刺客",
+    "level": 460,
+    "hp": 4000,
+    "attack": 200,
+    "defense": 200,
+    "description": "反射与错位的镜纹杀手。",
+    "drops": [
+      {
+        "id": "mk1_mirror_etched_shard",
+        "percent": 0.001,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "mk1_inverted_step_lace",
+        "percent": 0.0001,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "gold",
+        "percent": 0.8,
+        "range": {
+          "min": 120,
+          "max": 170
+        }
+      }
+    ],
+    "skills": {
+      "mirrorImage": {
+        "level": 1
+      },
+      "silenceStrike": {
+        "level": 10
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {
+      "sneak": {
+        "id": "sneak",
+        "duration": 2,
+        "remainingDuration": 2
+      }
+    },
+    "status": {
+      "strength": {
+        "level": 50
+      },
+      "dexterity": {
+        "level": 80
+      },
+      "intelligence": {
+        "level": 20
+      },
+      "stamina": {
+        "level": 20
+      },
+      "attacking": {
+        "level": 200
+      },
+      "defencing": {
+        "level": 200
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 50
+      },
+      "dexterity": {
+        "level": 80
+      },
+      "intelligence": {
+        "level": 20
+      },
+      "stamina": {
+        "level": 20
+      },
+      "attacking": {
+        "level": 200
+      },
+      "defencing": {
+        "level": 200
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 2000,
+    "maxHp": 4000,
+    "maxMp": 250,
+    "mp": 250,
+    "isBoss": false,
+    "ignoreTurn": false,
+    "equipment": {
+      "decorate1": "riposteAmulet"
+    }
+  },
+  "cd_vc1": {
+    "id": "cd_vc1",
+    "name": "虚渊呼唤者",
+    "level": 500,
+    "hp": 8000,
+    "attack": 100,
+    "defense": 200,
+    "description": "通渊引无相的灵媒。",
+    "drops": [
+      {
+        "id": "vc1_void_ichor",
+        "percent": 0.001,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "gold",
+        "percent": 0.8,
+        "range": {
+          "min": 120,
+          "max": 170
+        }
+      }
+    ],
+    "skills": {
+      "siphonPulse": {
+        "level": 10
+      },
+      "soulDrain": {
+        "level": 10
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 20
+      },
+      "dexterity": {
+        "level": 60
+      },
+      "intelligence": {
+        "level": 20
+      },
+      "stamina": {
+        "level": 20
+      },
+      "attacking": {
+        "level": 100
+      },
+      "defencing": {
+        "level": 200
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 20
+      },
+      "dexterity": {
+        "level": 60
+      },
+      "intelligence": {
+        "level": 20
+      },
+      "stamina": {
+        "level": 20
+      },
+      "attacking": {
+        "level": 100
+      },
+      "defencing": {
+        "level": 200
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 3500,
+    "maxHp": 8000,
+    "maxMp": 1000,
+    "mp": 1000,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "cd_qn": {
+    "id": "cd_qn",
+    "name": "寂鸣回响女王",
+    "level": 550,
+    "hp": 12000,
+    "attack": 250,
+    "defense": 300,
+    "description": "以回响裁罚的静默主宰。",
+    "drops": [
+      {
+        "id": "qn_chorus_veil",
+        "percent": 0.0001,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "qn_echo_diadem",
+        "percent": 0.0001,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "gold",
+        "percent": 0.8,
+        "range": {
+          "min": 1500,
+          "max": 1900
+        }
+      }
+    ],
+    "skills": {
+      "brainwashing": {
+        "level": 1
+      },
+      "groupSilence": {
+        "level": 10
+      },
+      "qeDirgeCataclysm": {
+        "level": 5
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {
+      "proof2": {
+        "id": "proof2",
+        "duration": 2,
+        "remainingDuration": 2
+      }
+    },
+    "status": {
+      "strength": {
+        "level": 45
+      },
+      "dexterity": {
+        "level": 80
+      },
+      "intelligence": {
+        "level": 100
+      },
+      "stamina": {
+        "level": 40
+      },
+      "attacking": {
+        "level": 250
+      },
+      "defencing": {
+        "level": 300
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 45
+      },
+      "dexterity": {
+        "level": 80
+      },
+      "intelligence": {
+        "level": 100
+      },
+      "stamina": {
+        "level": 40
+      },
+      "attacking": {
+        "level": 250
+      },
+      "defencing": {
+        "level": 300
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 4000,
+    "maxHp": 12000,
+    "maxMp": 500,
+    "mp": 500,
+    "isBoss": true,
+    "ignoreTurn": false,
+    "equipment": {
+      "decorate1": "echoBellCharm"
+    }
+  },
+  "cd_kg": {
+    "id": "cd_kg",
+    "name": "漆冕影廷之王",
+    "level": 550,
+    "hp": 12000,
+    "attack": 500,
+    "defense": 450,
+    "description": "御令改局的暗冕君王。",
+    "drops": [
+      {
+        "id": "kg_nocturne_scepter_grip",
+        "percent": 0.0001,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "kg_obsidian_crown_shard",
+        "percent": 0.0001,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "onyx_shield",
+        "percent": 0.0001,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "gold",
+        "percent": 0.8,
+        "range": {
+          "min": 1500,
+          "max": 1900
+        }
+      }
+    ],
+    "skills": {
+      "bcScepterOfNight": {
+        "level": 1
+      },
+      "bcCrowningMidnight": {
+        "level": 1
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {
+      "bcCourtTithe": {
+        "id": "bcCourtTithe",
+        "duration": 999,
+        "remainingDuration": 999
+      }
+    },
+    "status": {
+      "strength": {
+        "level": 80
+      },
+      "dexterity": {
+        "level": 60
+      },
+      "intelligence": {
+        "level": 80
+      },
+      "stamina": {
+        "level": 60
+      },
+      "attacking": {
+        "level": 500
+      },
+      "defencing": {
+        "level": 450
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 80
+      },
+      "dexterity": {
+        "level": 60
+      },
+      "intelligence": {
+        "level": 80
+      },
+      "stamina": {
+        "level": 60
+      },
+      "attacking": {
+        "level": 500
+      },
+      "defencing": {
+        "level": 450
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 4000,
+    "maxHp": 12000,
+    "maxMp": 500,
+    "mp": 500,
+    "isBoss": true,
+    "ignoreTurn": false,
+    "equipment": {
+      "leftHand": "onyx_shield"
+    }
+  },
+  "cd_hb": {
+    "id": "cd_hb",
+    "name": "虚渊无相先驱",
+    "level": 550,
+    "hp": 15000,
+    "attack": 500,
+    "defense": 0,
+    "description": "形而无形的规则前驱。",
+    "drops": [
+      {
+        "id": "hb_faceless_membrane",
+        "percent": 0.001,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "hb_paradox_core",
+        "percent": 0.0001,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "hb_null_signature",
+        "percent": 0.0001,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "gold",
+        "percent": 0.8,
+        "range": {
+          "min": 1500,
+          "max": 1900
+        }
+      },
+      {
+        "id": "cat_dungeon_002_expedition_map",
+        "percent": 0.0001,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "abyssalTideForCdHb": {
+        "level": 10
+      },
+      "cdhbFormShiftSkill": {
+        "level": 1
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {
+      "cdhbFormShift": {
+        "id": "cdhbFormShift",
+        "duration": 999,
+        "remainingDuration": 999
+      }
+    },
+    "status": {
+      "strength": {
+        "level": 100
+      },
+      "dexterity": {
+        "level": 100
+      },
+      "intelligence": {
+        "level": 100
+      },
+      "stamina": {
+        "level": 100
+      },
+      "attacking": {
+        "level": 500
+      },
+      "defencing": {
+        "level": 0
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 100
+      },
+      "dexterity": {
+        "level": 100
+      },
+      "intelligence": {
+        "level": 100
+      },
+      "stamina": {
+        "level": 100
+      },
+      "attacking": {
+        "level": 500
+      },
+      "defencing": {
+        "level": 0
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 8000,
+    "maxHp": 15000,
+    "maxMp": 500,
+    "mp": 500,
+    "isBoss": true,
+    "ignoreTurn": false,
+    "equipment": {
+      "cloak": "abyssalCloak"
+    }
+  },
+  "cd_oc": {
+    "id": "cd_oc",
+    "name": "玄铁巨像",
+    "level": 550,
+    "hp": 20000,
+    "attack": 500,
+    "defense": 500,
+    "description": "碾阵如纸的玄铁战争器。",
+    "drops": [
+      {
+        "id": "oc_xuansteel_slab",
+        "percent": 0.001,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "oc_fortress_heart",
+        "percent": 0.0001,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "gold",
+        "percent": 0.8,
+        "range": {
+          "min": 1500,
+          "max": 1900
+        }
+      },
+      {
+        "id": "cat_dungeon_002_expedition_map",
+        "percent": 0.0001,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "powerStrike": {
+        "level": 10
+      },
+      "baseAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {
+      "proof": {
+        "id": "proof",
+        "duration": 999,
+        "remainingDuration": 999
+      }
+    },
+    "status": {
+      "strength": {
+        "level": 150
+      },
+      "dexterity": {
+        "level": 10
+      },
+      "intelligence": {
+        "level": 10
+      },
+      "stamina": {
+        "level": 10
+      },
+      "attacking": {
+        "level": 500
+      },
+      "defencing": {
+        "level": 500
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 150
+      },
+      "dexterity": {
+        "level": 10
+      },
+      "intelligence": {
+        "level": 10
+      },
+      "stamina": {
+        "level": 10
+      },
+      "attacking": {
+        "level": 500
+      },
+      "defencing": {
+        "level": 500
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 8000,
+    "maxHp": 20000,
+    "maxMp": 200,
+    "mp": 200,
+    "isBoss": true,
+    "ignoreTurn": false,
+    "equipment": {
+      "body": "starforgedAlloylCoat+5",
+      "decorate1": "eternalGuardianAmulet"
+    }
+  },
+  "dense_fog_sprite_e_001": {
+    "id": "dense_fog_sprite_e_001",
+    "name": "迷雾幽灵聚合体",
+    "level": 400,
+    "hp": 8500,
+    "attack": 625,
+    "defense": 450,
+    "description": "游荡在迷雾中的幽灵",
+    "drops": [
+      {
+        "id": "denseFogDust",
+        "percent": 1,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "denseFogMurkyCrystal",
+        "percent": 1,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      {
+        "id": "murkyCrystalGuardianCoreAmulet",
+        "percent": 0.0001,
+        "range": {
+          "min": 1,
+          "max": 2
+        }
+      }
+    ],
+    "skills": {
+      "denseFogSpriteAttackBoss": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {},
+    "status": {
+      "strength": {
+        "level": 100
+      },
+      "dexterity": {
+        "level": 100
+      },
+      "intelligence": {
+        "level": 100
+      },
+      "stamina": {
+        "level": 100
+      },
+      "attacking": {
+        "level": 625
+      },
+      "defencing": {
+        "level": 450
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 100
+      },
+      "dexterity": {
+        "level": 100
+      },
+      "intelligence": {
+        "level": 100
+      },
+      "stamina": {
+        "level": 100
+      },
+      "attacking": {
+        "level": 625
+      },
+      "defencing": {
+        "level": 450
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 4000,
+    "maxHp": 8500,
+    "maxMp": 4000,
+    "mp": 4000,
+    "isBoss": true,
+    "ignoreTurn": false
+  },
+  "dense_fog_sprite_001": {
+    "id": "dense_fog_sprite_001",
+    "name": "迷雾幽灵(力量)",
+    "level": 100,
+    "hp": 2000,
+    "attack": 100,
+    "defense": 100,
+    "description": "游荡在迷雾中的幽灵",
+    "drops": [
+      {
+        "id": "denseFogDust",
+        "percent": 0.1,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "denseFogMurkyCrystal",
+        "percent": 0.1,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "denseFogSpriteAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {
+      "denseFogStrength": {
+        "id": "denseFogStrength",
+        "duration": 3,
+        "remainingDuration": 3
+      }
+    },
+    "status": {
+      "strength": {
+        "level": 100
+      },
+      "dexterity": {
+        "level": 25
+      },
+      "intelligence": {
+        "level": 25
+      },
+      "stamina": {
+        "level": 25
+      },
+      "attacking": {
+        "level": 100
+      },
+      "defencing": {
+        "level": 100
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 100
+      },
+      "dexterity": {
+        "level": 25
+      },
+      "intelligence": {
+        "level": 25
+      },
+      "stamina": {
+        "level": 25
+      },
+      "attacking": {
+        "level": 100
+      },
+      "defencing": {
+        "level": 100
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 1000,
+    "maxHp": 2000,
+    "maxMp": 1000,
+    "mp": 1000,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "dense_fog_sprite_002": {
+    "id": "dense_fog_sprite_002",
+    "name": "迷雾幽灵(敏捷)",
+    "level": 100,
+    "hp": 1500,
+    "attack": 200,
+    "defense": 50,
+    "description": "游荡在迷雾中的幽灵",
+    "drops": [
+      {
+        "id": "denseFogDust",
+        "percent": 0.1,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "denseFogMurkyCrystal",
+        "percent": 0.1,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "denseFogSpriteAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {
+      "denseFogDexterity": {
+        "id": "denseFogDexterity",
+        "duration": 3,
+        "remainingDuration": 3
+      }
+    },
+    "status": {
+      "strength": {
+        "level": 25
+      },
+      "dexterity": {
+        "level": 100
+      },
+      "intelligence": {
+        "level": 25
+      },
+      "stamina": {
+        "level": 25
+      },
+      "attacking": {
+        "level": 200
+      },
+      "defencing": {
+        "level": 50
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 25
+      },
+      "dexterity": {
+        "level": 100
+      },
+      "intelligence": {
+        "level": 25
+      },
+      "stamina": {
+        "level": 25
+      },
+      "attacking": {
+        "level": 200
+      },
+      "defencing": {
+        "level": 50
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 1000,
+    "maxHp": 1500,
+    "maxMp": 1000,
+    "mp": 1000,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "dense_fog_sprite_003": {
+    "id": "dense_fog_sprite_003",
+    "name": "迷雾幽灵(智力)",
+    "level": 100,
+    "hp": 1000,
+    "attack": 300,
+    "defense": 0,
+    "description": "游荡在迷雾中的幽灵",
+    "drops": [
+      {
+        "id": "denseFogDust",
+        "percent": 0.1,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "denseFogMurkyCrystal",
+        "percent": 0.1,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "denseFogSpriteAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {
+      "denseFogIntelligence": {
+        "id": "denseFogIntelligence",
+        "duration": 3,
+        "remainingDuration": 3
+      }
+    },
+    "status": {
+      "strength": {
+        "level": 25
+      },
+      "dexterity": {
+        "level": 25
+      },
+      "intelligence": {
+        "level": 100
+      },
+      "stamina": {
+        "level": 25
+      },
+      "attacking": {
+        "level": 300
+      },
+      "defencing": {
+        "level": 0
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 25
+      },
+      "dexterity": {
+        "level": 25
+      },
+      "intelligence": {
+        "level": 100
+      },
+      "stamina": {
+        "level": 25
+      },
+      "attacking": {
+        "level": 300
+      },
+      "defencing": {
+        "level": 0
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 1000,
+    "maxHp": 1000,
+    "maxMp": 1000,
+    "mp": 1000,
+    "isBoss": false,
+    "ignoreTurn": false
+  },
+  "dense_fog_sprite_004": {
+    "id": "dense_fog_sprite_004",
+    "name": "迷雾幽灵(耐力)",
+    "level": 100,
+    "hp": 4000,
+    "attack": 25,
+    "defense": 300,
+    "description": "游荡在迷雾中的幽灵",
+    "drops": [
+      {
+        "id": "denseFogDust",
+        "percent": 0.1,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      {
+        "id": "denseFogMurkyCrystal",
+        "percent": 0.1,
+        "range": {
+          "min": 1,
+          "max": 1
+        }
+      }
+    ],
+    "skills": {
+      "denseFogSpriteAttack": {
+        "level": 1
+      }
+    },
+    "ai": {},
+    "state": {
+      "denseFogStamina": {
+        "id": "denseFogStamina",
+        "duration": 3,
+        "remainingDuration": 3
+      }
+    },
+    "status": {
+      "strength": {
+        "level": 25
+      },
+      "dexterity": {
+        "level": 25
+      },
+      "intelligence": {
+        "level": 25
+      },
+      "stamina": {
+        "level": 100
+      },
+      "attacking": {
+        "level": 25
+      },
+      "defencing": {
+        "level": 300
+      }
+    },
+    "baseStatus": {
+      "strength": {
+        "level": 25
+      },
+      "dexterity": {
+        "level": 25
+      },
+      "intelligence": {
+        "level": 25
+      },
+      "stamina": {
+        "level": 100
+      },
+      "attacking": {
+        "level": 25
+      },
+      "defencing": {
+        "level": 300
+      }
+    },
+    "tmpShield": 0,
+    "isPlayer": false,
+    "expReward": 1000,
+    "maxHp": 4000,
+    "maxMp": 1000,
+    "mp": 1000,
+    "isBoss": false,
+    "ignoreTurn": false
+  }
+}

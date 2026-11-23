@@ -1,0 +1,51 @@
+output.tar
+
+.vscode
+
+
+.clinic
+
+# Nuxt dev/build outputs
+.output
+.data
+.nuxt
+.nitro
+.cache
+dist
+
+# Node dependencies
+node_modules
+
+# Logs
+logs
+*.log
+
+# Misc
+.DS_Store
+.fleet
+.idea
+
+# Local env files
+.env
+.env.*
+!.env.example
+
+generated/prisma/
+
+output.tar
+./output.tar
+
+assets/data/market.json
+
+.~*.xlsx
+
+# User-uploaded avatars (do not commit)
+public/uploads/avatars/
+runtime-uploads/
+runtime-uploads/avatars/
+
+*.heapsnapshot
+assets/resource/newSponsorList.xlsx
+assets/resource/sponsorList.json
+
+/wiki/

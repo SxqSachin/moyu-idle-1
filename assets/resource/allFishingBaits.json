@@ -1,0 +1,99 @@
+{
+  "staterFishBait": {
+    "resourceId": "staterFishBait",
+    "hookTimeReductionPercent": 0.03,
+    "biteRateIncreasePercent": 0.03,
+    "preferredSpeciesBoost": {
+      "salmon": 0.05,
+      "jadeTuna": 0.07
+    },
+    "baitAreaDurationSec": 60,
+    "baitAreaRadius": 20,
+    "baitAreaHookTimeReductionPercent": 0.01,
+    "baitAreaBiteRateIncreasePercent": 0.01,
+    "baitAreaPreferredSpeciesPercentBoost": {
+      "catfish_night": 0.05
+    },
+    "baitAreaPreferredSpeciesWeightBoost": {
+      "catfish_night": 5
+    }
+  },
+  "mysticalEssence": {
+    "resourceId": "mysticalEssence",
+    "hookTimeReductionPercent": 0.04,
+    "biteRateIncreasePercent": 0.03,
+    "preferredSpeciesBoost": {
+      "salmon": 0.05,
+      "jadeTuna": 0.07
+    },
+    "baitAreaDurationSec": 60,
+    "baitAreaRadius": 35,
+    "baitAreaHookTimeReductionPercent": 0.04,
+    "baitAreaBiteRateIncreasePercent": 0.04,
+    "baitAreaPreferredSpeciesPercentBoost": {
+      "golden_tetra": 0.05
+    },
+    "baitAreaPreferredSpeciesWeightBoost": {
+      "golden_tetra": 5
+    }
+  },
+  "normalFishBait": {
+    "resourceId": "normalFishBait",
+    "hookTimeReductionPercent": 0.02,
+    "biteRateIncreasePercent": 0.04,
+    "preferredSpeciesBoost": {
+      "salmon": 0.05,
+      "jadeTuna": 0.07
+    },
+    "baitAreaDurationSec": 180,
+    "baitAreaRadius": 35,
+    "baitAreaHookTimeReductionPercent": 0.03,
+    "baitAreaBiteRateIncreasePercent": 0.03,
+    "baitAreaPreferredSpeciesPercentBoost": {
+      "catfish_night": 0.07
+    },
+    "baitAreaPreferredSpeciesWeightBoost": {
+      "catfish_night": 7
+    }
+  },
+  "mysticalEssenceFishBait": {
+    "resourceId": "mysticalEssenceFishBait",
+    "hookTimeReductionPercent": 0.05,
+    "biteRateIncreasePercent": 0.06,
+    "preferredSpeciesBoost": {
+      "salmon": 0.05,
+      "jadeTuna": 0.07
+    },
+    "baitAreaDurationSec": 300,
+    "baitAreaRadius": 35,
+    "baitAreaHookTimeReductionPercent": 0.05,
+    "baitAreaBiteRateIncreasePercent": 0.05,
+    "baitAreaPreferredSpeciesPercentBoost": {
+      "golden_tetra": 0.07
+    },
+    "baitAreaPreferredSpeciesWeightBoost": {
+      "golden_tetra": 7
+    }
+  },
+  "nutrientEssence": {
+    "resourceId": "nutrientEssence",
+    "hookTimeReductionPercent": 0.02,
+    "biteRateIncreasePercent": 0.04,
+    "preferredSpeciesBoost": {
+      "salmon": 0.05,
+      "jadeTuna": 0.07
+    },
+    "baitAreaDurationSec": 180,
+    "baitAreaRadius": 60,
+    "baitAreaHookTimeReductionPercent": 0.01,
+    "baitAreaBiteRateIncreasePercent": 0.01,
+    "baitAreaPreferredSpeciesPercentBoost": {
+      "moonlightShrimp": 0.1,
+      "emberEel": 0.1
+    },
+    "baitAreaPreferredSpeciesWeightBoost": {
+      "moonlightShrimp": 10,
+      "emberEel": 10
+    }
+  }
+}

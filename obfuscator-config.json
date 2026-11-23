@@ -1,0 +1,5 @@
+{
+  "deprecated": true,
+  "reason": "javascript-obfuscator abandoned — file retained for history. Do not use.",
+  "note": "build:obf script removed from package.json; use npm run build to produce non-obfuscated bundles"
+}

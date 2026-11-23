@@ -1,0 +1,869 @@
+{
+  "rareThing": {
+    "id": "rareThing",
+    "name": "稀有的小玩意儿",
+    "icon": null,
+    "description": null,
+    "percent": 0.01,
+    "rarity": 1,
+    "qualityWeight": [],
+    "minLength": 0,
+    "maxLength": 0,
+    "minWeight": 0,
+    "maxWeight": 100,
+    "neededStatus": [],
+    "neededConfiguration": {},
+    "neededBait": [],
+    "activeHours": {
+      "start": "00:00",
+      "end": "23:59"
+    },
+    "shopBaseRecallPrice": 0,
+    "extraPriceForEachLength": 0,
+    "extraPriceForEachWeight": 0,
+    "extraPriceForEachQuality": 0,
+    "disabled": false,
+    "asResource": true,
+    "resourcePool": {
+      "fish": 80,
+      "cuteOutfit": 5,
+      "cuteHat": 5,
+      "cuteDoll": 5,
+      "cuteIronBox": 1
+    },
+    "exp": 1
+  },
+  "randomThing": {
+    "id": "randomThing",
+    "name": "一些小东西",
+    "icon": null,
+    "description": null,
+    "percent": 0.5,
+    "rarity": 1,
+    "qualityWeight": [],
+    "minLength": 0,
+    "maxLength": 0,
+    "minWeight": 0,
+    "maxWeight": 100,
+    "neededStatus": [],
+    "neededConfiguration": {},
+    "neededBait": [],
+    "activeHours": {
+      "start": "00:00",
+      "end": "23:59"
+    },
+    "shopBaseRecallPrice": 0,
+    "extraPriceForEachLength": 0,
+    "extraPriceForEachWeight": 0,
+    "extraPriceForEachQuality": 0,
+    "disabled": false,
+    "asResource": true,
+    "resourcePool": {
+      "berry": 33,
+      "wood": 66,
+      "fish": 1
+    },
+    "exp": 3
+  },
+  "fish": {
+    "id": "fish",
+    "name": "鱼",
+    "icon": null,
+    "description": null,
+    "percent": 0.65,
+    "rarity": 1,
+    "qualityWeight": [],
+    "minLength": 0,
+    "maxLength": 0,
+    "minWeight": 0,
+    "maxWeight": 100,
+    "neededStatus": [],
+    "neededConfiguration": {},
+    "neededBait": [],
+    "activeHours": {
+      "start": "00:00",
+      "end": "23:59"
+    },
+    "shopBaseRecallPrice": 0,
+    "extraPriceForEachLength": 0,
+    "extraPriceForEachWeight": 0,
+    "extraPriceForEachQuality": 0,
+    "disabled": false,
+    "asResource": true,
+    "resourcePool": {
+      "fish": 1
+    },
+    "exp": 3
+  },
+  "salmon": {
+    "id": "salmon",
+    "name": "鲑鱼",
+    "icon": null,
+    "description": null,
+    "percent": 0.65,
+    "rarity": 1,
+    "qualityWeight": [],
+    "minLength": 0,
+    "maxLength": 0,
+    "minWeight": 0,
+    "maxWeight": 100,
+    "neededStatus": [],
+    "neededConfiguration": {},
+    "neededBait": [
+      "normalFishBait"
+    ],
+    "activeHours": {
+      "start": "00:00",
+      "end": "23:59"
+    },
+    "shopBaseRecallPrice": 0,
+    "extraPriceForEachLength": 0,
+    "extraPriceForEachWeight": 0,
+    "extraPriceForEachQuality": 0,
+    "disabled": false,
+    "asResource": true,
+    "resourcePool": {
+      "salmon": 1
+    },
+    "exp": 5
+  },
+  "tuna": {
+    "id": "tuna",
+    "name": "金枪鱼",
+    "icon": null,
+    "description": null,
+    "percent": 0.45,
+    "rarity": 1,
+    "qualityWeight": [],
+    "minLength": 0,
+    "maxLength": 0,
+    "minWeight": 0,
+    "maxWeight": 100,
+    "neededStatus": [],
+    "neededConfiguration": {},
+    "neededBait": [
+      "normalFishBait"
+    ],
+    "activeHours": {
+      "start": "00:00",
+      "end": "23:59"
+    },
+    "shopBaseRecallPrice": 0,
+    "extraPriceForEachLength": 0,
+    "extraPriceForEachWeight": 0,
+    "extraPriceForEachQuality": 0,
+    "disabled": false,
+    "asResource": true,
+    "resourcePool": {
+      "tuna": 1
+    },
+    "exp": 5
+  },
+  "rareCatfish": {
+    "id": "rareCatfish",
+    "name": "稀有猫鱼",
+    "icon": null,
+    "description": null,
+    "percent": 0.33,
+    "rarity": 1,
+    "qualityWeight": [],
+    "minLength": 0,
+    "maxLength": 0,
+    "minWeight": 0,
+    "maxWeight": 100,
+    "neededStatus": [],
+    "neededConfiguration": {},
+    "neededBait": [
+      "normalFishBait"
+    ],
+    "activeHours": {
+      "start": "09:00",
+      "end": "16:00"
+    },
+    "shopBaseRecallPrice": 0,
+    "extraPriceForEachLength": 0,
+    "extraPriceForEachWeight": 0,
+    "extraPriceForEachQuality": 0,
+    "disabled": false,
+    "asResource": true,
+    "resourcePool": {
+      "rareCatfish": 1
+    },
+    "exp": 8
+  },
+  "mysticalKoi": {
+    "id": "mysticalKoi",
+    "name": "神秘锦鲤",
+    "icon": null,
+    "description": null,
+    "percent": 0.33,
+    "rarity": 1,
+    "qualityWeight": [],
+    "minLength": 0,
+    "maxLength": 0,
+    "minWeight": 0,
+    "maxWeight": 100,
+    "neededStatus": [],
+    "neededConfiguration": {},
+    "neededBait": [
+      "normalFishBait"
+    ],
+    "activeHours": {
+      "start": "09:00",
+      "end": "16:00"
+    },
+    "shopBaseRecallPrice": 0,
+    "extraPriceForEachLength": 0,
+    "extraPriceForEachWeight": 0,
+    "extraPriceForEachQuality": 0,
+    "disabled": false,
+    "asResource": true,
+    "resourcePool": {
+      "mysticalKoi": 1
+    },
+    "exp": 12
+  },
+  "jadeTuna": {
+    "id": "jadeTuna",
+    "name": "翡翠金枪鱼",
+    "icon": null,
+    "description": null,
+    "percent": 0.33,
+    "rarity": 1,
+    "qualityWeight": [],
+    "minLength": 0,
+    "maxLength": 0,
+    "minWeight": 0,
+    "maxWeight": 100,
+    "neededStatus": [],
+    "neededConfiguration": {},
+    "neededBait": [
+      "normalFishBait"
+    ],
+    "activeHours": {
+      "start": "00:00",
+      "end": "23:59"
+    },
+    "shopBaseRecallPrice": 0,
+    "extraPriceForEachLength": 0,
+    "extraPriceForEachWeight": 0,
+    "extraPriceForEachQuality": 0,
+    "disabled": false,
+    "asResource": true,
+    "resourcePool": {
+      "jadeTuna": 1
+    },
+    "exp": 12
+  },
+  "emberEel": {
+    "id": "emberEel",
+    "name": "余烬鳗",
+    "icon": null,
+    "description": null,
+    "percent": 0.33,
+    "rarity": 1,
+    "qualityWeight": [],
+    "minLength": 0,
+    "maxLength": 0,
+    "minWeight": 0,
+    "maxWeight": 100,
+    "neededStatus": [],
+    "neededConfiguration": {},
+    "neededBait": [
+      "normalFishBait"
+    ],
+    "activeHours": {
+      "start": "00:00",
+      "end": "23:59"
+    },
+    "shopBaseRecallPrice": 0,
+    "extraPriceForEachLength": 0,
+    "extraPriceForEachWeight": 0,
+    "extraPriceForEachQuality": 0,
+    "disabled": false,
+    "asResource": true,
+    "resourcePool": {
+      "emberEel": 1
+    },
+    "exp": 12
+  },
+  "moonlightShrimp": {
+    "id": "moonlightShrimp",
+    "name": "月光虾",
+    "icon": null,
+    "description": null,
+    "percent": 0.33,
+    "rarity": 1,
+    "qualityWeight": [],
+    "minLength": 0,
+    "maxLength": 0,
+    "minWeight": 0,
+    "maxWeight": 100,
+    "neededStatus": [],
+    "neededConfiguration": {},
+    "neededBait": [
+      "normalFishBait"
+    ],
+    "activeHours": {
+      "start": "21:00",
+      "end": "03:00"
+    },
+    "shopBaseRecallPrice": 0,
+    "extraPriceForEachLength": 0,
+    "extraPriceForEachWeight": 0,
+    "extraPriceForEachQuality": 0,
+    "disabled": false,
+    "asResource": true,
+    "resourcePool": {
+      "moonlightShrimp": 1
+    },
+    "exp": 12
+  },
+  "crystalCarp": {
+    "id": "crystalCarp",
+    "name": "水晶鲤",
+    "icon": null,
+    "description": null,
+    "percent": 0.33,
+    "rarity": 1,
+    "qualityWeight": [],
+    "minLength": 0,
+    "maxLength": 0,
+    "minWeight": 0,
+    "maxWeight": 100,
+    "neededStatus": [],
+    "neededConfiguration": {},
+    "neededBait": [
+      "normalFishBait"
+    ],
+    "activeHours": {
+      "start": "21:00",
+      "end": "03:00"
+    },
+    "shopBaseRecallPrice": 0,
+    "extraPriceForEachLength": 0,
+    "extraPriceForEachWeight": 0,
+    "extraPriceForEachQuality": 0,
+    "disabled": false,
+    "asResource": true,
+    "resourcePool": {
+      "crystalCarp": 1
+    },
+    "exp": 12
+  },
+  "rainbowFish": {
+    "id": "rainbowFish",
+    "name": "彩虹鱼",
+    "icon": null,
+    "description": null,
+    "percent": 0.05,
+    "rarity": 1,
+    "qualityWeight": [],
+    "minLength": 0,
+    "maxLength": 0,
+    "minWeight": 0,
+    "maxWeight": 100,
+    "neededStatus": [],
+    "neededConfiguration": {},
+    "neededBait": [
+      "mysticalEssenceFishBait"
+    ],
+    "activeHours": {
+      "start": "11:00",
+      "end": "13:00"
+    },
+    "shopBaseRecallPrice": 0,
+    "extraPriceForEachLength": 0,
+    "extraPriceForEachWeight": 0,
+    "extraPriceForEachQuality": 0,
+    "disabled": false,
+    "asResource": true,
+    "resourcePool": {
+      "rainbowFish": 1
+    },
+    "exp": 25
+  },
+  "darkFish": {
+    "id": "darkFish",
+    "name": "黑暗鱼",
+    "icon": null,
+    "description": null,
+    "percent": 0.05,
+    "rarity": 1,
+    "qualityWeight": [],
+    "minLength": 0,
+    "maxLength": 0,
+    "minWeight": 0,
+    "maxWeight": 100,
+    "neededStatus": [],
+    "neededConfiguration": {},
+    "neededBait": [
+      "mysticalEssenceFishBait"
+    ],
+    "activeHours": {
+      "start": "23:00",
+      "end": "03:00"
+    },
+    "shopBaseRecallPrice": 0,
+    "extraPriceForEachLength": 0,
+    "extraPriceForEachWeight": 0,
+    "extraPriceForEachQuality": 0,
+    "disabled": false,
+    "asResource": true,
+    "resourcePool": {
+      "darkFish": 1
+    },
+    "exp": 25
+  },
+  "fatFish": {
+    "id": "fatFish",
+    "name": "胖胖鱼",
+    "icon": null,
+    "description": null,
+    "percent": 0.05,
+    "rarity": 1,
+    "qualityWeight": [],
+    "minLength": 0,
+    "maxLength": 0,
+    "minWeight": 0,
+    "maxWeight": 100,
+    "neededStatus": [],
+    "neededConfiguration": {},
+    "neededBait": [
+      "mysticalEssenceFishBait"
+    ],
+    "activeHours": {
+      "start": "00:00",
+      "end": "23:59"
+    },
+    "shopBaseRecallPrice": 0,
+    "extraPriceForEachLength": 0,
+    "extraPriceForEachWeight": 0,
+    "extraPriceForEachQuality": 0,
+    "disabled": false,
+    "asResource": true,
+    "resourcePool": {
+      "fatFish": 1
+    },
+    "exp": 25
+  },
+  "flashFish": {
+    "id": "flashFish",
+    "name": "闪光鱼",
+    "icon": null,
+    "description": null,
+    "percent": 0.05,
+    "rarity": 1,
+    "qualityWeight": [],
+    "minLength": 0,
+    "maxLength": 0,
+    "minWeight": 0,
+    "maxWeight": 100,
+    "neededStatus": [],
+    "neededConfiguration": {},
+    "neededBait": [
+      "mysticalEssenceFishBait"
+    ],
+    "activeHours": {
+      "start": "09:00",
+      "end": "16:00"
+    },
+    "shopBaseRecallPrice": 0,
+    "extraPriceForEachLength": 0,
+    "extraPriceForEachWeight": 0,
+    "extraPriceForEachQuality": 0,
+    "disabled": false,
+    "asResource": true,
+    "resourcePool": {
+      "flashFish": 1
+    },
+    "exp": 25
+  },
+  "carp_common": {
+    "id": "carp_common",
+    "name": "鲤鱼",
+    "icon": "🐟",
+    "description": "常见的淡水鲤鱼，性情温和",
+    "percent": 0.2,
+    "rarity": 1,
+    "qualityWeight": [
+      50,
+      30,
+      15,
+      4,
+      1
+    ],
+    "minLength": 10,
+    "maxLength": 90,
+    "minWeight": 1,
+    "maxWeight": 8,
+    "neededStatus": [
+      {
+        "status": "strength",
+        "min": 20
+      },
+      {
+        "status": "dexterity",
+        "min": 25
+      },
+      {
+        "status": "stamina",
+        "min": 15
+      }
+    ],
+    "neededConfiguration": {},
+    "neededBait": [],
+    "activeHours": {
+      "start": "06:00",
+      "end": "21:00"
+    },
+    "shopBaseRecallPrice": 24107,
+    "extraPriceForEachLength": 278,
+    "extraPriceForEachWeight": 849,
+    "extraPriceForEachQuality": 694,
+    "disabled": false,
+    "asResource": false,
+    "resourcePool": {},
+    "exp": 32
+  },
+  "carp_big": {
+    "id": "carp_big",
+    "name": "大鲤鱼",
+    "icon": "🐟",
+    "description": "体型硕大、力气十足的鲤鱼",
+    "percent": 0.2,
+    "rarity": 2,
+    "qualityWeight": [
+      50,
+      30,
+      15,
+      4,
+      1
+    ],
+    "minLength": 30,
+    "maxLength": 240,
+    "minWeight": 3,
+    "maxWeight": 14,
+    "neededStatus": [
+      {
+        "status": "strength",
+        "min": 20
+      },
+      {
+        "status": "dexterity",
+        "min": 25
+      },
+      {
+        "status": "stamina",
+        "min": 15
+      }
+    ],
+    "neededConfiguration": {},
+    "neededBait": [],
+    "activeHours": {
+      "start": "09:00",
+      "end": "15:00"
+    },
+    "shopBaseRecallPrice": 77143,
+    "extraPriceForEachLength": 402,
+    "extraPriceForEachWeight": 1882,
+    "extraPriceForEachQuality": 2666,
+    "disabled": false,
+    "asResource": false,
+    "resourcePool": {},
+    "exp": 36
+  },
+  "trout_mountain": {
+    "id": "trout_mountain",
+    "name": "山间鳟鱼",
+    "icon": "🐟",
+    "description": "生活在清冷山涧的鳟鱼",
+    "percent": 0.2,
+    "rarity": 3,
+    "qualityWeight": [
+      50,
+      30,
+      15,
+      4,
+      1
+    ],
+    "minLength": 8,
+    "maxLength": 64,
+    "minWeight": 3,
+    "maxWeight": 12,
+    "neededStatus": [
+      {
+        "status": "strength",
+        "min": 20
+      },
+      {
+        "status": "dexterity",
+        "min": 25
+      },
+      {
+        "status": "stamina",
+        "min": 15
+      }
+    ],
+    "neededConfiguration": {},
+    "neededBait": [
+      "normalFishBait",
+      "mysticalEssenceFishBait"
+    ],
+    "activeHours": {
+      "start": "18:00",
+      "end": "23:59"
+    },
+    "shopBaseRecallPrice": 78823,
+    "extraPriceForEachLength": 1799,
+    "extraPriceForEachWeight": 2627,
+    "extraPriceForEachQuality": 3178,
+    "disabled": false,
+    "asResource": false,
+    "resourcePool": {},
+    "exp": 42
+  },
+  "catfish_night": {
+    "id": "catfish_night",
+    "name": "夜猫鲶鱼",
+    "icon": "🐟",
+    "description": "夜间活动的鲶鱼，习性隐蔽",
+    "percent": 0.2,
+    "rarity": 3,
+    "qualityWeight": [
+      50,
+      30,
+      15,
+      4,
+      1
+    ],
+    "minLength": 25,
+    "maxLength": 120,
+    "minWeight": 2,
+    "maxWeight": 10,
+    "neededStatus": [
+      {
+        "status": "strength",
+        "min": 20
+      },
+      {
+        "status": "dexterity",
+        "min": 25
+      },
+      {
+        "status": "stamina",
+        "min": 15
+      }
+    ],
+    "neededConfiguration": {},
+    "neededBait": [
+      "normalFishBait",
+      "mysticalEssenceFishBait"
+    ],
+    "activeHours": {
+      "start": "01:00",
+      "end": "07:00"
+    },
+    "shopBaseRecallPrice": 112500,
+    "extraPriceForEachLength": 1410,
+    "extraPriceForEachWeight": 4474,
+    "extraPriceForEachQuality": 4536,
+    "disabled": false,
+    "asResource": false,
+    "resourcePool": {},
+    "exp": 44
+  },
+  "golden_tetra": {
+    "id": "golden_tetra",
+    "name": "金色四刺鱼",
+    "icon": "🐟",
+    "description": "体形小巧、鳞色金亮的鱼类，外观闪耀惹人注目",
+    "percent": 0.2,
+    "rarity": 4,
+    "qualityWeight": [
+      50,
+      30,
+      15,
+      4,
+      1
+    ],
+    "minLength": 3,
+    "maxLength": 32,
+    "minWeight": 2,
+    "maxWeight": 16,
+    "neededStatus": [
+      {
+        "status": "strength",
+        "min": 20
+      },
+      {
+        "status": "dexterity",
+        "min": 25
+      },
+      {
+        "status": "stamina",
+        "min": 15
+      }
+    ],
+    "neededConfiguration": {},
+    "neededBait": [
+      "mysticalEssenceFishBait"
+    ],
+    "activeHours": {
+      "start": "04:00",
+      "end": "20:00"
+    },
+    "shopBaseRecallPrice": 57143,
+    "extraPriceForEachLength": 2949,
+    "extraPriceForEachWeight": 1610,
+    "extraPriceForEachQuality": 2633,
+    "disabled": false,
+    "asResource": false,
+    "resourcePool": {},
+    "exp": 50
+  },
+  "eel_electric": {
+    "id": "eel_electric",
+    "name": "电鳗",
+    "icon": "🐟",
+    "description": "能释放电流的长形鱼类",
+    "percent": 0.2,
+    "rarity": 2,
+    "qualityWeight": [
+      50,
+      30,
+      15,
+      4,
+      1
+    ],
+    "minLength": 40,
+    "maxLength": 240,
+    "minWeight": 4,
+    "maxWeight": 16,
+    "neededStatus": [
+      {
+        "status": "strength",
+        "min": 20
+      },
+      {
+        "status": "dexterity",
+        "min": 25
+      },
+      {
+        "status": "stamina",
+        "min": 15
+      }
+    ],
+    "neededConfiguration": {},
+    "neededBait": [],
+    "activeHours": {
+      "start": "18:00",
+      "end": "23:59"
+    },
+    "shopBaseRecallPrice": 96518,
+    "extraPriceForEachLength": 511,
+    "extraPriceForEachWeight": 2068,
+    "extraPriceForEachQuality": 3336,
+    "disabled": false,
+    "asResource": false,
+    "resourcePool": {},
+    "exp": 24
+  },
+  "koi_ornamental": {
+    "id": "koi_ornamental",
+    "name": "锦鲤",
+    "icon": "🐟",
+    "description": "色彩斑斓的观赏锦鲤，象征吉祥与好运",
+    "percent": 0.1,
+    "rarity": 4,
+    "qualityWeight": [
+      50,
+      30,
+      15,
+      4,
+      1
+    ],
+    "minLength": 50,
+    "maxLength": 240,
+    "minWeight": 2,
+    "maxWeight": 12,
+    "neededStatus": [
+      {
+        "status": "strength",
+        "min": 20
+      },
+      {
+        "status": "dexterity",
+        "min": 25
+      },
+      {
+        "status": "stamina",
+        "min": 15
+      }
+    ],
+    "neededConfiguration": {},
+    "neededBait": [
+      "normalFishBait",
+      "mysticalEssenceFishBait"
+    ],
+    "activeHours": {
+      "start": "12:00",
+      "end": "16:00"
+    },
+    "shopBaseRecallPrice": 166667,
+    "extraPriceForEachLength": 1194,
+    "extraPriceForEachWeight": 6289,
+    "extraPriceForEachQuality": 8961,
+    "disabled": false,
+    "asResource": false,
+    "resourcePool": {},
+    "exp": 66
+  },
+  "puffer_toxic": {
+    "id": "puffer_toxic",
+    "name": "河豚",
+    "icon": "🐟",
+    "description": "遇险会鼓胀的河豚，外表可爱但体内含有剧毒",
+    "percent": 0.2,
+    "rarity": 3,
+    "qualityWeight": [
+      50,
+      30,
+      15,
+      4,
+      1
+    ],
+    "minLength": 12,
+    "maxLength": 60,
+    "minWeight": 4,
+    "maxWeight": 16,
+    "neededStatus": [
+      {
+        "status": "strength",
+        "min": 20
+      },
+      {
+        "status": "dexterity",
+        "min": 25
+      },
+      {
+        "status": "stamina",
+        "min": 15
+      }
+    ],
+    "neededConfiguration": {},
+    "neededBait": [],
+    "activeHours": {
+      "start": "06:00",
+      "end": "23:59"
+    },
+    "shopBaseRecallPrice": 30083,
+    "extraPriceForEachLength": 752,
+    "extraPriceForEachWeight": 752,
+    "extraPriceForEachQuality": 1213,
+    "disabled": false,
+    "asResource": false,
+    "resourcePool": {},
+    "exp": 32
+  }
+}

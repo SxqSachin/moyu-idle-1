@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+* {
+  /* Firefox 滚动条样式 */
+  scrollbar-width: thin;
+  scrollbar-color: #d8dce4 transparent;
+}
+
+/* 暗色模式下的 Firefox 滚动条 */
+.dark * {
+  scrollbar-color: #64748b transparent;
+}
+
+/* Webkit 浏览器（Chrome, Safari, Edge）滚动条样式 */
+*::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 3px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+  transition: background-color 0.2s ease;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #cfd5df;
+}
+
+*::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* 暗色模式下的滚动条 */
+.dark *::-webkit-scrollbar-thumb {
+  background: #64748b;
+}
+
+.dark *::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}

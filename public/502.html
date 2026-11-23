@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // Precompute the next half-hour mark so the ETA renders immediately without placeholders.
+        (function () {
+            const now = new Date();
+            const target = new Date(now);
+            target.setSeconds(0, 0);
+            if (now.getMinutes() < 30) {
+                target.setMinutes(30);
+            } else {
+                target.setHours(now.getHours() + 1, 0);
+            }
+
+            const pad = (n) => (n < 10 ? "0" + n : "" + n);
+            const formatted = `${target.getFullYear()}-${pad(target.getMonth() + 1)}-${pad(target.getDate())} ${pad(target.getHours())}:${pad(target.getMinutes())}`;
+            window.__etaText = `预计恢复于：${formatted}`;
+        })();
+    </script>
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            width: 100vw;
+        }
+
+        .content {
+            width: 100vw;
+            height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loading-text {
+            font-size: 24px;
+            color: white;
+            white-space: nowrap;
+            margin-bottom: 2em;
+        }
+
+        .version {
+            font-size: 12px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <span class="loading-text">猫猫村维护中...</span>
+
+        <span id="eta-text" style="color: white;"><script>document.write(window.__etaText || "")</script></span>
+    </div>
+</body>
+
+</html>
